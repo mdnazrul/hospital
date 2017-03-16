@@ -1,0 +1,100 @@
+﻿@model WebApplication2.Models.tbl_Attendance
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "attendanceList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function DeleteAttendance(pid, that) {
+            if (confirm("Do you want to delete the Row: " + pid)) {
+                $.ajax({
+                    type: "POST",
+                    url: '/Attendanc/attendanceDelete',
+                    data: { id: pid },
+                    dataType: "json",
+                    success: function () {
+                        alert('Deleted Successfully');
+                        location = location.href;
+                        location.reload();
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 style="text-align:center;color:#ff6a00;">Attendace List</h2>
+    <hr />
+    <div class="form-group">
+        <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+            @Html.ActionLink("Add To Create", "addAttendance")
+        </div>
+    </div>
+    @using (Html.BeginForm("attendanceList", "Attendanc", FormMethod.Post))
+    {
+        <input type="text" name="keyword" />
+        <input type="submit" value="Search" name="Submit">
+    }
+    <br />
+    <table id="myDataTable" class="gridtable" style=" width:60%; font-family:Tahoma;font-size:11px ;">
+        <thead>
+            <tr>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Employee</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Attendance</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Sift</th>
+                <th style="border-right-color: ActiveBorder; background-color: #dedede">OverTime</th>
+
+                <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model.AttendanceListResult)
+        {
+            <tbody>
+                <tr>
+                    <td><span class="EmployeeName">@item.tbl_staffInfo.Name</span></td>
+                    <td>@item.EmployeeAttendance</td>
+                    <td>@item.Sift</td>
+                    <td>@item.OverTime</td>
+                    <td>
+                        @Html.ActionLink("Edit", "AttendanceUpdate", new { id = item.AttendID, userid = @item.tbl_staffInfo.StaffID, empAttentdid = @item.EmployeeAttendance })
+                        @* @Html.ActionLink("Edit", "AttendanceUpdate", new { id = item.AttendID })*@
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="~/Images/delete.png" alt="Delete" onclick="DeleteAttendance(@item.AttendID)" />
+                        @*<img src="~/Images/delete.png" alt="Delete" style="cursor:pointer" onclick="DeleteAdvance(@item.AdvanceID)" />*@
+
+                    </td>
+
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div id="listpage" style="padding-left: 22px; padding-top:10px; width: 85%; float: left;">
+        @Html.PagedListPager(Model.AttendanceListResult, page => Url.Action("attendanceList", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+    </div>
+
+</body>
+</html>
+
+
+
+
+

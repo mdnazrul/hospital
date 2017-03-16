@@ -1,0 +1,85 @@
+﻿@model WebApplication2.Models.tbl_AppointmentSchedule
+
+@{
+    ViewBag.Title = "appointmentScheduleUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["userid"]";
+            //alert(x);
+            $("#StaffID option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Appointment Schedule List</h2>
+        <hr />
+        <h4 style="color:#ff6a00">@ViewBag.Message</h4>
+        @using (Html.BeginForm("appointmentScheduleUpdate", "AppointmentSchedule", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.StaffID, "EmployeeName", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("StaffID", (SelectList)ViewData["tbl_staffInfo"], "...Select StaffName...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PatientName, " PatientName", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(u => u.PatientName, new { id = "PatientName", @class = "form-control", placeholder = "Input PatientName", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MobNo, " MobNo", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(u => u.MobNo, new { id = "MobNo", @class = "form-control", placeholder = "Input MobNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.RoomNo, " RoomNo", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(u => u.RoomNo, new { id = "RoomNo", @class = "form-control", placeholder = "Input RoomNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.SerialNo, " SerialNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.SerialNo, new { id = "SerialNo", @class = "form-control", placeholder = "Input SerialNo", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-4 btn btn-group btn-lg">
+                                    <input type="submit" class="btn btn-primary" value="Update" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "appointmentScheduleList")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+
+

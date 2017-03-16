@@ -1,0 +1,130 @@
+﻿@model WebApplication2.Models.tbl_staffInfo
+
+@{
+    ViewBag.Title = "addStaff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+    <h2 style="padding-top:30px;color:#ff6a00;text-align:center;">Staff Information</h2>
+    <hr />
+    <div>
+        @using (Html.BeginForm("addStaff", "StaffInformation", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Name, " Name", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Name, new { id = "Name", @class = "form-control", placeholder = "Input Name", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.StaffTypeID, "Select StaffType", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("StaffTypeID", (SelectList)ViewData["tbl_StaffType"], "...Select StaffType...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.DesignationID, "Select Designation", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("DesignationID", (SelectList)ViewData["tbl_DesignationType"], "...Select Designation...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PresentAddress, " PresentAddress", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.PresentAddress, new { id = "PresentAddress", @class = "form-control", placeholder = "Input PresentAddress", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ParmanentAddress, " ParmanentAddress", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.ParmanentAddress, new { id = "ParmanentAddress", @class = "form-control", placeholder = "Input ParmanentAddress", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MobNo, " MobNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.MobNo, new { id = "MobNo", @class = "form-control", placeholder = "Input MobNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Image, " Image", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBox("file", "", new { type = "file" })  <br>
+                                </div>
+                            
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.BasicSalary, " BasicSalary", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.BasicSalary, new { id = "BasicSalary", @class = "form-control", placeholder = "Input BasicSalary", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Bonus, " Bonus", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Bonus, new { id = "Bonus", @class = "form-control", placeholder = "Input Bonus", Required = "required" })
+                                </div>
+                            </div>
+                          
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ConfermationDate, " ConfermationDate", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.ConfermationDate, new { @class = "form-control", placeholder = "Input ConfermationDate", id = "ConfermationDate", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ReginingDate, " ReginingDate", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.ReginingDate, new { id = "ReginingDate", @class = "form-control", placeholder = "Input ReginingDate", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.EmailNo, " EmailNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.EmailNo, new { id = "EmailNo", @class = "form-control", placeholder = "Input EmailNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Remarks, " Remarks", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Remarks, new { id = "Remarks", @class = "form-control", placeholder = "Input Remarks", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-10">
+                                    <input style="width:88px;margin-right:5px" type="submit" class="btn btn-primary" value="Save" />
+                                    <a class="btn btn-success" href="/StaffInformation/staffList">Show List</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <link href="../Content/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+        <script src="../Scripts/jquery.datetimepicker.full.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $('#JoiningDate').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d',
+                formatDate: 'Y-m-d'
+            });
+
+            $('#ConfermationDate').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d',
+                formatDate: 'Y-m-d'
+            });
+            $('#ReginingDate').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d',
+                formatDate: 'Y-m-d'
+            });
+        </script>
+    </div>

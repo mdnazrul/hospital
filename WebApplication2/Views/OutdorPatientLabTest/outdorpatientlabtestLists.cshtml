@@ -1,0 +1,66 @@
+﻿@model WebApplication2.Models.tbl_OutdorPatientLabTest
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "outdorpatientlabtestLists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">OutDoor Patient Lab Test Lists</h2>
+        <hr />
+        <div class="form-group">
+            <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                @Html.ActionLink("Create New", "outdorpatientlabtest")
+            </div>
+        </div>
+        @using (Html.BeginForm("outdorpatientlabtestLists", "OutdorPatientLabTest", FormMethod.Post))
+        {
+            <input type="text" name="keyword" />
+            <input type="submit" name="Submit" value="Search" />
+        }
+        <br />
+        <table id="myDataTable" class="gridtable" style=" width:60%; font-family:Tahoma;font-size:11px ;">
+            <thead>
+                <tr>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">OutdoorPatientName</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">Address</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">MobNo</th>
+                    <th style="border-right-color: ActiveBorder; background-color: #dedede">LabName</th>
+                    <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>                  
+                </tr>
+                </thead>
+                @foreach (var item in Model.outdorpatientlabtestListsResults)
+                {
+                  <tbody>
+                      <tr>
+                        <td>@item.OutdorName</td>
+                        <td>@item.Address</td>
+                        <td>@item.MobNo</td>
+                        <td>@item.tbl_LabInfo.LabName</td>
+                        <td>
+                            @Html.ActionLink("Edit", "outdorpatientlabtestUpdate", new { id = item.OutdorLabTestId ,labid=@item.LabID})
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            @Html.ActionLink("Delete", "outdorpatientlabtestDelet", new { id = item.OutdorLabTestId })
+
+                        </td>
+                    </tr>
+                      </tbody>
+
+                }
+
+        </table>
+        <div id="listpage" style="padding-left: 22px; width: 85%; float: left;">
+            @Html.PagedListPager(Model.outdorpatientlabtestListsResults, page => Url.Action("outdorpatientlabtestLists", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+        </div>
+    </div>
+</body>
+</html>

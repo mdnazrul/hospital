@@ -1,0 +1,75 @@
+﻿@model WebApplication2.Models.tbl_Loan
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "loanList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 style="text-align:center;color:#ff6a00;">Loan List</h2>
+    <hr />
+    <div class="form-group">
+        <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+            @Html.ActionLink("Add To Create", "addLoan")
+        </div>
+    </div>
+    @using (Html.BeginForm("loanList", "Loan", FormMethod.Post))
+    {
+        <input type="text" name="keyword" />
+        <input type="submit" value="Search" name="Submit">
+    }
+    <br />
+    <table id="myDataTable" class="gridtable" style=" width:70%; font-family:Tahoma;font-size:11px ;">
+        <thead>
+            <tr>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Employee</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Salary</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">LoanAmount</th>
+                <th style="border-right-color: ActiveBorder; background-color: #dedede">NewLoan</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">LoanBack</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">PaymentWay</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">GrandTotalLoan</th>
+                <th style="border-right-color: ActiveBorder; background-color: #dedede">PaidLoan</th>
+                <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model.loanListResults)
+        {
+            <tbody>
+                <tr>
+                    <td><span class="EmployeeName">@item.tbl_staffInfo.Name</span></td>
+                    <td>@item.Salary</td>
+                    <td>@item.LoanAmount</td>
+                    <td>@item.NewLoan</td>
+                    <td>@item.LoanBack</td>
+                    <td>@item.PaymentWay</td>
+                    <td>@item.GrandTotalLoan</td>
+                    <td>@item.PaidLoan</td>
+                    <td>
+                        @Html.ActionLink("Edit", "loanUpdate", new { id = item.LoanID, userid = @item.tbl_staffInfo.StaffID, paidid = @item.PaidLoan })
+
+                        @* @Html.ActionLink("Edit", "loanUpdate", new { id = item.LoanID })/*@
+                        @Html.ActionLink("Delete", "loanDelete", new { id = item.LoanID })
+                    </td>
+
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div id="listpage" style="padding-left: 22px; padding-top:10px; width: 85%; float: left;">
+        @Html.PagedListPager(Model.loanListResults, page => Url.Action("loanList", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+    </div>
+
+</body>
+</html>
+
+
+

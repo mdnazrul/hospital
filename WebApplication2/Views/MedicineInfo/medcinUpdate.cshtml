@@ -1,0 +1,91 @@
+﻿@model WebApplication2.Models.tbl_MedicineInfo
+
+@{
+    ViewBag.Title = "medcinUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["medicineid"]";
+            //alert(x);
+            $("#MediUnitID option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["catagoryid"]";
+            //alert(x);
+            $("#MediCataID option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2 style="color:#ff6a00;text-align:center;">Medecine Update</h2>
+        <hr />
+        <h3 style="color:#ff6a00">@ViewBag.Message</h3>
+        @using (Html.BeginForm("medcinUpdate", "MedicineInfo", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MediName, " MedicineName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.MediName, new { id = "MediName", @class = "form-control", placeholder = "Input MedicineName", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MedicompaName, " Company Name", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.MedicompaName, new { id = "MedicompaName", @class = "form-control", placeholder = "Input MedicompaName", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MediUnitID, "MedicineUnit", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("MediUnitID", (SelectList)ViewData["tbl_MedicinUnit"], "...Select MedicineUnit...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MediCataID, "Disease", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("MediCataID", (SelectList)ViewData["tbl_MedicinCatagory"], "...Select Disease...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Update" />
+                                </div>
+                            </div>
+                            <h3 style="color:#ff6a00">@Html.ActionLink("Back To List", "medicineInfoList")</h3>
+                            <div class="col-sm-6">
+                                <div id="SaleItems result_area">
+                                    <div class="CSSTableGenerator">
+                                        <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

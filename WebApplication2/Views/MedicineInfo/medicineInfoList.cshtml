@@ -1,0 +1,86 @@
+﻿@model WebApplication2.Models.tbl_MedicineInfo
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "medicineInfoList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+    @*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+
+        <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+
+        <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            function DeleteAdvance(pid, that) {
+                if (confirm("Do you want to delete the Row: " + pid)) {
+                    $.ajax({
+                        type: "POST",
+                        url: '/Advanced/advancedDelete',
+                        data: { id: pid },
+                        dataType: "json",
+                        success: function () {
+                            alert('Deleted Successfully');
+                            location = location.href;
+                            location.reload();
+                        }
+                    });
+                }
+            }
+        </script>*@
+</head>
+<body>
+    <h2 style="text-align:center;color:#ff6a00">Medicine Infomation List</h2>
+    <hr />
+    <h3 style="color:#ff6a00">@Html.ActionLink("Create New", "addmedicineInfo")</h3>
+    @using (Html.BeginForm("medicineInfoList", "MedicineInfo", FormMethod.Post))
+    {
+        <input type="text" name="keyword" />
+        <input type="submit" value="Search" name="Submit">
+    }
+    <hr />
+    <table id="myDataTable" class="gridtable" style=" width:60%; font-family:Tahoma;font-size:11px ;">
+        <thead>
+            <tr>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">MedicineName</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">MedicompanyName</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">MedicineUnit</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">GroupName</th>
+                <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.medicineInfoListResults)
+        {
+            <tbody>
+                <tr>
+                    <td>@item.MediName</td>
+                    <td>@item.MedicompaName</td>
+                    <td>@item.tbl_MedicinUnit.UnitName</td>
+                    <td>@item.tbl_MedicinCatagory.CatagoryName</td>
+                    <td>
+                        @Html.ActionLink("Edit", "medcinUpdate", new { id = item.MediInfoID, medicineid = @item.tbl_MedicinUnit.MediUnitID, catagoryid = @item.tbl_MedicinCatagory.MediCataID })
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.ActionLink("Delete", "medicinDelete", new { id = item.MediInfoID })
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div id="listpage" style="padding-left: 22px; width: 85%; float: left;">
+        @Html.PagedListPager(Model.medicineInfoListResults, page => Url.Action("medicineInfoList", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,416 @@
+﻿@model WebApplication2.Models.ReferenceOutDoorMedicineSalesModel
+@{
+    ViewBag.Title = "OutDoorMedicineSalesEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <style>
+        .CSSTableGenerator {
+            border: 1px solid #000000;
+            border-radius: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+            .CSSTableGenerator table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .CSSTableGenerator tr:last-child td:last-child {
+                -moz-border-radius-bottomright: 0px;
+                -webkit-border-bottom-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
+            .CSSTableGenerator table tr:first-child td:first-child {
+                -moz-border-radius-topleft: 0px;
+                -webkit-border-top-left-radius: 0px;
+                border-top-left-radius: 0px;
+            }
+
+            .CSSTableGenerator table tr:first-child td:last-child {
+                -moz-border-radius-topright: 0px;
+                -webkit-border-top-right-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            .CSSTableGenerator tr:last-child td:first-child {
+                -moz-border-radius-bottomleft: 0px;
+                -webkit-border-bottom-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+
+            .CSSTableGenerator tr:hover td {
+            }
+
+            .CSSTableGenerator tr:nth-child(odd) {
+                background-color: #aad4ff;
+            }
+
+            .CSSTableGenerator tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+
+            .CSSTableGenerator td {
+                vertical-align: middle;
+                border: 1px solid #000000;
+                border-width: 0px 1px 1px 0px;
+                text-align: center;
+                padding: 2px;
+                font-size: 10px;
+                font-family: Arial;
+                font-weight: normal;
+                color: #000000;
+            }
+
+            .CSSTableGenerator tr:last-child td {
+                border-width: 0px 1px 0px 0px;
+            }
+
+            .CSSTableGenerator tr td:last-child {
+                border-width: 0px 0px 1px 0px;
+            }
+
+            .CSSTableGenerator tr:last-child td:last-child {
+                border-width: 0px 0px 0px 0px;
+            }
+
+            .CSSTableGenerator tr:first-child td {
+                background: -o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);
+                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+                background: -moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
+                background: -o-linear-gradient(top,#005fbf,003f7f);
+                background-color: #005fbf;
+                border: 0px solid #000000;
+                text-align: center;
+                border-width: 0px 0px 1px 1px;
+                font-size: 11px;
+                font-family: Arial;
+                font-weight: bold;
+                color: #ffffff;
+            }
+
+            .CSSTableGenerator tr:first-child:hover td {
+                background: -o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);
+                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+                background: -moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
+                background: -o-linear-gradient(top,#005fbf,003f7f);
+                background-color: #005fbf;
+            }
+
+            .CSSTableGenerator tr:first-child td:first-child {
+                border-width: 0px 0px 1px 0px;
+            }
+
+            .CSSTableGenerator tr:first-child td:last-child {
+                border-width: 0px 0px 1px 1px;
+            }
+
+        .form-group {
+            margin-bottom: 5px !important;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 24px;
+            padding: 6px 10px;
+            font-size: 11px;
+            line-height: 1.428571429;
+            color: #000;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#Quantity").keyup(function () {
+                var x = $("#Rate").val();
+                var y = $("#Quantity").val();
+                var z = parseInt(x) * parseInt(y);
+                $("#Amount").val(parseInt(z));
+
+                var sum = parseInt($("#hidden_totalamount").val()) - parseInt($("#hidden_amount").val()) + parseInt($("#Amount").val());
+                $("#TotalAmount").val(sum);
+
+                //$("#DueAmount").val($("#GrandTotalAmount").val() - $("#PayAmount").val());
+            });
+
+            //$(document).ready(function () {
+            $("#DiscountAmount").keyup(function () {
+                var a = $("#TotalAmount").val();
+                var b = $("#VatAmount").val();
+                var vat = parseFloat(a) * parseFloat(b / 100);
+                var c = $("#DiscountAmount").val();
+                var discount = parseFloat(a) * parseFloat(c / 100);
+                var grandTotal = parseFloat(a) + parseFloat(vat) - parseFloat(discount);
+                $("#GrandTotalAmount").val(parseFloat(grandTotal));
+                //var sum = parseInt($("#hidden_grandt").val()) - parseInt($("#hidden_amount").val()) + parseInt($("#Amount").val());
+                //    $("#GrandTotalAmount").val(sum);
+
+            });
+
+            $("#PayAmount").keyup(function () {
+                var x = $("#GrandTotalAmount").val() - $("#PayAmount").val();
+                $("#DueAmount").val(x);
+            });
+        });
+
+
+        $(document).ready(function () {
+
+            //Save button click function
+            $('#btnUpdate').click(function () {
+
+                var OutdorMedicenSaleseId = $("#VocherDe_hiddenId").val();
+                var OutdorMedicineSalesVoucherNo = $("#OutdorMedicineSalesVoucherNo").val();
+                var OutdorPatientName = $("#OutdorPatientName").val();
+                var MediInfoID = $("#MediInfoID").val();
+                var Rate = $("#Rate").val();
+                var Quantity = $("#Quantity").val();
+                var Amount = $("#Amount").val();
+                var TotalAmount = $("#TotalAmount").val();
+                var VatAmount = $("#VatAmount").val();
+                var DiscountAmount = $("#DiscountAmount").val();
+                var GrandTotalAmount = $("#GrandTotalAmount").val();
+                var PayAmount = $("#PayAmount").val();
+                var DueAmount = $("#DueAmount").val();
+
+                if ($('#VocherDe_hiddenId').val() == '' || $('#OutdorPatientName').val() == '' || $('#MediInfoID').val() == '' || $('#Rate').val() == '' || $('#Quantity').val() == '' || $('#TotalAmount').val() == '' || $('#GrandTotalAmount').val() == '') {
+                    alert('Vocuher Id,OutdorPatientName,MedicineName, Quantity, Rate, TotalAmount and GrandTotal are required');
+                }
+                else {
+                    var data = {
+                        OutdorMedicineSalesVoucherNo: OutdorMedicineSalesVoucherNo,
+                        OutdorPatientName: OutdorPatientName,
+                        TotalAmount: TotalAmount,
+                        VatAmount: VatAmount,
+                        DiscountAmount: DiscountAmount,
+                        GrandTotalAmount: GrandTotalAmount,
+                        PayAmount: PayAmount,
+                        DueAmount: DueAmount,
+                        OutdorMedicenSaleseId: OutdorMedicenSaleseId,
+                        MediInfoID: MediInfoID,
+                        Rate: Rate,
+                        Quantity: Quantity,
+                        Amount: Amount
+                    }
+
+                    $.ajax({
+                        url: '../OutDoorMedicineSales/OutDoorMedicineSalesUpdate',
+                        type: "POST",
+                        data: JSON.stringify(data),
+                        dataType: "JSON",
+                        contentType: "application/json",
+                        success: function (d) {
+                            alert(d.message);
+                            $('#VocherDe_hiddenId').val('');
+                            $('#OutdorPatientName').val('');
+                            //$('#TotalAmount').val('');
+                            $("#MediInfoID").val('Select');
+                            $("#Rate").val('');
+                            $("#Quantity").val('');
+                            $("#Amount").val('');
+                            $("#hidden_amount").val('');
+                            $('#TotalAmount').val('');
+                            $('#VatAmount').val('');
+                            $('#DiscountAmount').val('');
+                            $("#hidden_grandt").val('');
+                            $('#GrandTotalAmount').val('');
+                            $('#PayAmount').val('');
+                            $('#DueAmount').val('');
+                            $("#btnUpdate").hide();
+                            window.location.reload();
+                        },
+                        error: function () {
+                            alert('Error. Please try again.');
+                        }
+                    });
+                }
+            });
+        });
+
+
+        function Edit(id, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11) {
+            $("#VocherDe_hiddenId").val(id);
+            $("#OutdorPatientName").val(value1);
+            $("#MediInfoID option").each(function () {
+                if ($(this).val() == value2) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+
+            $("#Rate").val(value3);
+            $("#Quantity").val(value4);
+            $("#Amount").val(value5);
+            $("#TotalAmount").val(value6);
+            $("#VatAmount").val(value7);
+            $("#DiscountAmount").val(value8);
+            $("#GrandTotalAmount").val(value9);
+            $("#PayAmount").val(value10);
+            $("#DueAmount").val(value11);
+
+            // calculate for grand total
+            $("#hidden_amount").val(value5);
+            $("#hidden_totalamount").val(value6);
+
+            $("#btnUpdate").show();
+        }
+
+        //function medicineSalesDelete(IndorMedicenSaleseVocherNo, id, amount)
+        //{
+        //    var IndorMedicenSaleseId = id;
+        //    var data = {
+        //        IndorMedicenSaleseVocherNo: IndorMedicenSaleseVocherNo,
+        //        IndorMedicenSaleseId: IndorMedicenSaleseId,
+        //        TotalAmount: amount
+        //    }
+        //    $.ajax({
+        //        url: '../IndorMedicineSales/IndormedicinesalesDelete',
+        //        type: "POST",
+        //        data: JSON.stringify(data),
+        //        dataType: "JSON",
+        //        contentType: "application/json",
+        //        success: function (d) {
+        //            alert(d.message);
+        //            window.location.reload();
+        //        },
+        //        error: function () {
+        //            alert('Error. Please try again.');
+        //        }
+        //    });
+        //}
+    </script>
+</head>
+<body>
+    <div>
+        <h4 style="text-align:center;color:#ff6a00">Outdoor Medicine Sales</h4>
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="IndorMedicenSaleseVocherNo">OutdorMedicineSalesVoucherNo</label>
+                            <input type="text" class="form-control" id="OutdorMedicineSalesVoucherNo" readonly value="@ViewBag.OutdorMedicineSalesVoucherNo" />
+                            <input type="hidden" class="form-control" id="VocherDe_hiddenId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="OutdorPatientName">OutdorPatientName</label>
+                            <input type="text" class="form-control" id="OutdorPatientName" />
+                        </div>
+                        <div class="form-group">
+                            <label for="MedicineName">Medicine Name</label>
+                            @Html.DropDownList("MediInfoID", (SelectList)ViewData["tbl_MedicineInfo"], "...Select Medicine...", new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label for="Rate">Rate</label>
+                            <input type="text" class="form-control" id="Rate" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Quantity">Quantity</label>
+                            <input type="text" class="form-control" id="Quantity" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Amount">Amount</label>
+                            <input type="text" class="form-control" id="Amount" readonly />
+                            <input type="hidden" class="form-control" id="hidden_amount" />
+                            <input type="hidden" class="form-control" id="hidden_totalamount">
+                        </div>
+                        <div class="form-group">
+                            <label for="TotalAmount">TotalAmount</label>
+                            <input type="text" class="form-control" id="TotalAmount" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label for="VatAmount">VatAmount</label>
+                            <input type="text" class="form-control" id="VatAmount" />
+                        </div>
+                        <div class="form-group">
+                            <label for="DiscountAmount">DiscountAmount</label>
+                            <input type="text" class="form-control" id="DiscountAmount" />
+                        </div>
+                        <div class="form-group">
+                            <label for="GrandTotalAmount">Grand Total Amount</label>
+                            <input type="text" class="form-control" id="GrandTotalAmount" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label for="PayAmount">Pay Amount</label>
+                            <input type="text" class="form-control" id="PayAmount" />
+                        </div>
+                        <div class="form-group">
+                            <label for="DueAmount">Due Amount</label>
+                            <input type="text" class="form-control" id="DueAmount" readonly />
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-10">
+                                <input type="button" class="btn btn-primary" id="btnUpdate" value="Update" style="display:none;" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                                @Html.ActionLink("Back To List", "outdorMedicineSalesList")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-horizontal">
+                        <div id="SaleItems result_area">
+                            <div class="CSSTableGenerator">
+                                <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;">
+                                    <tbody>
+                                        <tr>
+                                            <th>Medicin</th>
+                                            <th>Rate</th>
+                                            <th>Quantity</th>
+                                            <th>Amount</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        @foreach (var item in Model.OutdoorMedicinesalesDeltailsTbl)
+                                        {
+                                            <tr>
+                                                <td>@item.MediInfoID</td>
+                                                <td>@item.Rate</td>
+                                                <td>@item.Quantity</td>
+                                                <td>@item.Amount</td>
+                                                <td>
+                                                    <input type="button" name="edit" value="Edit" onclick="Edit(@item.OutdorMedicenSaleseId,'@item.tbl_OutdorMedicineSalesVoucher.OutdorPatientName', @item.MediInfoID, @item.Rate, @item.Quantity, @item.Amount,@item.tbl_OutdorMedicineSalesVoucher.TotalAmount,@item.tbl_OutdorMedicineSalesVoucher.VatAmount,@item.tbl_OutdorMedicineSalesVoucher.DiscountAmount, @item.tbl_OutdorMedicineSalesVoucher.GrandTotalAmount, @item.tbl_OutdorMedicineSalesVoucher.PayAmount, @item.tbl_OutdorMedicineSalesVoucher.DueAmount);">
+                                                    @* &nbsp;*@
+                                                    @*<input type="button" name="delete" value="Delete" onclick="medicineSalesDelete('@ViewBag.IndorMedicenSaleseVocherNo', @item.IndorMedicenSaleseId, @item.Amount);">*@
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                                <table id="dataTable1" class="gridtable" style="font-family:Tahoma;font-size:11px;"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

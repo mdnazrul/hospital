@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_AppointmentSchedule">
+    <Key>
+      <PropertyRef Name="AppSchedulID" />
+    </Key>
+    <Property Name="AppSchedulID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SerialNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_PatientInfo" Relationship="Self.FK_tbl_PatientInfo_tbl_AppointmentSchedule" FromRole="tbl_AppointmentSchedule" ToRole="tbl_PatientInfo" />
+    <NavigationProperty Name="tbl_PrescriptionInfo" Relationship="Self.FK_tbl_PrescriptionInfo_tbl_AppointmentSchedule" FromRole="tbl_AppointmentSchedule" ToRole="tbl_PrescriptionInfo" />
+  </EntityType>
+  <EntityType Name="tbl_DoctorInfo">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Speciality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorFee" Type="Decimal" Precision="7" Scale="2" />
+    <NavigationProperty Name="tbl_PrescriptionInfo" Relationship="Self.FK_tbl_PrescriptionInfo_tbl_DoctorInfo" FromRole="tbl_DoctorInfo" ToRole="tbl_PrescriptionInfo" />
+  </EntityType>
+  <EntityType Name="tbl_MedicinCatagory">
+    <Key>
+      <PropertyRef Name="MediCataID" />
+    </Key>
+    <Property Name="MediCataID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CatagoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_MedicineInfo" Relationship="Self.FK_tbl_MedicineInfo_tbl_MedicinCatagory" FromRole="tbl_MedicinCatagory" ToRole="tbl_MedicineInfo" />
+  </EntityType>
+  <EntityType Name="tbl_MedicineInfo">
+    <Key>
+      <PropertyRef Name="MediInfoID" />
+    </Key>
+    <Property Name="MediInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MediName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MedicompaName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MediUnitID" Type="Int32" />
+    <Property Name="MediCataID" Type="Int32" />
+    <NavigationProperty Name="tbl_MedicinCatagory" Relationship="Self.FK_tbl_MedicineInfo_tbl_MedicinCatagory" FromRole="tbl_MedicineInfo" ToRole="tbl_MedicinCatagory" />
+    <NavigationProperty Name="tbl_MedicinUnit" Relationship="Self.FK_tbl_MedicineInfo_tbl_MedicinUnit" FromRole="tbl_MedicineInfo" ToRole="tbl_MedicinUnit" />
+    <NavigationProperty Name="tbl_PrescriptionDetails" Relationship="Self.FK_tbl_PrescriptionDetails_tbl_MedicineInfo" FromRole="tbl_MedicineInfo" ToRole="tbl_PrescriptionDetails" />
+  </EntityType>
+  <EntityType Name="tbl_MedicinUnit">
+    <Key>
+      <PropertyRef Name="MediUnitID" />
+    </Key>
+    <Property Name="MediUnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_MedicineInfo" Relationship="Self.FK_tbl_MedicineInfo_tbl_MedicinUnit" FromRole="tbl_MedicinUnit" ToRole="tbl_MedicineInfo" />
+  </EntityType>
+  <EntityType Name="tbl_PatientInfo">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppSchedulID" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PatientMobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Disease" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Gardian" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WordNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BadNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmergencyMobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_AppointmentSchedule" Relationship="Self.FK_tbl_PatientInfo_tbl_AppointmentSchedule" FromRole="tbl_PatientInfo" ToRole="tbl_AppointmentSchedule" />
+  </EntityType>
+  <EntityType Name="tbl_PrescriptionDetails">
+    <Key>
+      <PropertyRef Name="PrescriptionId" />
+    </Key>
+    <Property Name="PrescriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrescriptionVoucherNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MediInfoID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Rate" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="Amount" Type="Decimal" Precision="7" Scale="2" />
+    <NavigationProperty Name="tbl_MedicineInfo" Relationship="Self.FK_tbl_PrescriptionDetails_tbl_MedicineInfo" FromRole="tbl_PrescriptionDetails" ToRole="tbl_MedicineInfo" />
+    <NavigationProperty Name="tbl_PrescriptionInfo" Relationship="Self.FK_tbl_PrescriptionDetails_tbl_PrescriptionInfo" FromRole="tbl_PrescriptionDetails" ToRole="tbl_PrescriptionInfo" />
+  </EntityType>
+  <EntityType Name="tbl_PrescriptionInfo">
+    <Key>
+      <PropertyRef Name="PrescriptionVoucherNo" />
+    </Key>
+    <Property Name="PrescriptionVoucherNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DoctorID" Type="Int32" Nullable="false" />
+    <Property Name="AppSchedulID" Type="Int32" Nullable="false" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="DoctorFee" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="GrandTotalAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="PaymentAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="DeuAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_AppointmentSchedule" Relationship="Self.FK_tbl_PrescriptionInfo_tbl_AppointmentSchedule" FromRole="tbl_PrescriptionInfo" ToRole="tbl_AppointmentSchedule" />
+    <NavigationProperty Name="tbl_DoctorInfo" Relationship="Self.FK_tbl_PrescriptionInfo_tbl_DoctorInfo" FromRole="tbl_PrescriptionInfo" ToRole="tbl_DoctorInfo" />
+    <NavigationProperty Name="tbl_PrescriptionDetails" Relationship="Self.FK_tbl_PrescriptionDetails_tbl_PrescriptionInfo" FromRole="tbl_PrescriptionInfo" ToRole="tbl_PrescriptionDetails" />
+  </EntityType>
+  <EntityType Name="View_PRESCRIPTION">
+    <Key>
+      <PropertyRef Name="AppSchedulID" />
+      <PropertyRef Name="DoctorID" />
+      <PropertyRef Name="MediInfoID" />
+    </Key>
+    <Property Name="AppSchedulID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DoctorID" Type="Int32" Nullable="false" />
+    <Property Name="DoctorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Speciality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorFee" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="GrandTotalAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="PaymentAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="DeuAmount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Rate" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="MediInfoID" Type="Int32" Nullable="false" />
+    <Property Name="MediName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UnitName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_tbl_PatientInfo_tbl_AppointmentSchedule">
+    <End Role="tbl_AppointmentSchedule" Type="Self.tbl_AppointmentSchedule" Multiplicity="1" />
+    <End Role="tbl_PatientInfo" Type="Self.tbl_PatientInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_AppointmentSchedule">
+        <PropertyRef Name="AppSchedulID" />
+      </Principal>
+      <Dependent Role="tbl_PatientInfo">
+        <PropertyRef Name="AppSchedulID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PrescriptionInfo_tbl_AppointmentSchedule">
+    <End Role="tbl_AppointmentSchedule" Type="Self.tbl_AppointmentSchedule" Multiplicity="1" />
+    <End Role="tbl_PrescriptionInfo" Type="Self.tbl_PrescriptionInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_AppointmentSchedule">
+        <PropertyRef Name="AppSchedulID" />
+      </Principal>
+      <Dependent Role="tbl_PrescriptionInfo">
+        <PropertyRef Name="AppSchedulID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PrescriptionInfo_tbl_DoctorInfo">
+    <End Role="tbl_DoctorInfo" Type="Self.tbl_DoctorInfo" Multiplicity="1" />
+    <End Role="tbl_PrescriptionInfo" Type="Self.tbl_PrescriptionInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_DoctorInfo">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="tbl_PrescriptionInfo">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicineInfo_tbl_MedicinCatagory">
+    <End Role="tbl_MedicinCatagory" Type="Self.tbl_MedicinCatagory" Multiplicity="0..1" />
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicinCatagory">
+        <PropertyRef Name="MediCataID" />
+      </Principal>
+      <Dependent Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediCataID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicineInfo_tbl_MedicinUnit">
+    <End Role="tbl_MedicinUnit" Type="Self.tbl_MedicinUnit" Multiplicity="0..1" />
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicinUnit">
+        <PropertyRef Name="MediUnitID" />
+      </Principal>
+      <Dependent Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PrescriptionDetails_tbl_MedicineInfo">
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="1" />
+    <End Role="tbl_PrescriptionDetails" Type="Self.tbl_PrescriptionDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediInfoID" />
+      </Principal>
+      <Dependent Role="tbl_PrescriptionDetails">
+        <PropertyRef Name="MediInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PrescriptionDetails_tbl_PrescriptionInfo">
+    <End Role="tbl_PrescriptionInfo" Type="Self.tbl_PrescriptionInfo" Multiplicity="1" />
+    <End Role="tbl_PrescriptionDetails" Type="Self.tbl_PrescriptionDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PrescriptionInfo">
+        <PropertyRef Name="PrescriptionVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_PrescriptionDetails">
+        <PropertyRef Name="PrescriptionVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PMSDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tbl_AppointmentSchedule" EntityType="Self.tbl_AppointmentSchedule" />
+    <EntitySet Name="tbl_DoctorInfo" EntityType="Self.tbl_DoctorInfo" />
+    <EntitySet Name="tbl_MedicinCatagory" EntityType="Self.tbl_MedicinCatagory" />
+    <EntitySet Name="tbl_MedicineInfo" EntityType="Self.tbl_MedicineInfo" />
+    <EntitySet Name="tbl_MedicinUnit" EntityType="Self.tbl_MedicinUnit" />
+    <EntitySet Name="tbl_PatientInfo" EntityType="Self.tbl_PatientInfo" />
+    <EntitySet Name="tbl_PrescriptionDetails" EntityType="Self.tbl_PrescriptionDetails" />
+    <EntitySet Name="tbl_PrescriptionInfo" EntityType="Self.tbl_PrescriptionInfo" />
+    <EntitySet Name="View_PRESCRIPTION" EntityType="Self.View_PRESCRIPTION" />
+    <AssociationSet Name="FK_tbl_PatientInfo_tbl_AppointmentSchedule" Association="Self.FK_tbl_PatientInfo_tbl_AppointmentSchedule">
+      <End Role="tbl_AppointmentSchedule" EntitySet="tbl_AppointmentSchedule" />
+      <End Role="tbl_PatientInfo" EntitySet="tbl_PatientInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PrescriptionInfo_tbl_AppointmentSchedule" Association="Self.FK_tbl_PrescriptionInfo_tbl_AppointmentSchedule">
+      <End Role="tbl_AppointmentSchedule" EntitySet="tbl_AppointmentSchedule" />
+      <End Role="tbl_PrescriptionInfo" EntitySet="tbl_PrescriptionInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PrescriptionInfo_tbl_DoctorInfo" Association="Self.FK_tbl_PrescriptionInfo_tbl_DoctorInfo">
+      <End Role="tbl_DoctorInfo" EntitySet="tbl_DoctorInfo" />
+      <End Role="tbl_PrescriptionInfo" EntitySet="tbl_PrescriptionInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicineInfo_tbl_MedicinCatagory" Association="Self.FK_tbl_MedicineInfo_tbl_MedicinCatagory">
+      <End Role="tbl_MedicinCatagory" EntitySet="tbl_MedicinCatagory" />
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicineInfo_tbl_MedicinUnit" Association="Self.FK_tbl_MedicineInfo_tbl_MedicinUnit">
+      <End Role="tbl_MedicinUnit" EntitySet="tbl_MedicinUnit" />
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PrescriptionDetails_tbl_MedicineInfo" Association="Self.FK_tbl_PrescriptionDetails_tbl_MedicineInfo">
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+      <End Role="tbl_PrescriptionDetails" EntitySet="tbl_PrescriptionDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PrescriptionDetails_tbl_PrescriptionInfo" Association="Self.FK_tbl_PrescriptionDetails_tbl_PrescriptionInfo">
+      <End Role="tbl_PrescriptionInfo" EntitySet="tbl_PrescriptionInfo" />
+      <End Role="tbl_PrescriptionDetails" EntitySet="tbl_PrescriptionDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

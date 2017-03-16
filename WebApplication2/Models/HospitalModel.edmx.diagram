@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6e8758dfaf4143c4bbb84f0828637678" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_AdvanceSalaryDetailPrevious_Log" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_AdvanceSalaryDetails" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_AdvanceSalarySummary" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_Attendance" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_Attendance_Manual_Log" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_AttendanceBonus" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_AttendanceProcess_Log" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_AttendanceStatusProcess_Log" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_Holiday" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_HolidayType" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_HospitalSetup" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_LeaveApply" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_LeaveType" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_Salary_Deduction" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_Salary_Punishment" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.HR_Shift" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.sysdiagram" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbe_NurseSectionType" Width="1.5" PointX="6" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Advance" Width="1.5" PointX="5.25" PointY="55.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AllowanceDetails" Width="1.5" PointX="7.5" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AllowanceType" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AllowanceVoucher" Width="1.5" PointX="5.25" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AmbCatagory" Width="1.5" PointX="6" PointY="63.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AmbulanceInfo" Width="1.5" PointX="8.25" PointY="56.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AmbulanceSchedule" Width="1.5" PointX="10.5" PointY="62.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_AppointmentSchedule" Width="1.5" PointX="10.25" PointY="52" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Attendance" Width="1.5" PointX="5.25" PointY="48.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_BloodDonerInfo" Width="1.5" PointX="23.75" PointY="66" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_BloodGroup" Width="1.5" PointX="21.5" PointY="63.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_BloodPurchaseeDetails" Width="1.5" PointX="23.75" PointY="58.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_BloodPurchaseVoucher" Width="1.5" PointX="16.5" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_BloodSupplierInfo" Width="1.5" PointX="14.25" PointY="60.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_BloodSupplierProfile" Width="1.5" PointX="19.5" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Claim" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_DesignationType" Width="1.5" PointX="0.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_DoctorDuty" Width="1.5" PointX="5.25" PointY="67.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_DoctorSpecialization" Width="1.5" PointX="5.25" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_IndorBloodSalesDetails" Width="1.5" PointX="18.75" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_IndorBloodSalesVoucher" Width="1.5" PointX="16.5" PointY="58.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_IndorMedicenPurshaseVoucher" Width="1.5" PointX="16.5" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_IndorMedicinePurchaseDetails" Width="1.5" PointX="21.75" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_IndorMedicineSalesDetails" Width="1.5" PointX="24.75" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_IndorMedicineSalesVoucher" Width="1.5" PointX="19.5" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.Tbl_IndorPatientLabTest" Width="1.5" PointX="7.5" PointY="74" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_InvoiceDetails" Width="1.5" PointX="23.75" PointY="62.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_InvoiceVocher" Width="1.5" PointX="21.5" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_LabInfo" Width="1.5" PointX="5.25" PointY="74.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Leave" Width="1.5" PointX="8.25" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Loan" Width="1.5" PointX="11.25" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_MedicinCatagory" Width="1.5" PointX="17.25" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_MedicineInfo" Width="1.5" PointX="19.5" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_MedicineSupplierInfo" Width="1.5" PointX="14.25" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_MedicineSupplierProfile" Width="1.5" PointX="22.5" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_MedicinUnit" Width="1.5" PointX="17.25" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_NurseDuty" Width="1.5" PointX="8.25" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_OperationInfo" Width="1.5" PointX="5.25" PointY="91" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_OutdorBloodSalesDetails" Width="1.5" PointX="18.75" PointY="81.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_OutdorBloodSalesVoucher" Width="1.5" PointX="16.5" PointY="80.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_OutdorMedicineSalesDetails" Width="1.5" PointX="18.75" PointY="85.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_OutdorMedicineSalesVoucher" Width="1.5" PointX="16.5" PointY="85.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_OutdorPatientLabTest" Width="1.5" PointX="10.5" PointY="73.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_PatientInfo" Width="1.5" PointX="17.25" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_PationRoomInformation" Width="1.5" PointX="15" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Referenceinfo" Width="1.5" PointX="15" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_RoomCatagory" Width="1.5" PointX="12.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_RoomType" Width="1.5" PointX="12.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Salary" Width="1.5" PointX="11.25" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_Service" Width="1.5" PointX="21.5" PointY="66.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_SpecializationType" Width="1.5" PointX="3" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_StaffEducation" Width="1.5" PointX="5.25" PointY="99.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_staffInfo" Width="1.5" PointX="3" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_StaffType" Width="1.5" PointX="0.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_UserInfo" Width="1.5" PointX="14.25" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalManagementSystemDBModel.tbl_UserRole" Width="1.5" PointX="12" PointY="43.75" IsExpanded="true" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_NurseDuty_tbe_NurseSectionType" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Advance_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Advance_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AllowanceDetails_tbl_AllowanceType" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AllowanceDetails_tbl_AllowanceVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AllowanceVoucher_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AmbulanceInfo_tbl_AmbCatagory" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AmbulanceInfo_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AmbulanceSchedule_tbl_AmbulanceInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AppointmentSchedule_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_AppointmentSchedule_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Attendance_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Attendance_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodDonerInfo_tbl_BloodGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodPurchasee_tbl_BloodGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorBloodSalesDetails_tbl_BloodGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorBloodSalesDetails_tbl_BloodGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodPurchasee_tbl_BloodPurchaseVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodPurchaseVoucher_tbl_BloodSupplierInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodPurchaseVoucher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodSupplierProfile_tbl_BloodSupplierInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_BloodSupplierProfile_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_staffInfo_tbl_DesignationType" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_DoctorDuty_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_DoctorSpecialization_tbl_SpecializationType" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_DoctorSpecialization_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorBloodSalesDetails_tbl_IndorBloodSalesVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorBloodSalesDetails_tbl_MedicinUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorBloodSalesVoucher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicenPurshaseVoucher_tbl_MedicineSupplierInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicenPurshaseVoucher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicinePurchaseDetails_tbl_MedicenPurshaseVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicinePurchaseDetails_tbl_MedicineInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorMedicineSalesDetails_tbl_IndorMedicineSalesVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorMedicineSalesDetails_tbl_MedicineInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorMedicineSalesVoucher_tbl_PatientInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_IndorMedicineSalesVoucher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_Tbl_LabTest_tbl_LabInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_Tbl_LabTest_tbl_PatientInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_Tbl_LabTest_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_InvoiceDetails_tbl_InvoiceVocher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_InvoiceDetails_tbl_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_InvoiceVocher_tbl_PatientInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_InvoiceVocher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_LabInfo_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorPatientLabTest_tbl_LabInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Leave_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Leave_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Loan_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Loan_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicineInfo_tbl_MedicinCatagory" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicineInfo_tbl_MedicinUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo1" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicineSupplierProfile_tbl_MedicineSupplierInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_MedicineSupplierProfile_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorBloodSalesDetails_tbl_MedicinUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_NurseDuty_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OperationInfo_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorBloodSalesDetails_tbl_OutdorBloodSalesVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorBloodSalesVoucher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorMedicineSalesDetails_tbl_OutdorMedicineSalesVoucher" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorMedicineSalesVoucher_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_OutdorPatientLabTest_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_PatientInfo_tbl_PationRoomInformation" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_PatientInfo_tbl_Referenceinfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_PationRoomInformation_tbl_RoomCatagory" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_PationRoomInformation_tbl_RoomType" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Salary_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_Salary_tbl_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_StaffEducation_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_staffInfo_tbl_StaffType" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_UserInfo_tbl_staffInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalManagementSystemDBModel.FK_tbl_UserInfo_tbl_UserRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

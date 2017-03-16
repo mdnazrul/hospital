@@ -1,0 +1,1098 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HospitalManagementSystemDBModelStoreContainer" CdmEntityContainer="HospitalManagementSystemDBEntities">
+    <EntitySetMapping Name="HR_AdvanceSalaryDetailPrevious_Log">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_AdvanceSalaryDetailPrevious_Log">
+        <MappingFragment StoreEntitySet="HR_AdvanceSalaryDetailPrevious_Log">
+          <ScalarProperty Name="AdvanceSalaryDetailsLogId" ColumnName="AdvanceSalaryDetailsLogId" />
+          <ScalarProperty Name="AdvanceSalaryDetailsId" ColumnName="AdvanceSalaryDetailsId" />
+          <ScalarProperty Name="ASCode" ColumnName="ASCode" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="ResionId" ColumnName="ResionId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="InstalmentAmount" ColumnName="InstalmentAmount" />
+          <ScalarProperty Name="NoOfInstalment" ColumnName="NoOfInstalment" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="AdvanceDeduction" ColumnName="AdvanceDeduction" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_AdvanceSalaryDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_AdvanceSalaryDetails">
+        <MappingFragment StoreEntitySet="HR_AdvanceSalaryDetails">
+          <ScalarProperty Name="AdvanceSalaryDetails_Id" ColumnName="AdvanceSalaryDetails_Id" />
+          <ScalarProperty Name="AdvancePay_Code" ColumnName="AdvancePay_Code" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="TotalAdvance_Amount" ColumnName="TotalAdvance_Amount" />
+          <ScalarProperty Name="Advance_Installment_Amount" ColumnName="Advance_Installment_Amount" />
+          <ScalarProperty Name="Number_Of_Installment" ColumnName="Number_Of_Installment" />
+          <ScalarProperty Name="Advance_FromDate" ColumnName="Advance_FromDate" />
+          <ScalarProperty Name="Advance_ToDate" ColumnName="Advance_ToDate" />
+          <ScalarProperty Name="Deduct_Month" ColumnName="Deduct_Month" />
+          <ScalarProperty Name="Deduct_Year" ColumnName="Deduct_Year" />
+          <ScalarProperty Name="PayScheduleDate" ColumnName="PayScheduleDate" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="AdvanceDeduction_Status" ColumnName="AdvanceDeduction_Status" />
+          <ScalarProperty Name="Advance_Remarks" ColumnName="Advance_Remarks" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_AdvanceSalarySummary">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_AdvanceSalarySummary">
+        <MappingFragment StoreEntitySet="HR_AdvanceSalarySummary">
+          <ScalarProperty Name="AdvanceSalaryId" ColumnName="AdvanceSalaryId" />
+          <ScalarProperty Name="AdvancePay_Code" ColumnName="AdvancePay_Code" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="TotalAdvance_Amount" ColumnName="TotalAdvance_Amount" />
+          <ScalarProperty Name="Advance_Installment_Amount" ColumnName="Advance_Installment_Amount" />
+          <ScalarProperty Name="Number_Of_Installment" ColumnName="Number_Of_Installment" />
+          <ScalarProperty Name="Advance_FromDate" ColumnName="Advance_FromDate" />
+          <ScalarProperty Name="Advance_ToDate" ColumnName="Advance_ToDate" />
+          <ScalarProperty Name="PayScheduleDate" ColumnName="PayScheduleDate" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="AdvanceRemarks" ColumnName="AdvanceRemarks" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_Attendance">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_Attendance">
+        <MappingFragment StoreEntitySet="HR_Attendance">
+          <ScalarProperty Name="AttendanceId" ColumnName="AttendanceId" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="Attendance_Date" ColumnName="Attendance_Date" />
+          <ScalarProperty Name="Attendance_Day" ColumnName="Attendance_Day" />
+          <ScalarProperty Name="Working_DayType" ColumnName="Working_DayType" />
+          <ScalarProperty Name="In_Time" ColumnName="In_Time" />
+          <ScalarProperty Name="Out_Time" ColumnName="Out_Time" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="AttendanceStatus" ColumnName="AttendanceStatus" />
+          <ScalarProperty Name="Over_Time" ColumnName="Over_Time" />
+          <ScalarProperty Name="Worked_Time" ColumnName="Worked_Time" />
+          <ScalarProperty Name="ShiftTotalTime" ColumnName="ShiftTotalTime" />
+          <ScalarProperty Name="OT_Status" ColumnName="OT_Status" />
+          <ScalarProperty Name="OT_Hour" ColumnName="OT_Hour" />
+          <ScalarProperty Name="OT_Minute" ColumnName="OT_Minute" />
+          <ScalarProperty Name="OT_ExtraAdd" ColumnName="OT_ExtraAdd" />
+          <ScalarProperty Name="OT_Deduction" ColumnName="OT_Deduction" />
+          <ScalarProperty Name="OT_Total" ColumnName="OT_Total" />
+          <ScalarProperty Name="Update_Status" ColumnName="Update_Status" />
+          <ScalarProperty Name="ManualAttendanceStatus" ColumnName="ManualAttendanceStatus" />
+          <ScalarProperty Name="AttendanceRemarks" ColumnName="AttendanceRemarks" />
+          <ScalarProperty Name="LeaveCode" ColumnName="LeaveCode" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_Attendance_Manual_Log">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_Attendance_Manual_Log">
+        <MappingFragment StoreEntitySet="HR_Attendance_Manual_Log">
+          <ScalarProperty Name="Attendance_Manual_LogId" ColumnName="Attendance_Manual_LogId" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="In_Time" ColumnName="In_Time" />
+          <ScalarProperty Name="Out_Time" ColumnName="Out_Time" />
+          <ScalarProperty Name="Over_Time" ColumnName="Over_Time" />
+          <ScalarProperty Name="OT_Hour" ColumnName="OT_Hour" />
+          <ScalarProperty Name="OT_Minute" ColumnName="OT_Minute" />
+          <ScalarProperty Name="OT_Total" ColumnName="OT_Total" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="AttendanceStatus" ColumnName="AttendanceStatus" />
+          <ScalarProperty Name="AttendanceRemarks" ColumnName="AttendanceRemarks" />
+          <ScalarProperty Name="Attendance_Date" ColumnName="Attendance_Date" />
+          <ScalarProperty Name="Attendance_Day" ColumnName="Attendance_Day" />
+          <ScalarProperty Name="Working_DayType" ColumnName="Working_DayType" />
+          <ScalarProperty Name="Update_Status" ColumnName="Update_Status" />
+          <ScalarProperty Name="Attendance_Process_Status" ColumnName="Attendance_Process_Status" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_AttendanceBonus">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_AttendanceBonus">
+        <MappingFragment StoreEntitySet="HR_AttendanceBonus">
+          <ScalarProperty Name="AttendanceBouns_Id" ColumnName="AttendanceBouns_Id" />
+          <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+          <ScalarProperty Name="AttendanceDays1" ColumnName="AttendanceDays1" />
+          <ScalarProperty Name="AttendanceDays2" ColumnName="AttendanceDays2" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Amount1" ColumnName="Amount1" />
+          <ScalarProperty Name="Amount2" ColumnName="Amount2" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_AttendanceProcess_Log">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_AttendanceProcess_Log">
+        <MappingFragment StoreEntitySet="HR_AttendanceProcess_Log">
+          <ScalarProperty Name="Att_ProcessLog_Id" ColumnName="Att_ProcessLog_Id" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_AttendanceStatusProcess_Log">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_AttendanceStatusProcess_Log">
+        <MappingFragment StoreEntitySet="HR_AttendanceStatusProcess_Log">
+          <ScalarProperty Name="Att_StatusProcessLog_Id" ColumnName="Att_StatusProcessLog_Id" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Ip_Address" ColumnName="Ip_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_Holiday">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_Holiday">
+        <MappingFragment StoreEntitySet="HR_Holiday">
+          <ScalarProperty Name="HoilidayId" ColumnName="HoilidayId" />
+          <ScalarProperty Name="HolidayName" ColumnName="HolidayName" />
+          <ScalarProperty Name="HolidayTypeCode" ColumnName="HolidayTypeCode" />
+          <ScalarProperty Name="Holiday_Date" ColumnName="Holiday_Date" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="TotalDay" ColumnName="TotalDay" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_HolidayType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_HolidayType">
+        <MappingFragment StoreEntitySet="HR_HolidayType">
+          <ScalarProperty Name="HoildayTypeId" ColumnName="HoildayTypeId" />
+          <ScalarProperty Name="HolidayType" ColumnName="HolidayType" />
+          <ScalarProperty Name="HolidayTypeCode" ColumnName="HolidayTypeCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_HospitalSetup">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_HospitalSetup">
+        <MappingFragment StoreEntitySet="HR_HospitalSetup">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="Company_Address" ColumnName="Company_Address" />
+          <ScalarProperty Name="Company_ContactNo" ColumnName="Company_ContactNo" />
+          <ScalarProperty Name="Company_Fax" ColumnName="Company_Fax" />
+          <ScalarProperty Name="Company_Email" ColumnName="Company_Email" />
+          <ScalarProperty Name="Company_Web" ColumnName="Company_Web" />
+          <ScalarProperty Name="Company_Logo" ColumnName="Company_Logo" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LeaveApply">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_LeaveApply">
+        <MappingFragment StoreEntitySet="HR_LeaveApply">
+          <ScalarProperty Name="LeaveId" ColumnName="LeaveId" />
+          <ScalarProperty Name="LeaveCode" ColumnName="LeaveCode" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="LeaveTypeCode" ColumnName="LeaveTypeCode" />
+          <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+          <ScalarProperty Name="LeaveDateFrom" ColumnName="LeaveDateFrom" />
+          <ScalarProperty Name="LeaveDateTo" ColumnName="LeaveDateTo" />
+          <ScalarProperty Name="TotalLeave" ColumnName="TotalLeave" />
+          <ScalarProperty Name="SupervisorEID" ColumnName="SupervisorEID" />
+          <ScalarProperty Name="SupervisorApproveStatus" ColumnName="SupervisorApproveStatus" />
+          <ScalarProperty Name="SupervisorApproveDate" ColumnName="SupervisorApproveDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_LeaveType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_LeaveType">
+        <MappingFragment StoreEntitySet="HR_LeaveType">
+          <ScalarProperty Name="LeaveTypeId" ColumnName="LeaveTypeId" />
+          <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+          <ScalarProperty Name="LeaveTypeCode" ColumnName="LeaveTypeCode" />
+          <ScalarProperty Name="LeaveDay" ColumnName="LeaveDay" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_Salary_Deduction">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_Salary_Deduction">
+        <MappingFragment StoreEntitySet="HR_Salary_Deduction">
+          <ScalarProperty Name="Salary_Deduction_Id" ColumnName="Salary_Deduction_Id" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Salary_DeductType" ColumnName="Salary_DeductType" />
+          <ScalarProperty Name="Salary_DeductDay" ColumnName="Salary_DeductDay" />
+          <ScalarProperty Name="Salary_Deduct_Amount" ColumnName="Salary_Deduct_Amount" />
+          <ScalarProperty Name="Salary_DeductDate" ColumnName="Salary_DeductDate" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_Salary_Punishment">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_Salary_Punishment">
+        <MappingFragment StoreEntitySet="HR_Salary_Punishment">
+          <ScalarProperty Name="SalryPunishment_Id" ColumnName="SalryPunishment_Id" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Salary_DeductType" ColumnName="Salary_DeductType" />
+          <ScalarProperty Name="TotalDeductDay" ColumnName="TotalDeductDay" />
+          <ScalarProperty Name="Salary_Deduct_Amount" ColumnName="Salary_Deduct_Amount" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HR_Shift">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.HR_Shift">
+        <MappingFragment StoreEntitySet="HR_Shift">
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="LateAllowed" ColumnName="LateAllowed" />
+          <ScalarProperty Name="Weekend1" ColumnName="Weekend1" />
+          <ScalarProperty Name="Weekend2" ColumnName="Weekend2" />
+          <ScalarProperty Name="ShiftType" ColumnName="ShiftType" />
+          <ScalarProperty Name="ShiftRemarks" ColumnName="ShiftRemarks" />
+          <ScalarProperty Name="TotalShiftHour" ColumnName="TotalShiftHour" />
+          <ScalarProperty Name="AddBy" ColumnName="AddBy" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbe_NurseSectionType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbe_NurseSectionType">
+        <MappingFragment StoreEntitySet="tbe_NurseSectionType">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Advance">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Advance">
+        <MappingFragment StoreEntitySet="tbl_Advance">
+          <ScalarProperty Name="AdvanceID" ColumnName="AdvanceID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="AdvanceDate" ColumnName="AdvanceDate" />
+          <ScalarProperty Name="AdvancePurpose" ColumnName="AdvancePurpose" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="NewAdvance" ColumnName="NewAdvance" />
+          <ScalarProperty Name="AdvanceBack" ColumnName="AdvanceBack" />
+          <ScalarProperty Name="PaymentWay" ColumnName="PaymentWay" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AllowanceDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AllowanceDetails">
+        <MappingFragment StoreEntitySet="tbl_AllowanceDetails">
+          <ScalarProperty Name="AllowanceDetailId" ColumnName="AllowanceDetailId" />
+          <ScalarProperty Name="AllowanceVocherNo" ColumnName="AllowanceVocherNo" />
+          <ScalarProperty Name="AllowanceID" ColumnName="AllowanceID" />
+          <ScalarProperty Name="AllowanceAmount" ColumnName="AllowanceAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AllowanceType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AllowanceType">
+        <MappingFragment StoreEntitySet="tbl_AllowanceType">
+          <ScalarProperty Name="AllowanceID" ColumnName="AllowanceID" />
+          <ScalarProperty Name="AllowanceName" ColumnName="AllowanceName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AllowanceVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AllowanceVoucher">
+        <MappingFragment StoreEntitySet="tbl_AllowanceVoucher">
+          <ScalarProperty Name="AllowanceVocherNo" ColumnName="AllowanceVocherNo" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AmbCatagory">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AmbCatagory">
+        <MappingFragment StoreEntitySet="tbl_AmbCatagory">
+          <ScalarProperty Name="AmbCatagoryID" ColumnName="AmbCatagoryID" />
+          <ScalarProperty Name="AmbCatName" ColumnName="AmbCatName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AmbulanceInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AmbulanceInfo">
+        <MappingFragment StoreEntitySet="tbl_AmbulanceInfo">
+          <ScalarProperty Name="AmbID" ColumnName="AmbID" />
+          <ScalarProperty Name="AmbPlateNo" ColumnName="AmbPlateNo" />
+          <ScalarProperty Name="AmbCatagoryID" ColumnName="AmbCatagoryID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="FreeOrBusy" ColumnName="FreeOrBusy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AmbulanceSchedule">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AmbulanceSchedule">
+        <MappingFragment StoreEntitySet="tbl_AmbulanceSchedule">
+          <ScalarProperty Name="AmbSchedulID" ColumnName="AmbSchedulID" />
+          <ScalarProperty Name="AmbID" ColumnName="AmbID" />
+          <ScalarProperty Name="TargetLocation" ColumnName="TargetLocation" />
+          <ScalarProperty Name="GoingTime" ColumnName="GoingTime" />
+          <ScalarProperty Name="BackTime" ColumnName="BackTime" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PatientDescription" ColumnName="PatientDescription" />
+          <ScalarProperty Name="FreeOrBusy" ColumnName="FreeOrBusy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AppointmentSchedule">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_AppointmentSchedule">
+        <MappingFragment StoreEntitySet="tbl_AppointmentSchedule">
+          <ScalarProperty Name="AppSchedulID" ColumnName="AppSchedulID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Attendance">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Attendance">
+        <MappingFragment StoreEntitySet="tbl_Attendance">
+          <ScalarProperty Name="AttendID" ColumnName="AttendID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="EmployeeAttendance" ColumnName="EmployeeAttendance" />
+          <ScalarProperty Name="Sift" ColumnName="Sift" />
+          <ScalarProperty Name="OverTime" ColumnName="OverTime" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BloodDonerInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_BloodDonerInfo">
+        <MappingFragment StoreEntitySet="tbl_BloodDonerInfo">
+          <ScalarProperty Name="BloodDonerID" ColumnName="BloodDonerID" />
+          <ScalarProperty Name="BloodDonerName" ColumnName="BloodDonerName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BloodID" ColumnName="BloodID" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="BloodDonerEmail" ColumnName="BloodDonerEmail" />
+          <ScalarProperty Name="BloodAmount" ColumnName="BloodAmount" />
+          <ScalarProperty Name="NationalId" ColumnName="NationalId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BloodGroup">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_BloodGroup">
+        <MappingFragment StoreEntitySet="tbl_BloodGroup">
+          <ScalarProperty Name="BloodID" ColumnName="BloodID" />
+          <ScalarProperty Name="BloodName" ColumnName="BloodName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BloodPurchaseeDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_BloodPurchaseeDetails">
+        <MappingFragment StoreEntitySet="tbl_BloodPurchaseeDetails">
+          <ScalarProperty Name="BloodPurchaseID" ColumnName="BloodPurchaseID" />
+          <ScalarProperty Name="BloodPurchaseVoucherNo" ColumnName="BloodPurchaseVoucherNo" />
+          <ScalarProperty Name="BloodID" ColumnName="BloodID" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BloodPurchaseVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_BloodPurchaseVoucher">
+        <MappingFragment StoreEntitySet="tbl_BloodPurchaseVoucher">
+          <ScalarProperty Name="BloodPurchaseVoucherNo" ColumnName="BloodPurchaseVoucherNo" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="BloodSupplyerID" ColumnName="BloodSupplyerID" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BloodSupplierInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_BloodSupplierInfo">
+        <MappingFragment StoreEntitySet="tbl_BloodSupplierInfo">
+          <ScalarProperty Name="BloodSupplyerID" ColumnName="BloodSupplyerID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ComAddress" ColumnName="ComAddress" />
+          <ScalarProperty Name="ComMobNo" ColumnName="ComMobNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="ContractPersMobNo" ColumnName="ContractPersMobNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BloodSupplierProfile">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_BloodSupplierProfile">
+        <MappingFragment StoreEntitySet="tbl_BloodSupplierProfile">
+          <ScalarProperty Name="BloodSupplierProfileID" ColumnName="BloodSupplierProfileID" />
+          <ScalarProperty Name="BloodSupplyerID" ColumnName="BloodSupplyerID" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="DueAmountBack" ColumnName="DueAmountBack" />
+          <ScalarProperty Name="DueAmountBackDate" ColumnName="DueAmountBackDate" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Claim">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Claim">
+        <MappingFragment StoreEntitySet="tbl_Claim">
+          <ScalarProperty Name="ClaimID" ColumnName="ClaimID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="AgreemntInfo" ColumnName="AgreemntInfo" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TimeDuration" ColumnName="TimeDuration" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DesignationType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_DesignationType">
+        <MappingFragment StoreEntitySet="tbl_DesignationType">
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="DesingnationName" ColumnName="DesingnationName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DoctorDuty">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_DoctorDuty">
+        <MappingFragment StoreEntitySet="tbl_DoctorDuty">
+          <ScalarProperty Name="DoctorDutyID" ColumnName="DoctorDutyID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="VisitDescription" ColumnName="VisitDescription" />
+          <ScalarProperty Name="OperationSchedule" ColumnName="OperationSchedule" />
+          <ScalarProperty Name="OutDorScheduleTime" ColumnName="OutDorScheduleTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="OperationDescription" ColumnName="OperationDescription" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DoctorSpecialization">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_DoctorSpecialization">
+        <MappingFragment StoreEntitySet="tbl_DoctorSpecialization">
+          <ScalarProperty Name="DoctorSpecialiID" ColumnName="DoctorSpecialiID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="SpeciaTypeID" ColumnName="SpeciaTypeID" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IndorBloodSalesDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_IndorBloodSalesDetails">
+        <MappingFragment StoreEntitySet="tbl_IndorBloodSalesDetails">
+          <ScalarProperty Name="IndorBloodSalesID" ColumnName="IndorBloodSalesID" />
+          <ScalarProperty Name="IndorBloodsalesVoucherNo" ColumnName="IndorBloodsalesVoucherNo" />
+          <ScalarProperty Name="BloodID" ColumnName="BloodID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="MediUnitID" ColumnName="MediUnitID" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IndorBloodSalesVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_IndorBloodSalesVoucher">
+        <MappingFragment StoreEntitySet="tbl_IndorBloodSalesVoucher">
+          <ScalarProperty Name="IndorBloodsalesVoucherNo" ColumnName="IndorBloodsalesVoucherNo" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="BuyerAddress" ColumnName="BuyerAddress" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DeuAmount" ColumnName="DeuAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IndorMedicenPurshaseVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_IndorMedicenPurshaseVoucher">
+        <MappingFragment StoreEntitySet="tbl_IndorMedicenPurshaseVoucher">
+          <ScalarProperty Name="MedicinePurchaseVoucherNo" ColumnName="MedicinePurchaseVoucherNo" />
+          <ScalarProperty Name="MediSupplyerID" ColumnName="MediSupplyerID" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="VoucharCopyImage" ColumnName="VoucharCopyImage" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ExperDate" ColumnName="ExperDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IndorMedicinePurchaseDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_IndorMedicinePurchaseDetails">
+        <MappingFragment StoreEntitySet="tbl_IndorMedicinePurchaseDetails">
+          <ScalarProperty Name="MedicinePurchaseId" ColumnName="MedicinePurchaseId" />
+          <ScalarProperty Name="MedicinePurchaseVoucherNo" ColumnName="MedicinePurchaseVoucherNo" />
+          <ScalarProperty Name="MediInfoID" ColumnName="MediInfoID" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IndorMedicineSalesDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_IndorMedicineSalesDetails">
+        <MappingFragment StoreEntitySet="tbl_IndorMedicineSalesDetails">
+          <ScalarProperty Name="IndorMedicenSaleseId" ColumnName="IndorMedicenSaleseId" />
+          <ScalarProperty Name="IndorMedicenSaleseVocherNo" ColumnName="IndorMedicenSaleseVocherNo" />
+          <ScalarProperty Name="MediInfoID" ColumnName="MediInfoID" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IndorMedicineSalesVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_IndorMedicineSalesVoucher">
+        <MappingFragment StoreEntitySet="tbl_IndorMedicineSalesVoucher">
+          <ScalarProperty Name="IndorMedicenSaleseVocherNo" ColumnName="IndorMedicenSaleseVocherNo" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="VatAmount" ColumnName="VatAmount" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_IndorPatientLabTest">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.Tbl_IndorPatientLabTest">
+        <MappingFragment StoreEntitySet="Tbl_IndorPatientLabTest">
+          <ScalarProperty Name="LabTestID" ColumnName="LabTestID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="LabID" ColumnName="LabID" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_InvoiceDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_InvoiceDetails">
+        <MappingFragment StoreEntitySet="tbl_InvoiceDetails">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceVoucherNo" ColumnName="InvoiceVoucherNo" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_InvoiceVocher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_InvoiceVocher">
+        <MappingFragment StoreEntitySet="tbl_InvoiceVocher">
+          <ScalarProperty Name="InvoiceVoucherNo" ColumnName="InvoiceVoucherNo" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_LabInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_LabInfo">
+        <MappingFragment StoreEntitySet="tbl_LabInfo">
+          <ScalarProperty Name="LabID" ColumnName="LabID" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="LabNo" ColumnName="LabNo" />
+          <ScalarProperty Name="LabName" ColumnName="LabName" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="LabDescription" ColumnName="LabDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Leave">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Leave">
+        <MappingFragment StoreEntitySet="tbl_Leave">
+          <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="LeaveDateFrom" ColumnName="LeaveDateFrom" />
+          <ScalarProperty Name="LeaveDateTo" ColumnName="LeaveDateTo" />
+          <ScalarProperty Name="TotalLeaveDays" ColumnName="TotalLeaveDays" />
+          <ScalarProperty Name="LeaveCause" ColumnName="LeaveCause" />
+          <ScalarProperty Name="TotalLeave" ColumnName="TotalLeave" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Loan">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Loan">
+        <MappingFragment StoreEntitySet="tbl_Loan">
+          <ScalarProperty Name="LoanID" ColumnName="LoanID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="LoanDate" ColumnName="LoanDate" />
+          <ScalarProperty Name="LoanPurpose" ColumnName="LoanPurpose" />
+          <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+          <ScalarProperty Name="NewLoan" ColumnName="NewLoan" />
+          <ScalarProperty Name="LoanBack" ColumnName="LoanBack" />
+          <ScalarProperty Name="PaymentWay" ColumnName="PaymentWay" />
+          <ScalarProperty Name="GrandTotalLoan" ColumnName="GrandTotalLoan" />
+          <ScalarProperty Name="PaidLoan" ColumnName="PaidLoan" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MedicinCatagory">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_MedicinCatagory">
+        <MappingFragment StoreEntitySet="tbl_MedicinCatagory">
+          <ScalarProperty Name="MediCataID" ColumnName="MediCataID" />
+          <ScalarProperty Name="CatagoryName" ColumnName="CatagoryName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MedicineInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_MedicineInfo">
+        <MappingFragment StoreEntitySet="tbl_MedicineInfo">
+          <ScalarProperty Name="MediInfoID" ColumnName="MediInfoID" />
+          <ScalarProperty Name="MediName" ColumnName="MediName" />
+          <ScalarProperty Name="MedicompaName" ColumnName="MedicompaName" />
+          <ScalarProperty Name="MediUnitID" ColumnName="MediUnitID" />
+          <ScalarProperty Name="MediCataID" ColumnName="MediCataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MedicineSupplierInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_MedicineSupplierInfo">
+        <MappingFragment StoreEntitySet="tbl_MedicineSupplierInfo">
+          <ScalarProperty Name="MediSupplyerID" ColumnName="MediSupplyerID" />
+          <ScalarProperty Name="MediSupplyerName" ColumnName="MediSupplyerName" />
+          <ScalarProperty Name="ComAddress" ColumnName="ComAddress" />
+          <ScalarProperty Name="ComMobNo" ColumnName="ComMobNo" />
+          <ScalarProperty Name="ContractPerson" ColumnName="ContractPerson" />
+          <ScalarProperty Name="ContractPersMobNo" ColumnName="ContractPersMobNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MedicineSupplierProfile">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_MedicineSupplierProfile">
+        <MappingFragment StoreEntitySet="tbl_MedicineSupplierProfile">
+          <ScalarProperty Name="SupplierProfileID" ColumnName="SupplierProfileID" />
+          <ScalarProperty Name="MediSupplyerID" ColumnName="MediSupplyerID" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="DueAmountBack" ColumnName="DueAmountBack" />
+          <ScalarProperty Name="DueAmountBackDate" ColumnName="DueAmountBackDate" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MedicinUnit">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_MedicinUnit">
+        <MappingFragment StoreEntitySet="tbl_MedicinUnit">
+          <ScalarProperty Name="MediUnitID" ColumnName="MediUnitID" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_NurseDuty">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_NurseDuty">
+        <MappingFragment StoreEntitySet="tbl_NurseDuty">
+          <ScalarProperty Name="NurseDutyID" ColumnName="NurseDutyID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="WorkDescription" ColumnName="WorkDescription" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="VisitDescription" ColumnName="VisitDescription" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="OperationDescription" ColumnName="OperationDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OperationInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_OperationInfo">
+        <MappingFragment StoreEntitySet="tbl_OperationInfo">
+          <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+          <ScalarProperty Name="OperationName" ColumnName="OperationName" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="NurseID" ColumnName="NurseID" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutdorBloodSalesDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_OutdorBloodSalesDetails">
+        <MappingFragment StoreEntitySet="tbl_OutdorBloodSalesDetails">
+          <ScalarProperty Name="OutdorBloodSalesID" ColumnName="OutdorBloodSalesID" />
+          <ScalarProperty Name="OutdorBloodSalesVoucherNo" ColumnName="OutdorBloodSalesVoucherNo" />
+          <ScalarProperty Name="BloodID" ColumnName="BloodID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="MediUnitID" ColumnName="MediUnitID" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutdorBloodSalesVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_OutdorBloodSalesVoucher">
+        <MappingFragment StoreEntitySet="tbl_OutdorBloodSalesVoucher">
+          <ScalarProperty Name="OutdorBloodSalesVoucherNo" ColumnName="OutdorBloodSalesVoucherNo" />
+          <ScalarProperty Name="OutdorBuyerName" ColumnName="OutdorBuyerName" />
+          <ScalarProperty Name="OutdorBuyerPnoneNo" ColumnName="OutdorBuyerPnoneNo" />
+          <ScalarProperty Name="OutdorBuyerAddress" ColumnName="OutdorBuyerAddress" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DeuAmount" ColumnName="DeuAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutdorMedicineSalesDetails">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_OutdorMedicineSalesDetails">
+        <MappingFragment StoreEntitySet="tbl_OutdorMedicineSalesDetails">
+          <ScalarProperty Name="OutdorMedicenSaleseId" ColumnName="OutdorMedicenSaleseId" />
+          <ScalarProperty Name="OutdorMedicineSalesVoucherNo" ColumnName="OutdorMedicineSalesVoucherNo" />
+          <ScalarProperty Name="MediInfoID" ColumnName="MediInfoID" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutdorMedicineSalesVoucher">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_OutdorMedicineSalesVoucher">
+        <MappingFragment StoreEntitySet="tbl_OutdorMedicineSalesVoucher">
+          <ScalarProperty Name="OutdorMedicineSalesVoucherNo" ColumnName="OutdorMedicineSalesVoucherNo" />
+          <ScalarProperty Name="OutdorPatientName" ColumnName="OutdorPatientName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="VatAmount" ColumnName="VatAmount" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OutdorPatientLabTest">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_OutdorPatientLabTest">
+        <MappingFragment StoreEntitySet="tbl_OutdorPatientLabTest">
+          <ScalarProperty Name="OutdorLabTestId" ColumnName="OutdorLabTestId" />
+          <ScalarProperty Name="OutdorName" ColumnName="OutdorName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="LabID" ColumnName="LabID" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PatientInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_PatientInfo">
+        <MappingFragment StoreEntitySet="tbl_PatientInfo">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PatientMobNo" ColumnName="PatientMobNo" />
+          <ScalarProperty Name="Disease" ColumnName="Disease" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+          <ScalarProperty Name="Gardian" ColumnName="Gardian" />
+          <ScalarProperty Name="EmergencyMobNo" ColumnName="EmergencyMobNo" />
+          <ScalarProperty Name="PRoomID" ColumnName="PRoomID" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PationRoomInformation">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_PationRoomInformation">
+        <MappingFragment StoreEntitySet="tbl_PationRoomInformation">
+          <ScalarProperty Name="PRoomID" ColumnName="PRoomID" />
+          <ScalarProperty Name="ProomNo" ColumnName="ProomNo" />
+          <ScalarProperty Name="CategorayID" ColumnName="CategorayID" />
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+          <ScalarProperty Name="FloorNo" ColumnName="FloorNo" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Referenceinfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Referenceinfo">
+        <MappingFragment StoreEntitySet="tbl_Referenceinfo">
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+          <ScalarProperty Name="ReferenceName" ColumnName="ReferenceName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="AgreementInfo" ColumnName="AgreementInfo" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TimeDuration" ColumnName="TimeDuration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RoomCatagory">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_RoomCatagory">
+        <MappingFragment StoreEntitySet="tbl_RoomCatagory">
+          <ScalarProperty Name="CategorayID" ColumnName="CategorayID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RoomType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_RoomType">
+        <MappingFragment StoreEntitySet="tbl_RoomType">
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+          <ScalarProperty Name="RoomTypeName" ColumnName="RoomTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Salary">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Salary">
+        <MappingFragment StoreEntitySet="tbl_Salary">
+          <ScalarProperty Name="SalaryID" ColumnName="SalaryID" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="BasicAmount" ColumnName="BasicAmount" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="AllowanceAmount" ColumnName="AllowanceAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="DetuctionAmount" ColumnName="DetuctionAmount" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="AdvanceBack" ColumnName="AdvanceBack" />
+          <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+          <ScalarProperty Name="LoanBack" ColumnName="LoanBack" />
+          <ScalarProperty Name="GrandTotalAmount" ColumnName="GrandTotalAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="EnterDate" ColumnName="EnterDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Service">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_Service">
+        <MappingFragment StoreEntitySet="tbl_Service">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SpecializationType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_SpecializationType">
+        <MappingFragment StoreEntitySet="tbl_SpecializationType">
+          <ScalarProperty Name="SpeciaTypeID" ColumnName="SpeciaTypeID" />
+          <ScalarProperty Name="SpecializationName" ColumnName="SpecializationName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_StaffEducation">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_StaffEducation">
+        <MappingFragment StoreEntitySet="tbl_StaffEducation">
+          <ScalarProperty Name="StaffEducaID" ColumnName="StaffEducaID" />
+          <ScalarProperty Name="StaffEducaName" ColumnName="StaffEducaName" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_staffInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_staffInfo">
+        <MappingFragment StoreEntitySet="tbl_staffInfo">
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StaffTypeID" ColumnName="StaffTypeID" />
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+          <ScalarProperty Name="ParmanentAddress" ColumnName="ParmanentAddress" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="BasicSalary" ColumnName="BasicSalary" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="ConfermationDate" ColumnName="ConfermationDate" />
+          <ScalarProperty Name="ReginingDate" ColumnName="ReginingDate" />
+          <ScalarProperty Name="EmailNo" ColumnName="EmailNo" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_StaffType">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_StaffType">
+        <MappingFragment StoreEntitySet="tbl_StaffType">
+          <ScalarProperty Name="StaffTypeID" ColumnName="StaffTypeID" />
+          <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserInfo">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_UserInfo">
+        <MappingFragment StoreEntitySet="tbl_UserInfo">
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="Isactive" ColumnName="Isactive" />
+          <ScalarProperty Name="Remars" ColumnName="Remars" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserRole">
+      <EntityTypeMapping TypeName="HospitalManagementSystemDBModel.tbl_UserRole">
+        <MappingFragment StoreEntitySet="tbl_UserRole">
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="UserRoleName" ColumnName="UserRoleName" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

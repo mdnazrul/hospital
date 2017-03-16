@@ -1,0 +1,88 @@
+﻿@model WebApplication2.Models.tbl_OutdorPatientLabTest
+
+@{
+    ViewBag.Title = "outdorpatientlabtest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Outdor Patient LabTest</h2>
+        <hr />
+        @using (Html.BeginForm("outdorpatientlabtest", "OutdorPatientLabTest", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.OutdorName, " OutdoorPatientName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.OutdorName, new { id = "OutdorName", @class = "form-control", placeholder = "Input OutdorName", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Address, " Address", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Address, new { id = "Address", @class = "form-control", placeholder = "Input Address", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.MobNo, " MobNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.MobNo, new { id = "MobNo", @class = "form-control", placeholder = "Input MobNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LabID, "LabName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("LabID", (SelectList)ViewData["tbl_LabInfo"], "...Select LabID...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Purpose, " Purpose", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Purpose, new { id = "Purpose", @class = "form-control", placeholder = "Input Purpose", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Result, " Result", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Result, new { id = "Result", @class = "form-control", placeholder = "Input Result", Required = "required" })
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                @Html.LabelFor(s => s.UserID, "userName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("UserID", (SelectList)ViewData["tbl_UserInfo"], "...Select userName...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>*@
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Add To Create" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-sm" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "outdorpatientlabtestLists")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div id="SaleItems result_area">
+                                    <div class="CSSTableGenerator">
+                                        <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

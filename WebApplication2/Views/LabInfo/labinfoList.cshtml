@@ -1,0 +1,63 @@
+﻿@model WebApplication2.Models.tbl_LabInfo
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "labinfoList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 style="color:#ff6a00;text-align:center;">lab Information List</h2>
+        <hr />
+        <div class="form-group">
+            <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                @Html.ActionLink("Create New", "addLabInfo")
+            </div>
+        </div>
+        @using (Html.BeginForm("labinfoList", "LabInfo", FormMethod.Post))
+        {
+            <input type="text" name="keyword" />
+            <input type="submit" value="Search" name="Submit">
+        }
+        <br />
+        <table id="myDataTable" class="gridtable" style=" width:50%; font-family:Tahoma;font-size:11px ;">
+            <thead>
+                <tr>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">Shift</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">LabNo</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">LabName</th>
+                    <th style="border-right-color: ActiveBorder; background-color: #dedede">EmployeeName</th>      
+                    <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>                  
+                </tr>
+                </thead>
+                @foreach (var item in Model.labinfoListResults)
+                  {
+                     <tbody>
+                          <tr>
+                            <td>@item.Shift</td>
+                            <td>@item.LabNo</td>
+                            <td>@item.LabName</td>
+                            <td>@item.tbl_staffInfo.Name</td>                    
+                            <td>                          
+                                @Html.ActionLink("Edit", "labInfoUpdate", new { id = item.LabID,userid=@item.tbl_staffInfo.StaffID })
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                @Html.ActionLink("Delete", "labInfoDelete", new { id = item.LabID })
+                           </td>
+                         </tr>
+                      </tbody>
+                   }
+        </table>
+        <div id="listpage" style="padding-left: 22px; padding-top:10px; width: 85%; float: left;">
+            @Html.PagedListPager(Model.labinfoListResults, page => Url.Action("labinfoList", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+        </div>
+    </div>
+</body>
+</html>

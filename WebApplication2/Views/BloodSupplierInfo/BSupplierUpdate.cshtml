@@ -1,0 +1,67 @@
+﻿@model WebApplication2.Models.tbl_BloodSupplierInfo
+
+@{
+    ViewBag.Title = "BSupplierUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 style="text-align:center;color:#ff6a00">Blood Supplier Update</h2>
+    <hr />
+    <h4 style="color:#ff6a00">@ViewBag.Message</h4>
+    <div style="padding-top: 30px; ">
+        @using (Html.BeginForm("BSupplierUpdate", "BloodSupplierInfo", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.CompanyName, " CompanyName", new { @class = "control-label col-sm-2" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(u => u.CompanyName, new { id = "CompanyName", @class = "form-control", placeholder = "Input CompanyName", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ComAddress, " CompanyAddress", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.ComAddress, new { id = "ComAddress", @class = "form-control", placeholder = "Input ComAddress", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ComMobNo, " CompanyMobNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.ComMobNo, new { id = "ComMobNo", @class = "form-control", placeholder = "Input ComMobNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ContactPerson, " ContactPerson", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.ContactPerson, new { id = "ContactPerson", @class = "form-control", placeholder = "Input ContactPerson", Required = "required" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Save" />
+                                </div>
+                            </div>
+                            <h4>@Html.ActionLink("Back To List", "bloodsupplierList")</h4>
+                            <div class="col-sm-6">
+                                <div id="SaleItems result_area">
+                                    <div class="CSSTableGenerator">
+                                        <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

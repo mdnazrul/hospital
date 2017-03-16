@@ -1,0 +1,61 @@
+﻿@model WebApplication2.Models.tbl_BloodDonerInfo
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "AddDonerList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div style="font-family:Arial;padding-top:30px;">
+        <h2 style="text-align:center;color:#ff6a00">Blood DonerList</h2>
+        <hr />
+        <h3 style="color:#ff6a00">@Html.ActionLink("Create New", "AddBDoner")</h3>
+        @using (Html.BeginForm("AddDonerList", "BloodDonnerInfo", FormMethod.Post))
+        {
+            <input type="text" name="keyword" />
+            <input type="submit" value="Search" name="Submit">
+        }
+        <br />
+        <table id="myDataTable" class="gridtable" style=" width:60%; font-family:Tahoma;font-size:11px ;">
+            <thead>
+                <tr>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">Name</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">Age</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">Address</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">Blood Name</th>
+                    <th style="border-right-color: ActiveBorder; background-color: #dedede">NationalId</th>
+                    <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.AddDonerListResults)
+            {
+                <tbody>
+                    <tr>
+                        <td>@item.BloodDonerName</td>
+                        <td>@item.Age</td>
+                        <td>@item.Address</td>
+                        <td>@item.tbl_BloodGroup.BloodName</td>
+                        <td>@item.NationalId</td>
+                        <td>
+                            @Html.ActionLink("Edit", "UpdateData", new { id = item.BloodDonerID, bloodid = @item.BloodID })
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            @Html.ActionLink("Delete", "DeleteData", new { id = item.BloodDonerID })
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <div id="listpage" style="padding-left: 22px; width: 85%; float: left;">
+            @Html.PagedListPager(Model.AddDonerListResults, page => Url.Action("AddDonerList", new RouteValueDictionary()
+             {
+             { "Page", page }
+           }),
+            PagedListRenderOptions.PageNumbersOnly)
+        </div>
+    </div>
+</body>
+</html>

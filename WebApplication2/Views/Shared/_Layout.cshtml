@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Hospital Management System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/custom-style.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="~/Content/themes/base/datepicker.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+    @*.....................Copy ............................*@   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @*............................copy end........................*@
+    <style>
+        body {
+            padding: 5px 0 0 0;
+            background-color: #cacaea;
+            font-size: 10px;
+            font-family: Georgia, "Times New Roman", Serif;
+        }
+        #mainMenu {
+            background-color: #a4f3dd;
+        }
+        .navbar-default {
+            background-color: #a4f3dd;
+            border:0;
+        }
+
+
+        #mainMenu a, #mainMenu a:link {
+            font-size: 1.6em;
+        }
+        #mainMenu ul.nav > li:hover {
+            background-color: #95ddcd;
+        }
+
+
+        #mainMenu ul.nav > li:visited {
+            background-color: #95ddcd;
+        }
+
+
+        #mainMenu ul.nav > li:active {
+            background-color: #95ddcd;
+        }
+
+        #mainMenu ul.nav > li > a:hover {
+            background-color: #95ddcd;
+        }
+
+        #mainMenu ul.nav > li > a:active {
+            background-color: #95ddcd;
+        }
+
+        #mainMenu ul.nav > li > a:visited {
+            background-color: #95ddcd;
+        }
+
+        #mainMenu ul.nav > li > a:focus {
+            background-color: #95ddcd;
+        }
+
+
+        #mainMenu ul ul {
+            background-color: #7ac4d8;
+        }
+
+        #mainMenu ul ul li {
+            font-size: .7em;
+        }
+
+
+        #mainContent {
+            box-sizing:border-box;
+            background-color: #eff0f0;
+            padding: 0 0px 35px;
+            
+        }
+        #footer {
+            min-height: 42px;
+            background-color: #286090;
+            color: white;
+            box-sizing:border-box;
+        }
+        #footer p {
+            text-align: center;
+            padding-top: 9px;
+            font-size:1.8em; 
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="mainMenu">
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @*<a class="navbar-brand" href="#">Inginous Technology</a>*@
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav ">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">HR<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("StaffInformation", "staffList", "StaffInformation")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Attendanc", "attendanceList", "Attendanc")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Salary", "salaryList", "Salary")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Advance", "AdvancedList", "Advanced")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Leave", "leaveList", "Leave")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Loan", "loanList", "Loan")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("Allowance", "AllowanceList", "Allowance")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ambulance Management<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("AmbulanceInfo", "ambulanceInfoList", "AmbulanceInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("AmbulanceSchedule", "ambulanceScheduleLists", "AmbulanceSechedule")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Patient Management<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("PatientInformation", "patientInfoList", "PatientInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("Invoice", "Invoicelist", "Invoice")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("ReferenceInfo", "referenceList", "ReferenceInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("AppointmentSchedule", "appointmentScheduleList", "AppointmentSchedule")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("PatientRoomInformation", "pationRoomInformationList", "PatienRoomInformation")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pharmacy Management<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("MedicineInfo", "medicineInfoList", "MedicineInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("MedicineSupplierInfo", "medicineSupplierList", "MedicineSupplierInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("Medicine SupplierProfile", "medicineSupplierList", "MedicineSupplierProfile")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("IndorMedicineSales", "IndormedicineSaleList", "IndorMedicineSales")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("IndorMedicinePurchase", "IndorMedicinePurchaseList", "IndorMedicinePurchase")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("OutDoorMedicineSales", "outdorMedicineSalesList", "OutDoorMedicineSales")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">BloodBank<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("BloodDonerInfo", "AddDonerList", "BloodDonnerInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("BloodSupplierInformation", "bloodsupplierList", "BloodSupplierInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("IndorBloodSales", "indorBloodsalesLists", "IndorBloodSalesVoucher")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("Blood Supplier Profile", "bloodSupplierProfileLists", "BloodSupplierProfile")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("BloodPurchase", "bloodpurchaseList", "BloodPurchase")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("OutDoorBloodSales", "OutdoorBloodSalesList", "OutdorBloodSales")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Lab Management<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("LabInformation", "labinfoList", "LabInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("IndorpatientLabTest", "indorpatientlabtestLists", "IndorPatientLabTest")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("OutDorPatientLabTest", "outdorpatientlabtestLists", "OutdorPatientLabTest")</li></ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">AmbulanceManagement<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("AmbulanceInfo", "ambulanceInfoList", "AmbulanceInfo")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("AmbulanceSchedule", "ambulanceScheduleLists", "AmbulanceSechedule")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">OperationManagement<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("DoctorDuty", "doctorDutyList", "DoctorDuty")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("Nurse Duty", "nurseDutyList", "NurseDuty")</li>
+                            </ul>
+                        </li>
+
+                        <li>@Html.ActionLink("Claim", "claimList", "Claim")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Hospital Setup", "HospitalSetup", "Settings")</li>
+                                <li class="divider"></li>
+                                <li>@Html.ActionLink("User Information", "addUserInfo", "UserInfo")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">UserInformation<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("UserRole", "addUserRole", "UserRole")</li><li class="divider"></li>
+                                <li>@Html.ActionLink("User Information", "addUserInfo", "UserInfo")</li>
+                            </ul>
+                        </li>
+
+                        <li>@Html.ActionLink("Log out", "LogOut", "UserInfo")</li>
+                      
+                    </ul>
+                    @*<ul class="nav navbar-nav navbar-right">*@
+                        @*<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>*@
+                   
+                    @*</ul>*@
+                </div>
+            
+     </div>
+</nav>
+</div>
+    <div class="container" id="mainContent">
+        @RenderBody()
+    </div>
+    <div class="container" id="footer">
+        <div class="row">
+            <div class=" col-xs-12">                
+               <p>@DateTime.Now.Year &copy; Ingenious Technologies</p>                
+            </div>
+        </div>
+    </div>
+   
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+        @*<script>
+                $(document).ready(function () {
+                    $(".dropdown").hover(
+                        function () {
+                            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("fast");
+                            $(this).toggleClass('open');
+                        },
+                        function () {
+                            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("fast");
+                            $(this).toggleClass('open');
+                        }
+                    );
+                });
+            </script>*@
+
+        @*..................Script.....................*@
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

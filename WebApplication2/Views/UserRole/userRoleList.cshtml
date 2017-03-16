@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebApplication2.Models.tbl_UserRole>
+
+@{
+    ViewBag.Title = "userRoleList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 style="color:#ff6a00;text-align:center;">User Role List</h2>
+        <hr />
+        <div class="form-group">
+            <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                @Html.ActionLink("Create New", "addUserRole")
+            </div>
+        </div>
+        <br />
+        <table id="myDataTable" class="gridtable" style=" width:50%; font-family:Tahoma;font-size:11px ;">
+            <thead>
+                <tr>
+                    <th style="border-right-color: ActiveBorder; background-color: #dedede">UserRoleName</th>
+                    <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>                 
+                </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody> 
+                    <tr>
+                        <td>@item.UserRoleName</td>
+                        <td>
+                            @Html.ActionLink("Edit", "userRoleUpdate", new { id = item.UserRoleID })
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            @Html.ActionLink("Delete", "userRoleDelete", new { id = item.UserRoleID })
+                        </td>
+                    </tr>
+                        </tbody>
+                }
+        </table>
+    </div>
+</body>
+</html>

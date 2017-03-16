@@ -1,0 +1,227 @@
+﻿@model WebApplication2.Models.tbl_Loan
+
+@{
+    ViewBag.Title = "addLoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        //...............Calculation Value..................
+        $(document).ready(function () {
+            $("#NewLoan").keyup(function (e) {
+                e.preventDefault();
+                var LoanBack = $("#LoanBack").val();
+                if (LoanBack == "" || LoanBack == null) {
+                    var LoanBack = 0;
+                }
+                else {
+                    var LoanBack = $("#LoanBack").val();
+                }
+
+                var NewLoan = $("#NewLoan").val();
+                if (NewLoan == "" || NewLoan == null) {
+                    var NewLoan = 0;
+                }
+                else {
+                    var NewLoan = $("#NewLoan").val();
+                }
+
+                var summation = parseFloat($("#hidden_loanamount").val()) - parseFloat(LoanBack) + parseFloat(NewLoan);
+                $("#LoanAmount").val(parseFloat(summation));
+                $("#GrandTotalLoan").val(parseFloat(summation));
+
+            });
+
+            $("#LoanBack").keyup(function (e) {
+                e.preventDefault();
+
+                var LoanBack = $("#LoanBack").val();
+                if (LoanBack == "" || LoanBack == null) {
+                    var LoanBack = 0;
+                }
+                else {
+                    var LoanBack = $("#LoanBack").val();
+                }
+
+                var NewLoan = $("#NewLoan").val();
+                if (NewLoan == "" || NewLoan == null) {
+                    var NewLoan = 0;
+                }
+                else {
+                    var NewLoan = $("#NewLoan").val();
+                }
+
+                var sub = parseFloat($("#hidden_loanamount").val()) + parseFloat(NewLoan) - parseFloat(LoanBack);
+                $("#LoanAmount").val(parseFloat(sub));
+                $("#GrandTotalLoan").val(parseFloat(sub));
+
+            });
+        });
+        //$(document).ready(function () {
+        //    $("#NewLoan").keyup(function (e) {
+        //        e.preventDefault();
+        //        var summation = parseFloat($("#hidden_loanamount").val()) + parseFloat($("#NewLoan").val());
+        //        $("#LoanAmount").val(parseFloat(summation));
+        //    });
+
+        //});
+        //$(document).ready(function () {
+        //    $("#LoanBack").keyup(function () {
+        //        var sub = parseFloat($("#LoanAmount").val()) - parseFloat($("#LoanBack").val());
+        //        $("#GrandTotalLoan").val(parseFloat(sub));
+
+        //    });
+        //});
+    </script>
+
+    <script>
+        //.................Get value...............
+        function get_value(_this) {
+            var staffid = $(_this).val();
+            var data = {
+                "StaffId": staffid
+            }
+            $.ajax({
+                url: '/Loan/GetEmpInfo',
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: "JSON",
+                contentType: 'application/json; charset=utf-8',
+                cache: false,
+                success: function (d) {
+                    $("#Salary").val(d.basicSalary);
+                    $("#LoanAmount").val(d.loanAmount);
+                    $("#hidden_loanamount").val(d.loanAmount);
+                },
+                error: function (d) {
+                    //alert(d.message);
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00;">addLoan</h2>
+        <hr />
+        @using (Html.BeginForm("addLoan", "Loan", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.StaffID, "Employee", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.DropDownList("StaffID", (SelectList)ViewData["tbl_staffInfo"], "...Select Employee...", new { @class = "form-control", @onchange = "get_value(this)", })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Salary, " Salary", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.Salary, new { id = "Salary", @class = "form-control", placeholder = "Input Salary", Required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LoanDate, " LoanDate", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.LoanDate, new { @class = "form-control", placeholder = "Input LoanDate", id = "LoanDate", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LoanPurpose, " LoanPurpose", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextAreaFor(u => u.LoanPurpose, new { id = "LoanPurpose", @class = "form-control", placeholder = "Input LoanPurpose", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LoanAmount, " LoanAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.LoanAmount, new { id = "LoanAmount", @class = "form-control", placeholder = "Input LoanAmount", Required = "required", @readonly = "readonly" })
+                                    <input type="hidden" id="hidden_loanamount">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.NewLoan, " NewLoan", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.NewLoan, new { id = "NewLoan", @class = "form-control", placeholder = "Input NewLoan", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LoanBack, " LoanBack", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.LoanBack, new { id = "LoanBack", @class = "form-control", placeholder = "Input LoanBack", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PaymentWay, " PaymentWay", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.PaymentWay, new { id = "PaymentWay", @class = "form-control", placeholder = "Input PaymentWay", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.GrandTotalLoan, " GrandTotalLoan", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.GrandTotalLoan, new { id = "GrandTotalLoan", @class = "form-control", placeholder = "Input GrandTotalLoan", Required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PaidLoan, " PaidLoan", new { @class = "control-label col-sm-2" })
+                                <div class="col-sd-6">
+                                    <input id="PaidLoan" name="PaidLoan" type="radio" value="1" />
+                                    <label for="Paid">Paid</label>
+                                    <input id="PaidLoan" name="PaidLoan" type="radio" value="0" />
+                                    <label for="NonPaid">NonPaid</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Remarks, " Remarks", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextAreaFor(u => u.Remarks, new { id = "Remarks", @class = "form-control", placeholder = "Input Remarks", Required = "required" })
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                @Html.LabelFor(s => s.StaffID, "UserName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.DropDownList("UserID", (SelectList)ViewData["tbl_UserInfo"], "...Select UserName...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>*@
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-6">
+                                    <button type="submit" class="btn btn-default">Add To Create</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-sm" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "loanList")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div id="SaleItems result_area">
+                                    <div class="CSSTableGenerator">
+                                        <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <link href="../Content/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery.datetimepicker.full.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#LoanDate').datetimepicker({
+            timepicker: false,
+            format: 'Y-m-d',
+            formatDate: 'Y-m-d'
+        });
+    </script>
+
+</body>
+</html>

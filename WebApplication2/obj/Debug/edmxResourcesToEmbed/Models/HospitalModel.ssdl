@@ -1,0 +1,2282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HospitalManagementSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HR_AdvanceSalaryDetailPrevious_Log">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryDetailsLogId" />
+    </Key>
+    <Property Name="AdvanceSalaryDetailsLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdvanceSalaryDetailsId" Type="bigint" />
+    <Property Name="ASCode" Type="nvarchar" MaxLength="200" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="ResionId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="InstalmentAmount" Type="money" />
+    <Property Name="NoOfInstalment" Type="int" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Month" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdvanceDeduction" Type="bit" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="HR_AdvanceSalaryDetails">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryDetails_Id" />
+    </Key>
+    <Property Name="AdvanceSalaryDetails_Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdvancePay_Code" Type="nvarchar" MaxLength="200" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalAdvance_Amount" Type="money" />
+    <Property Name="Advance_Installment_Amount" Type="money" />
+    <Property Name="Number_Of_Installment" Type="int" />
+    <Property Name="Advance_FromDate" Type="datetime" />
+    <Property Name="Advance_ToDate" Type="datetime" />
+    <Property Name="Deduct_Month" Type="int" />
+    <Property Name="Deduct_Year" Type="int" />
+    <Property Name="PayScheduleDate" Type="datetime" />
+    <Property Name="ReceiveAmount" Type="money" />
+    <Property Name="DueAmount" Type="money" />
+    <Property Name="AdvanceDeduction_Status" Type="bit" />
+    <Property Name="Advance_Remarks" Type="nvarchar(max)" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_AdvanceSalarySummary">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryId" />
+    </Key>
+    <Property Name="AdvanceSalaryId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdvancePay_Code" Type="nvarchar" MaxLength="200" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalAdvance_Amount" Type="money" />
+    <Property Name="Advance_Installment_Amount" Type="money" />
+    <Property Name="Number_Of_Installment" Type="int" />
+    <Property Name="Advance_FromDate" Type="datetime" />
+    <Property Name="Advance_ToDate" Type="datetime" />
+    <Property Name="PayScheduleDate" Type="datetime" />
+    <Property Name="ReceiveAmount" Type="money" />
+    <Property Name="DueAmount" Type="money" />
+    <Property Name="AdvanceRemarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_Attendance">
+    <Key>
+      <PropertyRef Name="AttendanceId" />
+    </Key>
+    <Property Name="AttendanceId" Type="int" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Attendance_Date" Type="datetime" />
+    <Property Name="Attendance_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Working_DayType" Type="nvarchar" MaxLength="50" />
+    <Property Name="In_Time" Type="time" Precision="7" />
+    <Property Name="Out_Time" Type="time" Precision="7" />
+    <Property Name="InTime" Type="nchar" MaxLength="10" />
+    <Property Name="OutTime" Type="nchar" MaxLength="10" />
+    <Property Name="AttendanceStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Over_Time" Type="time" Precision="7" />
+    <Property Name="Worked_Time" Type="time" Precision="7" />
+    <Property Name="ShiftTotalTime" Type="time" Precision="7" />
+    <Property Name="OT_Status" Type="bit" />
+    <Property Name="OT_Hour" Type="int" />
+    <Property Name="OT_Minute" Type="int" />
+    <Property Name="OT_ExtraAdd" Type="int" />
+    <Property Name="OT_Deduction" Type="int" />
+    <Property Name="OT_Total" Type="int" />
+    <Property Name="Update_Status" Type="bit" />
+    <Property Name="ManualAttendanceStatus" Type="bit" />
+    <Property Name="AttendanceRemarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="LeaveCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_Attendance_Manual_Log">
+    <Key>
+      <PropertyRef Name="Attendance_Manual_LogId" />
+    </Key>
+    <Property Name="Attendance_Manual_LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="In_Time" Type="time" Precision="7" />
+    <Property Name="Out_Time" Type="time" Precision="7" />
+    <Property Name="Over_Time" Type="time" Precision="7" />
+    <Property Name="OT_Hour" Type="float" />
+    <Property Name="OT_Minute" Type="float" />
+    <Property Name="OT_Total" Type="float" />
+    <Property Name="OT_Applicable" Type="bit" />
+    <Property Name="AttendanceStatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="AttendanceRemarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Attendance_Date" Type="datetime" />
+    <Property Name="Attendance_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Working_DayType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Update_Status" Type="int" />
+    <Property Name="Attendance_Process_Status" Type="bit" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="Ip_Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_AttendanceBonus">
+    <Key>
+      <PropertyRef Name="AttendanceBouns_Id" />
+    </Key>
+    <Property Name="AttendanceBouns_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OfficeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttendanceDays1" Type="int" />
+    <Property Name="AttendanceDays2" Type="int" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="150" />
+    <Property Name="Amount1" Type="money" />
+    <Property Name="Amount2" Type="money" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_AttendanceProcess_Log">
+    <Key>
+      <PropertyRef Name="Att_ProcessLog_Id" />
+    </Key>
+    <Property Name="Att_ProcessLog_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="DateTo" Type="datetime" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="Ip_Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_AttendanceStatusProcess_Log">
+    <Key>
+      <PropertyRef Name="Att_StatusProcessLog_Id" />
+    </Key>
+    <Property Name="Att_StatusProcessLog_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="DateTo" Type="datetime" />
+    <Property Name="Edit_User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Ip_Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HR_Holiday">
+    <Key>
+      <PropertyRef Name="HoilidayId" />
+    </Key>
+    <Property Name="HoilidayId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HolidayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HolidayTypeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Holiday_Date" Type="datetime" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="TotalDay" Type="float" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_HolidayType">
+    <Key>
+      <PropertyRef Name="HoildayTypeId" />
+    </Key>
+    <Property Name="HoildayTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HolidayType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HolidayTypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HR_HospitalSetup">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CompanyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Address" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Company_ContactNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Company_Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Company_Web" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Logo" Type="nvarchar(max)" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_LeaveApply">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Name="LeaveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeaveCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveTypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LeaveDate" Type="datetime" />
+    <Property Name="LeaveDateFrom" Type="datetime" />
+    <Property Name="LeaveDateTo" Type="datetime" />
+    <Property Name="TotalLeave" Type="int" />
+    <Property Name="SupervisorEID" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupervisorApproveStatus" Type="bit" />
+    <Property Name="SupervisorApproveDate" Type="datetime" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_LeaveType">
+    <Key>
+      <PropertyRef Name="LeaveTypeId" />
+    </Key>
+    <Property Name="LeaveTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeaveType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveTypeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveDay" Type="float" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_Salary_Deduction">
+    <Key>
+      <PropertyRef Name="Salary_Deduction_Id" />
+    </Key>
+    <Property Name="Salary_Deduction_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary_DeductType" Type="nvarchar" MaxLength="10" />
+    <Property Name="Salary_DeductDay" Type="float" />
+    <Property Name="Salary_Deduct_Amount" Type="money" />
+    <Property Name="Salary_DeductDate" Type="datetime" />
+    <Property Name="ApprovedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_Salary_Punishment">
+    <Key>
+      <PropertyRef Name="SalryPunishment_Id" />
+    </Key>
+    <Property Name="SalryPunishment_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary_DeductType" Type="nvarchar" MaxLength="10" />
+    <Property Name="TotalDeductDay" Type="float" />
+    <Property Name="Salary_Deduct_Amount" Type="money" />
+    <Property Name="Salary_Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary_Year" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HR_Shift">
+    <Key>
+      <PropertyRef Name="ShiftId" />
+    </Key>
+    <Property Name="ShiftId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="LateAllowed" Type="time" Precision="7" />
+    <Property Name="Weekend1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weekend2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftRemarks" Type="nvarchar" MaxLength="200" />
+    <Property Name="TotalShiftHour" Type="time" Precision="7" />
+    <Property Name="AddBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbe_NurseSectionType">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SectionName" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Advance">
+    <Key>
+      <PropertyRef Name="AdvanceID" />
+    </Key>
+    <Property Name="AdvanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="Salary" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="AdvanceDate" Type="datetime" />
+    <Property Name="AdvancePurpose" Type="varchar" MaxLength="200" />
+    <Property Name="AdvanceAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="NewAdvance" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="AdvanceBack" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PaymentWay" Type="varchar" MaxLength="200" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Paid" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_AllowanceDetails">
+    <Key>
+      <PropertyRef Name="AllowanceDetailId" />
+    </Key>
+    <Property Name="AllowanceDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllowanceVocherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AllowanceID" Type="int" Nullable="false" />
+    <Property Name="AllowanceAmount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_AllowanceType">
+    <Key>
+      <PropertyRef Name="AllowanceID" />
+    </Key>
+    <Property Name="AllowanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllowanceName" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_AllowanceVoucher">
+    <Key>
+      <PropertyRef Name="AllowanceVocherNo" />
+    </Key>
+    <Property Name="AllowanceVocherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_AmbCatagory">
+    <Key>
+      <PropertyRef Name="AmbCatagoryID" />
+    </Key>
+    <Property Name="AmbCatagoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AmbCatName" Type="varchar" MaxLength="200" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_AmbulanceInfo">
+    <Key>
+      <PropertyRef Name="AmbID" />
+    </Key>
+    <Property Name="AmbID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AmbPlateNo" Type="varchar" MaxLength="100" />
+    <Property Name="AmbCatagoryID" Type="int" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="FreeOrBusy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_AmbulanceSchedule">
+    <Key>
+      <PropertyRef Name="AmbSchedulID" />
+    </Key>
+    <Property Name="AmbSchedulID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AmbID" Type="int" Nullable="false" />
+    <Property Name="TargetLocation" Type="varchar" MaxLength="200" />
+    <Property Name="GoingTime" Type="varchar" MaxLength="50" />
+    <Property Name="BackTime" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="PatientDescription" Type="varchar" MaxLength="200" />
+    <Property Name="FreeOrBusy" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_AppointmentSchedule">
+    <Key>
+      <PropertyRef Name="AppSchedulID" />
+    </Key>
+    <Property Name="AppSchedulID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="PatientName" Type="varchar" MaxLength="100" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="RoomNo" Type="varchar" MaxLength="50" />
+    <Property Name="SerialNo" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Attendance">
+    <Key>
+      <PropertyRef Name="AttendID" />
+    </Key>
+    <Property Name="AttendID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="EmployeeAttendance" Type="int" />
+    <Property Name="Sift" Type="varchar" MaxLength="50" />
+    <Property Name="OverTime" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_BloodDonerInfo">
+    <Key>
+      <PropertyRef Name="BloodDonerID" />
+    </Key>
+    <Property Name="BloodDonerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BloodDonerName" Type="varchar" MaxLength="100" />
+    <Property Name="Age" Type="varchar" MaxLength="50" />
+    <Property Name="Weight" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="BloodID" Type="int" Nullable="false" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="BloodDonerEmail" Type="varchar" MaxLength="50" />
+    <Property Name="BloodAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="NationalId" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_BloodGroup">
+    <Key>
+      <PropertyRef Name="BloodID" />
+    </Key>
+    <Property Name="BloodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BloodName" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_BloodPurchaseeDetails">
+    <Key>
+      <PropertyRef Name="BloodPurchaseID" />
+    </Key>
+    <Property Name="BloodPurchaseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BloodPurchaseVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BloodID" Type="int" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Quantity" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_BloodPurchaseVoucher">
+    <Key>
+      <PropertyRef Name="BloodPurchaseVoucherNo" />
+    </Key>
+    <Property Name="BloodPurchaseVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="BloodSupplyerID" Type="int" Nullable="false" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Remark" Type="varchar" MaxLength="200" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_BloodSupplierInfo">
+    <Key>
+      <PropertyRef Name="BloodSupplyerID" />
+    </Key>
+    <Property Name="BloodSupplyerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="ComAddress" Type="varchar" MaxLength="100" />
+    <Property Name="ComMobNo" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="100" />
+    <Property Name="ContractPersMobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_BloodSupplierProfile">
+    <Key>
+      <PropertyRef Name="BloodSupplierProfileID" />
+    </Key>
+    <Property Name="BloodSupplierProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BloodSupplyerID" Type="int" Nullable="false" />
+    <Property Name="VoucherNo" Type="varchar" MaxLength="50" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmountBack" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmountBackDate" Type="datetime" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_Claim">
+    <Key>
+      <PropertyRef Name="ClaimID" />
+    </Key>
+    <Property Name="ClaimID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="AgreemntInfo" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="TimeDuration" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_DesignationType">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesingnationName" Type="varchar" MaxLength="50" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_DoctorDuty">
+    <Key>
+      <PropertyRef Name="DoctorDutyID" />
+    </Key>
+    <Property Name="DoctorDutyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="Shift" Type="varchar" MaxLength="50" />
+    <Property Name="VisitTime" Type="varchar" MaxLength="50" />
+    <Property Name="VisitDescription" Type="varchar" MaxLength="200" />
+    <Property Name="OperationSchedule" Type="varchar" MaxLength="200" />
+    <Property Name="OutDorScheduleTime" Type="varchar" MaxLength="50" />
+    <Property Name="OperationTime" Type="varchar" MaxLength="50" />
+    <Property Name="OperationDescription" Type="varchar" MaxLength="200" />
+    <Property Name="EntryDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_DoctorSpecialization">
+    <Key>
+      <PropertyRef Name="DoctorSpecialiID" />
+    </Key>
+    <Property Name="DoctorSpecialiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="SpeciaTypeID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_IndorBloodSalesDetails">
+    <Key>
+      <PropertyRef Name="IndorBloodSalesID" />
+    </Key>
+    <Property Name="IndorBloodSalesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IndorBloodsalesVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BloodID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Rate" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="MediUnitID" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_IndorBloodSalesVoucher">
+    <Key>
+      <PropertyRef Name="IndorBloodsalesVoucherNo" />
+    </Key>
+    <Property Name="IndorBloodsalesVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BuyerName" Type="varchar" MaxLength="50" />
+    <Property Name="BuyerAddress" Type="varchar" MaxLength="200" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DeuAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_IndorMedicenPurshaseVoucher">
+    <Key>
+      <PropertyRef Name="MedicinePurchaseVoucherNo" />
+    </Key>
+    <Property Name="MedicinePurchaseVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MediSupplyerID" Type="int" Nullable="false" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="VoucharCopyImage" Type="varchar" MaxLength="100" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ExperDate" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_IndorMedicinePurchaseDetails">
+    <Key>
+      <PropertyRef Name="MedicinePurchaseId" />
+    </Key>
+    <Property Name="MedicinePurchaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MedicinePurchaseVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MediInfoID" Type="int" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_IndorMedicineSalesDetails">
+    <Key>
+      <PropertyRef Name="IndorMedicenSaleseId" />
+    </Key>
+    <Property Name="IndorMedicenSaleseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IndorMedicenSaleseVocherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MediInfoID" Type="int" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_IndorMedicineSalesVoucher">
+    <Key>
+      <PropertyRef Name="IndorMedicenSaleseVocherNo" />
+    </Key>
+    <Property Name="IndorMedicenSaleseVocherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="VatAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayDate" Type="datetime" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_IndorPatientLabTest">
+    <Key>
+      <PropertyRef Name="LabTestID" />
+    </Key>
+    <Property Name="LabTestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="LabID" Type="int" Nullable="false" />
+    <Property Name="Purpose" Type="varchar" MaxLength="200" />
+    <Property Name="Result" Type="varchar" MaxLength="100" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_InvoiceDetails">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="float" />
+  </EntityType>
+  <EntityType Name="tbl_InvoiceVocher">
+    <Key>
+      <PropertyRef Name="InvoiceVoucherNo" />
+    </Key>
+    <Property Name="InvoiceVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="ReleaseDate" Type="datetime" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="vat" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Discount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_LabInfo">
+    <Key>
+      <PropertyRef Name="LabID" />
+    </Key>
+    <Property Name="LabID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Shift" Type="varchar" MaxLength="50" />
+    <Property Name="LabNo" Type="varchar" MaxLength="100" />
+    <Property Name="LabName" Type="varchar" MaxLength="200" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="LabDescription" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_Leave">
+    <Key>
+      <PropertyRef Name="LeaveID" />
+    </Key>
+    <Property Name="LeaveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="LeaveDateFrom" Type="datetime" />
+    <Property Name="LeaveDateTo" Type="datetime" />
+    <Property Name="TotalLeaveDays" Type="int" />
+    <Property Name="LeaveCause" Type="varchar" MaxLength="50" />
+    <Property Name="TotalLeave" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Loan">
+    <Key>
+      <PropertyRef Name="LoanID" />
+    </Key>
+    <Property Name="LoanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="Salary" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="LoanDate" Type="datetime" />
+    <Property Name="LoanPurpose" Type="varchar" MaxLength="200" />
+    <Property Name="LoanAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="NewLoan" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="LoanBack" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PaymentWay" Type="varchar" MaxLength="200" />
+    <Property Name="GrandTotalLoan" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PaidLoan" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_MedicinCatagory">
+    <Key>
+      <PropertyRef Name="MediCataID" />
+    </Key>
+    <Property Name="MediCataID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CatagoryName" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_MedicineInfo">
+    <Key>
+      <PropertyRef Name="MediInfoID" />
+    </Key>
+    <Property Name="MediInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MediName" Type="varchar" MaxLength="200" />
+    <Property Name="MedicompaName" Type="varchar" MaxLength="100" />
+    <Property Name="MediUnitID" Type="int" Nullable="false" />
+    <Property Name="MediCataID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_MedicineSupplierInfo">
+    <Key>
+      <PropertyRef Name="MediSupplyerID" />
+    </Key>
+    <Property Name="MediSupplyerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MediSupplyerName" Type="varchar" MaxLength="50" />
+    <Property Name="ComAddress" Type="varchar" MaxLength="100" />
+    <Property Name="ComMobNo" Type="varchar" MaxLength="50" />
+    <Property Name="ContractPerson" Type="varchar" MaxLength="100" />
+    <Property Name="ContractPersMobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_MedicineSupplierProfile">
+    <Key>
+      <PropertyRef Name="SupplierProfileID" />
+    </Key>
+    <Property Name="SupplierProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MediSupplyerID" Type="int" Nullable="false" />
+    <Property Name="VoucherNo" Type="varchar" MaxLength="50" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmountBack" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmountBackDate" Type="datetime" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_MedicinUnit">
+    <Key>
+      <PropertyRef Name="MediUnitID" />
+    </Key>
+    <Property Name="MediUnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_NurseDuty">
+    <Key>
+      <PropertyRef Name="NurseDutyID" />
+    </Key>
+    <Property Name="NurseDutyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="SectionID" Type="int" Nullable="false" />
+    <Property Name="RoomNo" Type="varchar" MaxLength="50" />
+    <Property Name="WorkDescription" Type="varchar" MaxLength="150" />
+    <Property Name="Shift" Type="varchar" MaxLength="50" />
+    <Property Name="VisitTime" Type="varchar" MaxLength="50" />
+    <Property Name="VisitDescription" Type="varchar" MaxLength="200" />
+    <Property Name="OperationTime" Type="varchar" MaxLength="50" />
+    <Property Name="OperationDescription" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_OperationInfo">
+    <Key>
+      <PropertyRef Name="OperationID" />
+    </Key>
+    <Property Name="OperationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationName" Type="varchar" MaxLength="100" />
+    <Property Name="PatientID" Type="int" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="DoctorID" Type="int" Nullable="false" />
+    <Property Name="NurseID" Type="int" Nullable="false" />
+    <Property Name="RoomNo" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_OutdorBloodSalesDetails">
+    <Key>
+      <PropertyRef Name="OutdorBloodSalesID" />
+    </Key>
+    <Property Name="OutdorBloodSalesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutdorBloodSalesVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BloodID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Rate" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="MediUnitID" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_OutdorBloodSalesVoucher">
+    <Key>
+      <PropertyRef Name="OutdorBloodSalesVoucherNo" />
+    </Key>
+    <Property Name="OutdorBloodSalesVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutdorBuyerName" Type="varchar" MaxLength="50" />
+    <Property Name="OutdorBuyerPnoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="OutdorBuyerAddress" Type="varchar" MaxLength="50" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DeuAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_OutdorMedicineSalesDetails">
+    <Key>
+      <PropertyRef Name="OutdorMedicenSaleseId" />
+    </Key>
+    <Property Name="OutdorMedicenSaleseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutdorMedicineSalesVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MediInfoID" Type="int" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+  </EntityType>
+  <EntityType Name="tbl_OutdorMedicineSalesVoucher">
+    <Key>
+      <PropertyRef Name="OutdorMedicineSalesVoucherNo" />
+    </Key>
+    <Property Name="OutdorMedicineSalesVoucherNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutdorPatientName" Type="varchar" MaxLength="50" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="50" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="VatAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DueAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="PayDate" Type="datetime" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_OutdorPatientLabTest">
+    <Key>
+      <PropertyRef Name="OutdorLabTestId" />
+    </Key>
+    <Property Name="OutdorLabTestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutdorName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="LabID" Type="int" Nullable="false" />
+    <Property Name="Purpose" Type="varchar" MaxLength="200" />
+    <Property Name="Result" Type="varchar" MaxLength="200" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="date" />
+    <Property Name="UpdateDate" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_PatientInfo">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientName" Type="varchar" MaxLength="100" />
+    <Property Name="Age" Type="varchar" MaxLength="50" />
+    <Property Name="Weight" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="PatientMobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Disease" Type="varchar" MaxLength="100" />
+    <Property Name="ReferenceID" Type="int" Nullable="false" />
+    <Property Name="Gardian" Type="varchar" MaxLength="100" />
+    <Property Name="EmergencyMobNo" Type="varchar" MaxLength="50" />
+    <Property Name="PRoomID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_PationRoomInformation">
+    <Key>
+      <PropertyRef Name="PRoomID" />
+    </Key>
+    <Property Name="PRoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProomNo" Type="varchar" MaxLength="50" />
+    <Property Name="CategorayID" Type="int" Nullable="false" />
+    <Property Name="RoomTypeID" Type="int" Nullable="false" />
+    <Property Name="FloorNo" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="float" />
+  </EntityType>
+  <EntityType Name="tbl_Referenceinfo">
+    <Key>
+      <PropertyRef Name="ReferenceID" />
+    </Key>
+    <Property Name="ReferenceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferenceName" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="AgreementInfo" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="TimeDuration" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_RoomCatagory">
+    <Key>
+      <PropertyRef Name="CategorayID" />
+    </Key>
+    <Property Name="CategorayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_RoomType">
+    <Key>
+      <PropertyRef Name="RoomTypeID" />
+    </Key>
+    <Property Name="RoomTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomTypeName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Salary">
+    <Key>
+      <PropertyRef Name="SalaryID" />
+    </Key>
+    <Property Name="SalaryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="BasicAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Designation" Type="varchar" MaxLength="100" />
+    <Property Name="AllowanceAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="TotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="DetuctionAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="AdvanceAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="AdvanceBack" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="LoanAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="LoanBack" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="GrandTotalAmount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="UserInfoID" Type="int" Nullable="false" />
+    <Property Name="EnterDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="100" />
+    <Property Name="Amount" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_SpecializationType">
+    <Key>
+      <PropertyRef Name="SpeciaTypeID" />
+    </Key>
+    <Property Name="SpeciaTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SpecializationName" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_StaffEducation">
+    <Key>
+      <PropertyRef Name="StaffEducaID" />
+    </Key>
+    <Property Name="StaffEducaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffEducaName" Type="varchar" MaxLength="100" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="Organization" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_staffInfo">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="StaffTypeID" Type="int" Nullable="false" />
+    <Property Name="DesignationID" Type="int" Nullable="false" />
+    <Property Name="PresentAddress" Type="varchar" MaxLength="200" />
+    <Property Name="ParmanentAddress" Type="varchar" MaxLength="200" />
+    <Property Name="MobNo" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="BasicSalary" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="Bonus" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="JoiningDate" Type="datetime" />
+    <Property Name="ConfermationDate" Type="datetime" />
+    <Property Name="ReginingDate" Type="datetime" />
+    <Property Name="EmailNo" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbl_StaffType">
+    <Key>
+      <PropertyRef Name="StaffTypeID" />
+    </Key>
+    <Property Name="StaffTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaffName" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_UserInfo">
+    <Key>
+      <PropertyRef Name="UserInfoID" />
+    </Key>
+    <Property Name="UserInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="StaffID" Type="int" Nullable="false" />
+    <Property Name="UserRoleID" Type="int" Nullable="false" />
+    <Property Name="Isactive" Type="varchar" MaxLength="100" />
+    <Property Name="Remars" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tbl_UserRole">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserRoleName" Type="varchar" MaxLength="100" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_tbl_Advance_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_Advance" Type="Self.tbl_Advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_Advance">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Advance_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_Advance" Type="Self.tbl_Advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_Advance">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AllowanceDetails_tbl_AllowanceType">
+    <End Role="tbl_AllowanceType" Type="Self.tbl_AllowanceType" Multiplicity="1" />
+    <End Role="tbl_AllowanceDetails" Type="Self.tbl_AllowanceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_AllowanceType">
+        <PropertyRef Name="AllowanceID" />
+      </Principal>
+      <Dependent Role="tbl_AllowanceDetails">
+        <PropertyRef Name="AllowanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AllowanceDetails_tbl_AllowanceVoucher">
+    <End Role="tbl_AllowanceVoucher" Type="Self.tbl_AllowanceVoucher" Multiplicity="1" />
+    <End Role="tbl_AllowanceDetails" Type="Self.tbl_AllowanceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_AllowanceVoucher">
+        <PropertyRef Name="AllowanceVocherNo" />
+      </Principal>
+      <Dependent Role="tbl_AllowanceDetails">
+        <PropertyRef Name="AllowanceVocherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AllowanceVoucher_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_AllowanceVoucher" Type="Self.tbl_AllowanceVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_AllowanceVoucher">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AmbulanceInfo_tbl_AmbCatagory">
+    <End Role="tbl_AmbCatagory" Type="Self.tbl_AmbCatagory" Multiplicity="1" />
+    <End Role="tbl_AmbulanceInfo" Type="Self.tbl_AmbulanceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_AmbCatagory">
+        <PropertyRef Name="AmbCatagoryID" />
+      </Principal>
+      <Dependent Role="tbl_AmbulanceInfo">
+        <PropertyRef Name="AmbCatagoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AmbulanceInfo_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_AmbulanceInfo" Type="Self.tbl_AmbulanceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_AmbulanceInfo">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AmbulanceSchedule_tbl_AmbulanceInfo">
+    <End Role="tbl_AmbulanceInfo" Type="Self.tbl_AmbulanceInfo" Multiplicity="1" />
+    <End Role="tbl_AmbulanceSchedule" Type="Self.tbl_AmbulanceSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_AmbulanceInfo">
+        <PropertyRef Name="AmbID" />
+      </Principal>
+      <Dependent Role="tbl_AmbulanceSchedule">
+        <PropertyRef Name="AmbID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AppointmentSchedule_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_AppointmentSchedule" Type="Self.tbl_AppointmentSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_AppointmentSchedule">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_AppointmentSchedule_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_AppointmentSchedule" Type="Self.tbl_AppointmentSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_AppointmentSchedule">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Attendance_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_Attendance" Type="Self.tbl_Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_Attendance">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Attendance_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_Attendance" Type="Self.tbl_Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_Attendance">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodDonerInfo_tbl_BloodGroup">
+    <End Role="tbl_BloodGroup" Type="Self.tbl_BloodGroup" Multiplicity="1" />
+    <End Role="tbl_BloodDonerInfo" Type="Self.tbl_BloodDonerInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodGroup">
+        <PropertyRef Name="BloodID" />
+      </Principal>
+      <Dependent Role="tbl_BloodDonerInfo">
+        <PropertyRef Name="BloodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodPurchasee_tbl_BloodGroup">
+    <End Role="tbl_BloodGroup" Type="Self.tbl_BloodGroup" Multiplicity="1" />
+    <End Role="tbl_BloodPurchaseeDetails" Type="Self.tbl_BloodPurchaseeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodGroup">
+        <PropertyRef Name="BloodID" />
+      </Principal>
+      <Dependent Role="tbl_BloodPurchaseeDetails">
+        <PropertyRef Name="BloodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodPurchasee_tbl_BloodPurchaseVoucher">
+    <End Role="tbl_BloodPurchaseVoucher" Type="Self.tbl_BloodPurchaseVoucher" Multiplicity="1" />
+    <End Role="tbl_BloodPurchaseeDetails" Type="Self.tbl_BloodPurchaseeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodPurchaseVoucher">
+        <PropertyRef Name="BloodPurchaseVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_BloodPurchaseeDetails">
+        <PropertyRef Name="BloodPurchaseVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodPurchaseVoucher_tbl_BloodSupplierInfo">
+    <End Role="tbl_BloodSupplierInfo" Type="Self.tbl_BloodSupplierInfo" Multiplicity="1" />
+    <End Role="tbl_BloodPurchaseVoucher" Type="Self.tbl_BloodPurchaseVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodSupplierInfo">
+        <PropertyRef Name="BloodSupplyerID" />
+      </Principal>
+      <Dependent Role="tbl_BloodPurchaseVoucher">
+        <PropertyRef Name="BloodSupplyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodPurchaseVoucher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_BloodPurchaseVoucher" Type="Self.tbl_BloodPurchaseVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_BloodPurchaseVoucher">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodSupplierProfile_tbl_BloodSupplierInfo">
+    <End Role="tbl_BloodSupplierInfo" Type="Self.tbl_BloodSupplierInfo" Multiplicity="1" />
+    <End Role="tbl_BloodSupplierProfile" Type="Self.tbl_BloodSupplierProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodSupplierInfo">
+        <PropertyRef Name="BloodSupplyerID" />
+      </Principal>
+      <Dependent Role="tbl_BloodSupplierProfile">
+        <PropertyRef Name="BloodSupplyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_BloodSupplierProfile_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_BloodSupplierProfile" Type="Self.tbl_BloodSupplierProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_BloodSupplierProfile">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DoctorDuty_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_DoctorDuty" Type="Self.tbl_DoctorDuty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_DoctorDuty">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DoctorSpecialization_tbl_SpecializationType">
+    <End Role="tbl_SpecializationType" Type="Self.tbl_SpecializationType" Multiplicity="1" />
+    <End Role="tbl_DoctorSpecialization" Type="Self.tbl_DoctorSpecialization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_SpecializationType">
+        <PropertyRef Name="SpeciaTypeID" />
+      </Principal>
+      <Dependent Role="tbl_DoctorSpecialization">
+        <PropertyRef Name="SpeciaTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_DoctorSpecialization_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_DoctorSpecialization" Type="Self.tbl_DoctorSpecialization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_DoctorSpecialization">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorBloodSalesDetails_tbl_BloodGroup">
+    <End Role="tbl_BloodGroup" Type="Self.tbl_BloodGroup" Multiplicity="1" />
+    <End Role="tbl_IndorBloodSalesDetails" Type="Self.tbl_IndorBloodSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodGroup">
+        <PropertyRef Name="BloodID" />
+      </Principal>
+      <Dependent Role="tbl_IndorBloodSalesDetails">
+        <PropertyRef Name="BloodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorBloodSalesDetails_tbl_IndorBloodSalesVoucher">
+    <End Role="tbl_IndorBloodSalesVoucher" Type="Self.tbl_IndorBloodSalesVoucher" Multiplicity="1" />
+    <End Role="tbl_IndorBloodSalesDetails" Type="Self.tbl_IndorBloodSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_IndorBloodSalesVoucher">
+        <PropertyRef Name="IndorBloodsalesVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_IndorBloodSalesDetails">
+        <PropertyRef Name="IndorBloodsalesVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorBloodSalesDetails_tbl_MedicinUnit">
+    <End Role="tbl_MedicinUnit" Type="Self.tbl_MedicinUnit" Multiplicity="1" />
+    <End Role="tbl_IndorBloodSalesDetails" Type="Self.tbl_IndorBloodSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicinUnit">
+        <PropertyRef Name="MediUnitID" />
+      </Principal>
+      <Dependent Role="tbl_IndorBloodSalesDetails">
+        <PropertyRef Name="MediUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorBloodSalesVoucher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_IndorBloodSalesVoucher" Type="Self.tbl_IndorBloodSalesVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_IndorBloodSalesVoucher">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorMedicineSalesDetails_tbl_IndorMedicineSalesVoucher">
+    <End Role="tbl_IndorMedicineSalesVoucher" Type="Self.tbl_IndorMedicineSalesVoucher" Multiplicity="1" />
+    <End Role="tbl_IndorMedicineSalesDetails" Type="Self.tbl_IndorMedicineSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_IndorMedicineSalesVoucher">
+        <PropertyRef Name="IndorMedicenSaleseVocherNo" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicineSalesDetails">
+        <PropertyRef Name="IndorMedicenSaleseVocherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorMedicineSalesDetails_tbl_MedicineInfo">
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="1" />
+    <End Role="tbl_IndorMedicineSalesDetails" Type="Self.tbl_IndorMedicineSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediInfoID" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicineSalesDetails">
+        <PropertyRef Name="MediInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorMedicineSalesVoucher_tbl_PatientInfo">
+    <End Role="tbl_PatientInfo" Type="Self.tbl_PatientInfo" Multiplicity="1" />
+    <End Role="tbl_IndorMedicineSalesVoucher" Type="Self.tbl_IndorMedicineSalesVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PatientInfo">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicineSalesVoucher">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_IndorMedicineSalesVoucher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_IndorMedicineSalesVoucher" Type="Self.tbl_IndorMedicineSalesVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicineSalesVoucher">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InvoiceDetails_tbl_InvoiceVocher">
+    <End Role="tbl_InvoiceVocher" Type="Self.tbl_InvoiceVocher" Multiplicity="1" />
+    <End Role="tbl_InvoiceDetails" Type="Self.tbl_InvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_InvoiceVocher">
+        <PropertyRef Name="InvoiceVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_InvoiceDetails">
+        <PropertyRef Name="InvoiceVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InvoiceDetails_tbl_Service">
+    <End Role="tbl_Service" Type="Self.tbl_Service" Multiplicity="1" />
+    <End Role="tbl_InvoiceDetails" Type="Self.tbl_InvoiceDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="tbl_InvoiceDetails">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InvoiceVocher_tbl_PatientInfo">
+    <End Role="tbl_PatientInfo" Type="Self.tbl_PatientInfo" Multiplicity="1" />
+    <End Role="tbl_InvoiceVocher" Type="Self.tbl_InvoiceVocher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PatientInfo">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="tbl_InvoiceVocher">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InvoiceVocher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_InvoiceVocher" Type="Self.tbl_InvoiceVocher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_InvoiceVocher">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_LabInfo_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_LabInfo" Type="Self.tbl_LabInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_LabInfo">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tbl_LabTest_tbl_LabInfo">
+    <End Role="tbl_LabInfo" Type="Self.tbl_LabInfo" Multiplicity="1" />
+    <End Role="Tbl_IndorPatientLabTest" Type="Self.Tbl_IndorPatientLabTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_LabInfo">
+        <PropertyRef Name="LabID" />
+      </Principal>
+      <Dependent Role="Tbl_IndorPatientLabTest">
+        <PropertyRef Name="LabID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tbl_LabTest_tbl_PatientInfo">
+    <End Role="tbl_PatientInfo" Type="Self.tbl_PatientInfo" Multiplicity="1" />
+    <End Role="Tbl_IndorPatientLabTest" Type="Self.Tbl_IndorPatientLabTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PatientInfo">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Tbl_IndorPatientLabTest">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tbl_LabTest_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="Tbl_IndorPatientLabTest" Type="Self.Tbl_IndorPatientLabTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="Tbl_IndorPatientLabTest">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Leave_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_Leave" Type="Self.tbl_Leave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_Leave">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Leave_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_Leave" Type="Self.tbl_Leave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_Leave">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Loan_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_Loan" Type="Self.tbl_Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_Loan">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Loan_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_Loan" Type="Self.tbl_Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_Loan">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicenPurshaseVoucher_tbl_MedicineSupplierInfo">
+    <End Role="tbl_MedicineSupplierInfo" Type="Self.tbl_MedicineSupplierInfo" Multiplicity="1" />
+    <End Role="tbl_IndorMedicenPurshaseVoucher" Type="Self.tbl_IndorMedicenPurshaseVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineSupplierInfo">
+        <PropertyRef Name="MediSupplyerID" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicenPurshaseVoucher">
+        <PropertyRef Name="MediSupplyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicenPurshaseVoucher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_IndorMedicenPurshaseVoucher" Type="Self.tbl_IndorMedicenPurshaseVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicenPurshaseVoucher">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicineInfo_tbl_MedicinCatagory">
+    <End Role="tbl_MedicinCatagory" Type="Self.tbl_MedicinCatagory" Multiplicity="1" />
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicinCatagory">
+        <PropertyRef Name="MediCataID" />
+      </Principal>
+      <Dependent Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediCataID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicineInfo_tbl_MedicinUnit">
+    <End Role="tbl_MedicinUnit" Type="Self.tbl_MedicinUnit" Multiplicity="1" />
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicinUnit">
+        <PropertyRef Name="MediUnitID" />
+      </Principal>
+      <Dependent Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicinePurchaseDetails_tbl_MedicenPurshaseVoucher">
+    <End Role="tbl_IndorMedicenPurshaseVoucher" Type="Self.tbl_IndorMedicenPurshaseVoucher" Multiplicity="1" />
+    <End Role="tbl_IndorMedicinePurchaseDetails" Type="Self.tbl_IndorMedicinePurchaseDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_IndorMedicenPurshaseVoucher">
+        <PropertyRef Name="MedicinePurchaseVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicinePurchaseDetails">
+        <PropertyRef Name="MedicinePurchaseVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicinePurchaseDetails_tbl_MedicineInfo">
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="1" />
+    <End Role="tbl_IndorMedicinePurchaseDetails" Type="Self.tbl_IndorMedicinePurchaseDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediInfoID" />
+      </Principal>
+      <Dependent Role="tbl_IndorMedicinePurchaseDetails">
+        <PropertyRef Name="MediInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicineSupplierProfile_tbl_MedicineSupplierInfo">
+    <End Role="tbl_MedicineSupplierInfo" Type="Self.tbl_MedicineSupplierInfo" Multiplicity="1" />
+    <End Role="tbl_MedicineSupplierProfile" Type="Self.tbl_MedicineSupplierProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineSupplierInfo">
+        <PropertyRef Name="MediSupplyerID" />
+      </Principal>
+      <Dependent Role="tbl_MedicineSupplierProfile">
+        <PropertyRef Name="MediSupplyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_MedicineSupplierProfile_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_MedicineSupplierProfile" Type="Self.tbl_MedicineSupplierProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_MedicineSupplierProfile">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_NurseDuty_tbe_NurseSectionType">
+    <End Role="tbe_NurseSectionType" Type="Self.tbe_NurseSectionType" Multiplicity="1" />
+    <End Role="tbl_NurseDuty" Type="Self.tbl_NurseDuty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbe_NurseSectionType">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="tbl_NurseDuty">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_NurseDuty_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_NurseDuty" Type="Self.tbl_NurseDuty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_NurseDuty">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OperationInfo_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_OperationInfo" Type="Self.tbl_OperationInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_OperationInfo">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorBloodSalesDetails_tbl_BloodGroup">
+    <End Role="tbl_BloodGroup" Type="Self.tbl_BloodGroup" Multiplicity="1" />
+    <End Role="tbl_OutdorBloodSalesDetails" Type="Self.tbl_OutdorBloodSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_BloodGroup">
+        <PropertyRef Name="BloodID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorBloodSalesDetails">
+        <PropertyRef Name="BloodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorBloodSalesDetails_tbl_MedicinUnit">
+    <End Role="tbl_MedicinUnit" Type="Self.tbl_MedicinUnit" Multiplicity="1" />
+    <End Role="tbl_OutdorBloodSalesDetails" Type="Self.tbl_OutdorBloodSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicinUnit">
+        <PropertyRef Name="MediUnitID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorBloodSalesDetails">
+        <PropertyRef Name="MediUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorBloodSalesDetails_tbl_OutdorBloodSalesVoucher">
+    <End Role="tbl_OutdorBloodSalesVoucher" Type="Self.tbl_OutdorBloodSalesVoucher" Multiplicity="1" />
+    <End Role="tbl_OutdorBloodSalesDetails" Type="Self.tbl_OutdorBloodSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_OutdorBloodSalesVoucher">
+        <PropertyRef Name="OutdorBloodSalesVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_OutdorBloodSalesDetails">
+        <PropertyRef Name="OutdorBloodSalesVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorBloodSalesVoucher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_OutdorBloodSalesVoucher" Type="Self.tbl_OutdorBloodSalesVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorBloodSalesVoucher">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo">
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="1" />
+    <End Role="tbl_OutdorMedicineSalesDetails" Type="Self.tbl_OutdorMedicineSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediInfoID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorMedicineSalesDetails">
+        <PropertyRef Name="MediInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo1">
+    <End Role="tbl_MedicineInfo" Type="Self.tbl_MedicineInfo" Multiplicity="1" />
+    <End Role="tbl_OutdorMedicineSalesDetails" Type="Self.tbl_OutdorMedicineSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MedicineInfo">
+        <PropertyRef Name="MediInfoID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorMedicineSalesDetails">
+        <PropertyRef Name="MediInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorMedicineSalesDetails_tbl_OutdorMedicineSalesVoucher">
+    <End Role="tbl_OutdorMedicineSalesVoucher" Type="Self.tbl_OutdorMedicineSalesVoucher" Multiplicity="1" />
+    <End Role="tbl_OutdorMedicineSalesDetails" Type="Self.tbl_OutdorMedicineSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_OutdorMedicineSalesVoucher">
+        <PropertyRef Name="OutdorMedicineSalesVoucherNo" />
+      </Principal>
+      <Dependent Role="tbl_OutdorMedicineSalesDetails">
+        <PropertyRef Name="OutdorMedicineSalesVoucherNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorMedicineSalesVoucher_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_OutdorMedicineSalesVoucher" Type="Self.tbl_OutdorMedicineSalesVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorMedicineSalesVoucher">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorPatientLabTest_tbl_LabInfo">
+    <End Role="tbl_LabInfo" Type="Self.tbl_LabInfo" Multiplicity="1" />
+    <End Role="tbl_OutdorPatientLabTest" Type="Self.tbl_OutdorPatientLabTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_LabInfo">
+        <PropertyRef Name="LabID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorPatientLabTest">
+        <PropertyRef Name="LabID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_OutdorPatientLabTest_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_OutdorPatientLabTest" Type="Self.tbl_OutdorPatientLabTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_OutdorPatientLabTest">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PatientInfo_tbl_PationRoomInformation">
+    <End Role="tbl_PationRoomInformation" Type="Self.tbl_PationRoomInformation" Multiplicity="1" />
+    <End Role="tbl_PatientInfo" Type="Self.tbl_PatientInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PationRoomInformation">
+        <PropertyRef Name="PRoomID" />
+      </Principal>
+      <Dependent Role="tbl_PatientInfo">
+        <PropertyRef Name="PRoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PatientInfo_tbl_Referenceinfo">
+    <End Role="tbl_Referenceinfo" Type="Self.tbl_Referenceinfo" Multiplicity="1" />
+    <End Role="tbl_PatientInfo" Type="Self.tbl_PatientInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Referenceinfo">
+        <PropertyRef Name="ReferenceID" />
+      </Principal>
+      <Dependent Role="tbl_PatientInfo">
+        <PropertyRef Name="ReferenceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PationRoomInformation_tbl_RoomCatagory">
+    <End Role="tbl_RoomCatagory" Type="Self.tbl_RoomCatagory" Multiplicity="1" />
+    <End Role="tbl_PationRoomInformation" Type="Self.tbl_PationRoomInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_RoomCatagory">
+        <PropertyRef Name="CategorayID" />
+      </Principal>
+      <Dependent Role="tbl_PationRoomInformation">
+        <PropertyRef Name="CategorayID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PationRoomInformation_tbl_RoomType">
+    <End Role="tbl_RoomType" Type="Self.tbl_RoomType" Multiplicity="1" />
+    <End Role="tbl_PationRoomInformation" Type="Self.tbl_PationRoomInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_RoomType">
+        <PropertyRef Name="RoomTypeID" />
+      </Principal>
+      <Dependent Role="tbl_PationRoomInformation">
+        <PropertyRef Name="RoomTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Salary_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_Salary" Type="Self.tbl_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_Salary">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Salary_tbl_UserInfo">
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="1" />
+    <End Role="tbl_Salary" Type="Self.tbl_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserInfo">
+        <PropertyRef Name="UserInfoID" />
+      </Principal>
+      <Dependent Role="tbl_Salary">
+        <PropertyRef Name="UserInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_StaffEducation_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_StaffEducation" Type="Self.tbl_StaffEducation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_StaffEducation">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_staffInfo_tbl_DesignationType">
+    <End Role="tbl_DesignationType" Type="Self.tbl_DesignationType" Multiplicity="1" />
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_DesignationType">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="tbl_staffInfo">
+        <PropertyRef Name="DesignationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_staffInfo_tbl_StaffType">
+    <End Role="tbl_StaffType" Type="Self.tbl_StaffType" Multiplicity="1" />
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_StaffType">
+        <PropertyRef Name="StaffTypeID" />
+      </Principal>
+      <Dependent Role="tbl_staffInfo">
+        <PropertyRef Name="StaffTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_UserInfo_tbl_staffInfo">
+    <End Role="tbl_staffInfo" Type="Self.tbl_staffInfo" Multiplicity="1" />
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_staffInfo">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="tbl_UserInfo">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_UserInfo_tbl_UserRole">
+    <End Role="tbl_UserRole" Type="Self.tbl_UserRole" Multiplicity="1" />
+    <End Role="tbl_UserInfo" Type="Self.tbl_UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_UserRole">
+        <PropertyRef Name="UserRoleID" />
+      </Principal>
+      <Dependent Role="tbl_UserInfo">
+        <PropertyRef Name="UserRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HospitalManagementSystemDBModelStoreContainer">
+    <EntitySet Name="HR_AdvanceSalaryDetailPrevious_Log" EntityType="Self.HR_AdvanceSalaryDetailPrevious_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_AdvanceSalaryDetails" EntityType="Self.HR_AdvanceSalaryDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_AdvanceSalarySummary" EntityType="Self.HR_AdvanceSalarySummary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Attendance" EntityType="Self.HR_Attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Attendance_Manual_Log" EntityType="Self.HR_Attendance_Manual_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_AttendanceBonus" EntityType="Self.HR_AttendanceBonus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_AttendanceProcess_Log" EntityType="Self.HR_AttendanceProcess_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_AttendanceStatusProcess_Log" EntityType="Self.HR_AttendanceStatusProcess_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Holiday" EntityType="Self.HR_Holiday" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_HolidayType" EntityType="Self.HR_HolidayType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_HospitalSetup" EntityType="Self.HR_HospitalSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_LeaveApply" EntityType="Self.HR_LeaveApply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_LeaveType" EntityType="Self.HR_LeaveType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Salary_Deduction" EntityType="Self.HR_Salary_Deduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Salary_Punishment" EntityType="Self.HR_Salary_Punishment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HR_Shift" EntityType="Self.HR_Shift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbe_NurseSectionType" EntityType="Self.tbe_NurseSectionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Advance" EntityType="Self.tbl_Advance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AllowanceDetails" EntityType="Self.tbl_AllowanceDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AllowanceType" EntityType="Self.tbl_AllowanceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AllowanceVoucher" EntityType="Self.tbl_AllowanceVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AmbCatagory" EntityType="Self.tbl_AmbCatagory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AmbulanceInfo" EntityType="Self.tbl_AmbulanceInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AmbulanceSchedule" EntityType="Self.tbl_AmbulanceSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AppointmentSchedule" EntityType="Self.tbl_AppointmentSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Attendance" EntityType="Self.tbl_Attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BloodDonerInfo" EntityType="Self.tbl_BloodDonerInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BloodGroup" EntityType="Self.tbl_BloodGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BloodPurchaseeDetails" EntityType="Self.tbl_BloodPurchaseeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BloodPurchaseVoucher" EntityType="Self.tbl_BloodPurchaseVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BloodSupplierInfo" EntityType="Self.tbl_BloodSupplierInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BloodSupplierProfile" EntityType="Self.tbl_BloodSupplierProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Claim" EntityType="Self.tbl_Claim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DesignationType" EntityType="Self.tbl_DesignationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DoctorDuty" EntityType="Self.tbl_DoctorDuty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DoctorSpecialization" EntityType="Self.tbl_DoctorSpecialization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_IndorBloodSalesDetails" EntityType="Self.tbl_IndorBloodSalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_IndorBloodSalesVoucher" EntityType="Self.tbl_IndorBloodSalesVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_IndorMedicenPurshaseVoucher" EntityType="Self.tbl_IndorMedicenPurshaseVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_IndorMedicinePurchaseDetails" EntityType="Self.tbl_IndorMedicinePurchaseDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_IndorMedicineSalesDetails" EntityType="Self.tbl_IndorMedicineSalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_IndorMedicineSalesVoucher" EntityType="Self.tbl_IndorMedicineSalesVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_IndorPatientLabTest" EntityType="Self.Tbl_IndorPatientLabTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_InvoiceDetails" EntityType="Self.tbl_InvoiceDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_InvoiceVocher" EntityType="Self.tbl_InvoiceVocher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_LabInfo" EntityType="Self.tbl_LabInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Leave" EntityType="Self.tbl_Leave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Loan" EntityType="Self.tbl_Loan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MedicinCatagory" EntityType="Self.tbl_MedicinCatagory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MedicineInfo" EntityType="Self.tbl_MedicineInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MedicineSupplierInfo" EntityType="Self.tbl_MedicineSupplierInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MedicineSupplierProfile" EntityType="Self.tbl_MedicineSupplierProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MedicinUnit" EntityType="Self.tbl_MedicinUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_NurseDuty" EntityType="Self.tbl_NurseDuty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OperationInfo" EntityType="Self.tbl_OperationInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutdorBloodSalesDetails" EntityType="Self.tbl_OutdorBloodSalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutdorBloodSalesVoucher" EntityType="Self.tbl_OutdorBloodSalesVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutdorMedicineSalesDetails" EntityType="Self.tbl_OutdorMedicineSalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutdorMedicineSalesVoucher" EntityType="Self.tbl_OutdorMedicineSalesVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OutdorPatientLabTest" EntityType="Self.tbl_OutdorPatientLabTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PatientInfo" EntityType="Self.tbl_PatientInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PationRoomInformation" EntityType="Self.tbl_PationRoomInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Referenceinfo" EntityType="Self.tbl_Referenceinfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_RoomCatagory" EntityType="Self.tbl_RoomCatagory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_RoomType" EntityType="Self.tbl_RoomType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Salary" EntityType="Self.tbl_Salary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Service" EntityType="Self.tbl_Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SpecializationType" EntityType="Self.tbl_SpecializationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_StaffEducation" EntityType="Self.tbl_StaffEducation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_staffInfo" EntityType="Self.tbl_staffInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_StaffType" EntityType="Self.tbl_StaffType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_UserInfo" EntityType="Self.tbl_UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_UserRole" EntityType="Self.tbl_UserRole" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_Advance_tbl_staffInfo" Association="Self.FK_tbl_Advance_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_Advance" EntitySet="tbl_Advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Advance_tbl_UserInfo" Association="Self.FK_tbl_Advance_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_Advance" EntitySet="tbl_Advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AllowanceDetails_tbl_AllowanceType" Association="Self.FK_tbl_AllowanceDetails_tbl_AllowanceType">
+      <End Role="tbl_AllowanceType" EntitySet="tbl_AllowanceType" />
+      <End Role="tbl_AllowanceDetails" EntitySet="tbl_AllowanceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AllowanceDetails_tbl_AllowanceVoucher" Association="Self.FK_tbl_AllowanceDetails_tbl_AllowanceVoucher">
+      <End Role="tbl_AllowanceVoucher" EntitySet="tbl_AllowanceVoucher" />
+      <End Role="tbl_AllowanceDetails" EntitySet="tbl_AllowanceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AllowanceVoucher_tbl_staffInfo" Association="Self.FK_tbl_AllowanceVoucher_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_AllowanceVoucher" EntitySet="tbl_AllowanceVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AmbulanceInfo_tbl_AmbCatagory" Association="Self.FK_tbl_AmbulanceInfo_tbl_AmbCatagory">
+      <End Role="tbl_AmbCatagory" EntitySet="tbl_AmbCatagory" />
+      <End Role="tbl_AmbulanceInfo" EntitySet="tbl_AmbulanceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AmbulanceInfo_tbl_staffInfo" Association="Self.FK_tbl_AmbulanceInfo_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_AmbulanceInfo" EntitySet="tbl_AmbulanceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AmbulanceSchedule_tbl_AmbulanceInfo" Association="Self.FK_tbl_AmbulanceSchedule_tbl_AmbulanceInfo">
+      <End Role="tbl_AmbulanceInfo" EntitySet="tbl_AmbulanceInfo" />
+      <End Role="tbl_AmbulanceSchedule" EntitySet="tbl_AmbulanceSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AppointmentSchedule_tbl_staffInfo" Association="Self.FK_tbl_AppointmentSchedule_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_AppointmentSchedule" EntitySet="tbl_AppointmentSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_AppointmentSchedule_tbl_UserInfo" Association="Self.FK_tbl_AppointmentSchedule_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_AppointmentSchedule" EntitySet="tbl_AppointmentSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Attendance_tbl_staffInfo" Association="Self.FK_tbl_Attendance_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_Attendance" EntitySet="tbl_Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Attendance_tbl_UserInfo" Association="Self.FK_tbl_Attendance_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_Attendance" EntitySet="tbl_Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodDonerInfo_tbl_BloodGroup" Association="Self.FK_tbl_BloodDonerInfo_tbl_BloodGroup">
+      <End Role="tbl_BloodGroup" EntitySet="tbl_BloodGroup" />
+      <End Role="tbl_BloodDonerInfo" EntitySet="tbl_BloodDonerInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodPurchasee_tbl_BloodGroup" Association="Self.FK_tbl_BloodPurchasee_tbl_BloodGroup">
+      <End Role="tbl_BloodGroup" EntitySet="tbl_BloodGroup" />
+      <End Role="tbl_BloodPurchaseeDetails" EntitySet="tbl_BloodPurchaseeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodPurchasee_tbl_BloodPurchaseVoucher" Association="Self.FK_tbl_BloodPurchasee_tbl_BloodPurchaseVoucher">
+      <End Role="tbl_BloodPurchaseVoucher" EntitySet="tbl_BloodPurchaseVoucher" />
+      <End Role="tbl_BloodPurchaseeDetails" EntitySet="tbl_BloodPurchaseeDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodPurchaseVoucher_tbl_BloodSupplierInfo" Association="Self.FK_tbl_BloodPurchaseVoucher_tbl_BloodSupplierInfo">
+      <End Role="tbl_BloodSupplierInfo" EntitySet="tbl_BloodSupplierInfo" />
+      <End Role="tbl_BloodPurchaseVoucher" EntitySet="tbl_BloodPurchaseVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodPurchaseVoucher_tbl_UserInfo" Association="Self.FK_tbl_BloodPurchaseVoucher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_BloodPurchaseVoucher" EntitySet="tbl_BloodPurchaseVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodSupplierProfile_tbl_BloodSupplierInfo" Association="Self.FK_tbl_BloodSupplierProfile_tbl_BloodSupplierInfo">
+      <End Role="tbl_BloodSupplierInfo" EntitySet="tbl_BloodSupplierInfo" />
+      <End Role="tbl_BloodSupplierProfile" EntitySet="tbl_BloodSupplierProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_BloodSupplierProfile_tbl_UserInfo" Association="Self.FK_tbl_BloodSupplierProfile_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_BloodSupplierProfile" EntitySet="tbl_BloodSupplierProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DoctorDuty_tbl_staffInfo" Association="Self.FK_tbl_DoctorDuty_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_DoctorDuty" EntitySet="tbl_DoctorDuty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DoctorSpecialization_tbl_SpecializationType" Association="Self.FK_tbl_DoctorSpecialization_tbl_SpecializationType">
+      <End Role="tbl_SpecializationType" EntitySet="tbl_SpecializationType" />
+      <End Role="tbl_DoctorSpecialization" EntitySet="tbl_DoctorSpecialization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_DoctorSpecialization_tbl_staffInfo" Association="Self.FK_tbl_DoctorSpecialization_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_DoctorSpecialization" EntitySet="tbl_DoctorSpecialization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorBloodSalesDetails_tbl_BloodGroup" Association="Self.FK_tbl_IndorBloodSalesDetails_tbl_BloodGroup">
+      <End Role="tbl_BloodGroup" EntitySet="tbl_BloodGroup" />
+      <End Role="tbl_IndorBloodSalesDetails" EntitySet="tbl_IndorBloodSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorBloodSalesDetails_tbl_IndorBloodSalesVoucher" Association="Self.FK_tbl_IndorBloodSalesDetails_tbl_IndorBloodSalesVoucher">
+      <End Role="tbl_IndorBloodSalesVoucher" EntitySet="tbl_IndorBloodSalesVoucher" />
+      <End Role="tbl_IndorBloodSalesDetails" EntitySet="tbl_IndorBloodSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorBloodSalesDetails_tbl_MedicinUnit" Association="Self.FK_tbl_IndorBloodSalesDetails_tbl_MedicinUnit">
+      <End Role="tbl_MedicinUnit" EntitySet="tbl_MedicinUnit" />
+      <End Role="tbl_IndorBloodSalesDetails" EntitySet="tbl_IndorBloodSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorBloodSalesVoucher_tbl_UserInfo" Association="Self.FK_tbl_IndorBloodSalesVoucher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_IndorBloodSalesVoucher" EntitySet="tbl_IndorBloodSalesVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorMedicineSalesDetails_tbl_IndorMedicineSalesVoucher" Association="Self.FK_tbl_IndorMedicineSalesDetails_tbl_IndorMedicineSalesVoucher">
+      <End Role="tbl_IndorMedicineSalesVoucher" EntitySet="tbl_IndorMedicineSalesVoucher" />
+      <End Role="tbl_IndorMedicineSalesDetails" EntitySet="tbl_IndorMedicineSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorMedicineSalesDetails_tbl_MedicineInfo" Association="Self.FK_tbl_IndorMedicineSalesDetails_tbl_MedicineInfo">
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+      <End Role="tbl_IndorMedicineSalesDetails" EntitySet="tbl_IndorMedicineSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorMedicineSalesVoucher_tbl_PatientInfo" Association="Self.FK_tbl_IndorMedicineSalesVoucher_tbl_PatientInfo">
+      <End Role="tbl_PatientInfo" EntitySet="tbl_PatientInfo" />
+      <End Role="tbl_IndorMedicineSalesVoucher" EntitySet="tbl_IndorMedicineSalesVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_IndorMedicineSalesVoucher_tbl_UserInfo" Association="Self.FK_tbl_IndorMedicineSalesVoucher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_IndorMedicineSalesVoucher" EntitySet="tbl_IndorMedicineSalesVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InvoiceDetails_tbl_InvoiceVocher" Association="Self.FK_tbl_InvoiceDetails_tbl_InvoiceVocher">
+      <End Role="tbl_InvoiceVocher" EntitySet="tbl_InvoiceVocher" />
+      <End Role="tbl_InvoiceDetails" EntitySet="tbl_InvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InvoiceDetails_tbl_Service" Association="Self.FK_tbl_InvoiceDetails_tbl_Service">
+      <End Role="tbl_Service" EntitySet="tbl_Service" />
+      <End Role="tbl_InvoiceDetails" EntitySet="tbl_InvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InvoiceVocher_tbl_PatientInfo" Association="Self.FK_tbl_InvoiceVocher_tbl_PatientInfo">
+      <End Role="tbl_PatientInfo" EntitySet="tbl_PatientInfo" />
+      <End Role="tbl_InvoiceVocher" EntitySet="tbl_InvoiceVocher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InvoiceVocher_tbl_UserInfo" Association="Self.FK_tbl_InvoiceVocher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_InvoiceVocher" EntitySet="tbl_InvoiceVocher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_LabInfo_tbl_staffInfo" Association="Self.FK_tbl_LabInfo_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_LabInfo" EntitySet="tbl_LabInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tbl_LabTest_tbl_LabInfo" Association="Self.FK_Tbl_LabTest_tbl_LabInfo">
+      <End Role="tbl_LabInfo" EntitySet="tbl_LabInfo" />
+      <End Role="Tbl_IndorPatientLabTest" EntitySet="Tbl_IndorPatientLabTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tbl_LabTest_tbl_PatientInfo" Association="Self.FK_Tbl_LabTest_tbl_PatientInfo">
+      <End Role="tbl_PatientInfo" EntitySet="tbl_PatientInfo" />
+      <End Role="Tbl_IndorPatientLabTest" EntitySet="Tbl_IndorPatientLabTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tbl_LabTest_tbl_UserInfo" Association="Self.FK_Tbl_LabTest_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="Tbl_IndorPatientLabTest" EntitySet="Tbl_IndorPatientLabTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Leave_tbl_staffInfo" Association="Self.FK_tbl_Leave_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_Leave" EntitySet="tbl_Leave" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Leave_tbl_UserInfo" Association="Self.FK_tbl_Leave_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_Leave" EntitySet="tbl_Leave" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Loan_tbl_staffInfo" Association="Self.FK_tbl_Loan_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_Loan" EntitySet="tbl_Loan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Loan_tbl_UserInfo" Association="Self.FK_tbl_Loan_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_Loan" EntitySet="tbl_Loan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicenPurshaseVoucher_tbl_MedicineSupplierInfo" Association="Self.FK_tbl_MedicenPurshaseVoucher_tbl_MedicineSupplierInfo">
+      <End Role="tbl_MedicineSupplierInfo" EntitySet="tbl_MedicineSupplierInfo" />
+      <End Role="tbl_IndorMedicenPurshaseVoucher" EntitySet="tbl_IndorMedicenPurshaseVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicenPurshaseVoucher_tbl_UserInfo" Association="Self.FK_tbl_MedicenPurshaseVoucher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_IndorMedicenPurshaseVoucher" EntitySet="tbl_IndorMedicenPurshaseVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicineInfo_tbl_MedicinCatagory" Association="Self.FK_tbl_MedicineInfo_tbl_MedicinCatagory">
+      <End Role="tbl_MedicinCatagory" EntitySet="tbl_MedicinCatagory" />
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicineInfo_tbl_MedicinUnit" Association="Self.FK_tbl_MedicineInfo_tbl_MedicinUnit">
+      <End Role="tbl_MedicinUnit" EntitySet="tbl_MedicinUnit" />
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicinePurchaseDetails_tbl_MedicenPurshaseVoucher" Association="Self.FK_tbl_MedicinePurchaseDetails_tbl_MedicenPurshaseVoucher">
+      <End Role="tbl_IndorMedicenPurshaseVoucher" EntitySet="tbl_IndorMedicenPurshaseVoucher" />
+      <End Role="tbl_IndorMedicinePurchaseDetails" EntitySet="tbl_IndorMedicinePurchaseDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicinePurchaseDetails_tbl_MedicineInfo" Association="Self.FK_tbl_MedicinePurchaseDetails_tbl_MedicineInfo">
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+      <End Role="tbl_IndorMedicinePurchaseDetails" EntitySet="tbl_IndorMedicinePurchaseDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicineSupplierProfile_tbl_MedicineSupplierInfo" Association="Self.FK_tbl_MedicineSupplierProfile_tbl_MedicineSupplierInfo">
+      <End Role="tbl_MedicineSupplierInfo" EntitySet="tbl_MedicineSupplierInfo" />
+      <End Role="tbl_MedicineSupplierProfile" EntitySet="tbl_MedicineSupplierProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_MedicineSupplierProfile_tbl_UserInfo" Association="Self.FK_tbl_MedicineSupplierProfile_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_MedicineSupplierProfile" EntitySet="tbl_MedicineSupplierProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_NurseDuty_tbe_NurseSectionType" Association="Self.FK_tbl_NurseDuty_tbe_NurseSectionType">
+      <End Role="tbe_NurseSectionType" EntitySet="tbe_NurseSectionType" />
+      <End Role="tbl_NurseDuty" EntitySet="tbl_NurseDuty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_NurseDuty_tbl_staffInfo" Association="Self.FK_tbl_NurseDuty_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_NurseDuty" EntitySet="tbl_NurseDuty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OperationInfo_tbl_staffInfo" Association="Self.FK_tbl_OperationInfo_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_OperationInfo" EntitySet="tbl_OperationInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorBloodSalesDetails_tbl_BloodGroup" Association="Self.FK_tbl_OutdorBloodSalesDetails_tbl_BloodGroup">
+      <End Role="tbl_BloodGroup" EntitySet="tbl_BloodGroup" />
+      <End Role="tbl_OutdorBloodSalesDetails" EntitySet="tbl_OutdorBloodSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorBloodSalesDetails_tbl_MedicinUnit" Association="Self.FK_tbl_OutdorBloodSalesDetails_tbl_MedicinUnit">
+      <End Role="tbl_MedicinUnit" EntitySet="tbl_MedicinUnit" />
+      <End Role="tbl_OutdorBloodSalesDetails" EntitySet="tbl_OutdorBloodSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorBloodSalesDetails_tbl_OutdorBloodSalesVoucher" Association="Self.FK_tbl_OutdorBloodSalesDetails_tbl_OutdorBloodSalesVoucher">
+      <End Role="tbl_OutdorBloodSalesVoucher" EntitySet="tbl_OutdorBloodSalesVoucher" />
+      <End Role="tbl_OutdorBloodSalesDetails" EntitySet="tbl_OutdorBloodSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorBloodSalesVoucher_tbl_UserInfo" Association="Self.FK_tbl_OutdorBloodSalesVoucher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_OutdorBloodSalesVoucher" EntitySet="tbl_OutdorBloodSalesVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo" Association="Self.FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo">
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+      <End Role="tbl_OutdorMedicineSalesDetails" EntitySet="tbl_OutdorMedicineSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo1" Association="Self.FK_tbl_OutdorMedicineSalesDetails_tbl_MedicineInfo1">
+      <End Role="tbl_MedicineInfo" EntitySet="tbl_MedicineInfo" />
+      <End Role="tbl_OutdorMedicineSalesDetails" EntitySet="tbl_OutdorMedicineSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorMedicineSalesDetails_tbl_OutdorMedicineSalesVoucher" Association="Self.FK_tbl_OutdorMedicineSalesDetails_tbl_OutdorMedicineSalesVoucher">
+      <End Role="tbl_OutdorMedicineSalesVoucher" EntitySet="tbl_OutdorMedicineSalesVoucher" />
+      <End Role="tbl_OutdorMedicineSalesDetails" EntitySet="tbl_OutdorMedicineSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorMedicineSalesVoucher_tbl_UserInfo" Association="Self.FK_tbl_OutdorMedicineSalesVoucher_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_OutdorMedicineSalesVoucher" EntitySet="tbl_OutdorMedicineSalesVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorPatientLabTest_tbl_LabInfo" Association="Self.FK_tbl_OutdorPatientLabTest_tbl_LabInfo">
+      <End Role="tbl_LabInfo" EntitySet="tbl_LabInfo" />
+      <End Role="tbl_OutdorPatientLabTest" EntitySet="tbl_OutdorPatientLabTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_OutdorPatientLabTest_tbl_UserInfo" Association="Self.FK_tbl_OutdorPatientLabTest_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_OutdorPatientLabTest" EntitySet="tbl_OutdorPatientLabTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PatientInfo_tbl_PationRoomInformation" Association="Self.FK_tbl_PatientInfo_tbl_PationRoomInformation">
+      <End Role="tbl_PationRoomInformation" EntitySet="tbl_PationRoomInformation" />
+      <End Role="tbl_PatientInfo" EntitySet="tbl_PatientInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PatientInfo_tbl_Referenceinfo" Association="Self.FK_tbl_PatientInfo_tbl_Referenceinfo">
+      <End Role="tbl_Referenceinfo" EntitySet="tbl_Referenceinfo" />
+      <End Role="tbl_PatientInfo" EntitySet="tbl_PatientInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PationRoomInformation_tbl_RoomCatagory" Association="Self.FK_tbl_PationRoomInformation_tbl_RoomCatagory">
+      <End Role="tbl_RoomCatagory" EntitySet="tbl_RoomCatagory" />
+      <End Role="tbl_PationRoomInformation" EntitySet="tbl_PationRoomInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PationRoomInformation_tbl_RoomType" Association="Self.FK_tbl_PationRoomInformation_tbl_RoomType">
+      <End Role="tbl_RoomType" EntitySet="tbl_RoomType" />
+      <End Role="tbl_PationRoomInformation" EntitySet="tbl_PationRoomInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Salary_tbl_staffInfo" Association="Self.FK_tbl_Salary_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_Salary" EntitySet="tbl_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Salary_tbl_UserInfo" Association="Self.FK_tbl_Salary_tbl_UserInfo">
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+      <End Role="tbl_Salary" EntitySet="tbl_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_StaffEducation_tbl_staffInfo" Association="Self.FK_tbl_StaffEducation_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_StaffEducation" EntitySet="tbl_StaffEducation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_staffInfo_tbl_DesignationType" Association="Self.FK_tbl_staffInfo_tbl_DesignationType">
+      <End Role="tbl_DesignationType" EntitySet="tbl_DesignationType" />
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_staffInfo_tbl_StaffType" Association="Self.FK_tbl_staffInfo_tbl_StaffType">
+      <End Role="tbl_StaffType" EntitySet="tbl_StaffType" />
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_UserInfo_tbl_staffInfo" Association="Self.FK_tbl_UserInfo_tbl_staffInfo">
+      <End Role="tbl_staffInfo" EntitySet="tbl_staffInfo" />
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_UserInfo_tbl_UserRole" Association="Self.FK_tbl_UserInfo_tbl_UserRole">
+      <End Role="tbl_UserRole" EntitySet="tbl_UserRole" />
+      <End Role="tbl_UserInfo" EntitySet="tbl_UserInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

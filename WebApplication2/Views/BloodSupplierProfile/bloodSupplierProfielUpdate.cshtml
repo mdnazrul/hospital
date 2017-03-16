@@ -1,0 +1,136 @@
+﻿@model WebApplication2.Models.tbl_BloodSupplierProfile
+@{
+    ViewBag.Title = "bloodSupplierProfielUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["bloodsupcompanyid"]";
+            $("#MediSupplyerName option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#PayAmount").keyup(function () {
+                var a = $("#TotalAmount").val();
+                var b = $("#PayAmount").val();
+                var c = parseFloat(a) - parseFloat(b);
+                $("#DueAmount").val(parseFloat(c));
+            });
+
+            $("#DueAmountBack").keyup(function () {
+                var deuAmount = $("#DueAmount").val();
+                var deuamounback = $("#DueAmountBack").val();
+                var totalamout = parseFloat(deuAmount) - parseFloat(deuamounback);
+                $("#GrandTotalAmount").val(parseFloat(totalamout));
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Blood Supplier Profile</h2>
+        <hr />
+        @using (Html.BeginForm("bloodSupplierProfielUpdate", "BloodSupplierProfile", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.BloodSupplyerID, " Company Name", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("BloodSupplyerID", (SelectList)ViewData["tbl_BloodSupplierInfo"], "[Select Medicine Supplier]", new { Value = 0, id = "MediSupplyerName", @class = "DropDownList" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.VoucherNo, " VoucherNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.VoucherNo, new { @class = "textbox", @placeholder = "Input VoucherNo", id = "VoucherNo", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.TotalAmount, " TotalAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.TotalAmount, new { @class = "textbox", @placeholder = "Input TotalAmount", id = "TotalAmount" ,@readonly="readonly"})
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PayAmount, " PayAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.PayAmount, new { @class = "textbox", @placeholder = "Input PayAmount", id = "PayAmount" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.DueAmount, " DueAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.DueAmount, new { @class = "textbox", @placeholder = "Input DueAmount", id = "DueAmount", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.DueAmountBack, " DueAmountBack", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.DueAmountBack, new { @class = "textbox", @placeholder = "Input DueAmountBack", id = "DueAmountBack" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.DueAmountBackDate, " DueAmountBackDate", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.DueAmountBackDate, new { @class = "textbox", @placeholder = "Input DueAmountBackDate", id = "DueAmountBackDate" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.GrandTotalAmount, " GrandTotalAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.GrandTotalAmount, new { @class = "textbox", @placeholder = "Input GrandTotalAmount", id = "GrandTotalAmount", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Add To Update" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "bloodSupplierProfileLists")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="SaleItems result_area">
+                            <div class="CSSTableGenerator">
+                                <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        }
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+﻿@model WebApplication2.Models.AmbulanceSchedule
+
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "ambulanceScheduleLists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Ambulance ScheduleLists</h2>
+        <hr />
+        <div class="form-group">
+            <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                @Html.ActionLink("Create New", "addambulanceSechedule")
+            </div>
+        </div>
+        @using (Html.BeginForm("ambulanceScheduleLists", "AmbulanceSechedule", FormMethod.Post))
+        {
+            <input type="text" name="keyword" />
+            <input type="submit" value="Search" name="Search">
+        }
+        <table id="myDataTable" class="gridtable" style=" width:60%; font-family:Tahoma;font-size:11px ;">
+            <thead>
+                <tr>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">AmbulancePlateNo</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">GoingTime</th>
+                    <th style="border-right-color:ActiveBorder;background-color:#dedede">BackTime</th>
+                    <th style="border-right-color: ActiveBorder; background-color: #dedede">Date</th>
+                    <th style="border-right-color: ActiveBorder; background-color: #dedede">FreeOrBusy</th>
+                    <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.ambulanceScheduleListsResults)
+            {
+                <tbody>
+                    <tr>
+                        <td>@item.tbl_AmbulanceInfo.AmbPlateNo</td>
+                        <td>@item.GoingTime</td>
+                        <td>@item.BackTime</td>
+                        <td>@item.Date</td>
+                        <td>@item.FreeOrBusy</td>
+                        <td>
+                            @Html.ActionLink("Edit", "ambulanceSchedulesUpdate", new { id = item.AmbSchedulID, ambinfid = @item.tbl_AmbulanceInfo.AmbID })
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            @Html.ActionLink("Delete", "ambulanceSchedulesDelete", new { id = item.AmbSchedulID })
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <div id="listpage" style="padding-left: 22px; width: 85%; float: left;">
+            @Html.PagedListPager(Model.ambulanceScheduleListsResults, page => Url.Action("ambulanceScheduleLists", new RouteValueDictionary()
+        {
+         { "Page", page }
+         }),
+        PagedListRenderOptions.PageNumbersOnly)
+        </div>
+    </div>
+</body>
+</html>

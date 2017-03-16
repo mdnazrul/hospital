@@ -1,0 +1,105 @@
+﻿@model WebApplication2.Models.tbl_Attendance
+@{
+    ViewBag.Title = "AttendanceUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["userid"]";
+            $("#Name option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["empAttentdid"]";
+            $("#EmployeeAttendance option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Add Attendance</h2>
+        <hr />
+        @using (Html.BeginForm("AttendanceUpdate", "Attendanc", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.StaffID, " Employee", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("StaffID", (SelectList)ViewData["tbl_staffInfo"], "[Select Employee]", new { Value = 0, id = "Name", @class = "DropDownList" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.EmployeeAttendance, " Attendance", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    <select id="EmployeeAttendance" name="EmployeeAttendance">
+                                        <option>Select Attendance</option>
+                                        <option value="1">Present</option>
+                                        <option value="0">Absent</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Sift, " Shift", new { @class = "control-label col-sm-2" })
+                                <div class="col-md-4">
+                                    @Html.RadioButtonFor(u => u.Sift, "Day")
+                                    @Html.Label("Day") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    @Html.RadioButtonFor(s => s.Sift, "Night")
+                                    @Html.Label("Night")
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.OverTime, " OverTime", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.OverTime, new { @class = "textbox", @placeholder = "Input OverTime", id = "OverTime" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Add To Update" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "attendanceList")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="SaleItems result_area">
+                            <div class="CSSTableGenerator">
+                                <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

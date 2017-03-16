@@ -1,0 +1,150 @@
+﻿@model WebApplication2.Models.tbl_Loan
+
+@{
+    ViewBag.Title = "loanUpdate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["userid"]";
+            $("#StaffID option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var x = "@this.Request.QueryString["paidid"]";
+            $("#PaidLoan option").each(function () {
+                if ($(this).val() == x) {
+                    $(this).attr('selected', 'selected');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#NewLoan").keyup(function (e) {
+                e.preventDefault();
+                var summation = parseFloat($("#hidden_loanamount").val()) + parseFloat($("#NewLoan").val());
+                $("#LoanAmount").val(parseFloat(summation));
+            });
+
+        });
+        $(document).ready(function () {
+            $("#LoanBack").keyup(function () {
+                var sub = parseFloat($("#LoanAmount").val()) - parseFloat($("#LoanBack").val());
+                $("#GrandTotalLoan").val(parseFloat(sub));
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00;">Loan Update</h2>
+        <hr />
+        <h4 style="color:#ff6a00;">@ViewBag.Messages</h4>
+        @using (Html.BeginForm("loanUpdate", "Loan", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.StaffID, "Employee", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.DropDownList("StaffID", (SelectList)ViewData["tbl_staffInfo"], "...Select Employee...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Salary, " Salary", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.Salary, new { id = "Salary", @class = "form-control", placeholder = "Input Salary", Required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LoanAmount, " LoanAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.LoanAmount, new { id = "LoanAmount", @class = "form-control", placeholder = "Input LoanAmount", Required = "required", @readonly = "readonly" })
+                                    <input type="hidden" id="hidden_loanamount">
+                                 </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.NewLoan, " NewLoan", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.NewLoan, new { id = "NewLoan", @class = "form-control", placeholder = "Input NewLoan", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.LoanBack, " LoanBack", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.LoanBack, new { id = "LoanBack", @class = "form-control", placeholder = "Input LoanBack", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PaymentWay, " PaymentWay", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.PaymentWay, new { id = "PaymentWay", @class = "form-control", placeholder = "Input PaymentWay", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.GrandTotalLoan, " GrandTotalLoan", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    @Html.TextBoxFor(u => u.GrandTotalLoan, new { id = "GrandTotalLoan", @class = "form-control", placeholder = "Input GrandTotalLoan", Required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                    @Html.LabelFor(s => s.PaidLoan, " PaidLoan", new { @class = "control-label col-sm-2" })
+                                    <div class="col-sd-6">
+                                        <input id="PaidLoan" name="PaidLoan" type="radio" value="1" />
+                                        <label for="Paid">Paid</label>
+                                        <input id="PaidLoan" name="PaidLoan" type="radio" value="0" />
+                                        <label for="NonPaid">NonPaid</label>
+                                    </div>
+                                </div>*@
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PaidLoan, "PaidLoan", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-6">
+                                    <select id="PaidLoan" name="Paid" class="form-control">
+                                        <option>Select Option</option>
+                                        <option value="1">Paid</option>
+                                        <option value="0">NonPaid</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-6">
+                                    <button type="submit" class="btn btn-default">Add To Update</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-sm" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "loanList")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div id="SaleItems result_area">
+                                    <div class="CSSTableGenerator">
+                                        <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

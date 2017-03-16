@@ -1,0 +1,77 @@
+﻿@model WebApplication2.Models.tbl_staffInfo
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "staffList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<html>
+<head>
+    <title>staff list</title>
+    <meta charset="utf-8">
+    @*<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
+    
+</head>
+<body>
+    <div class="container">           
+         
+        @using (Html.BeginForm("staffList", "StaffInformation", FormMethod.Post))
+        {
+            <a class="btn btn-success" href="/StaffInformation/addStaff">Create New</a>
+            <input type="text" name="keyword" style="height: 30px; padding-bottom: 10px; width: 250px;" />
+            <input class="btn btn-success"type="submit" value="Search" name="Submit">
+           
+        }
+        
+        <br />
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr class="success">
+                        <th>Name</th>
+                        <th>Employee Type</th>
+                        <th>Desingnation Name</th>
+                        <th>Present Address</th>
+                        <th>MobNo</th>
+                        <th>Image</th>
+                        <th>EmailNo</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model.staffListListsResults)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.tbl_StaffType.StaffName</td>
+                            <td>@item.tbl_DesignationType.DesingnationName</td>
+                            <td>@item.PresentAddress</td>
+                            <td>@item.MobNo</td>
+                            <td><img src="~/Images/@item.Image" width="30" height="30" alt="Preview Image" /></td>
+                            <td>@item.EmailNo</td>
+                            <td>
+                                @Html.ActionLink("Edit", "staffUpdate", new { id = item.StaffID, staffid = @item.tbl_StaffType.StaffTypeID, DTypeId = @item.tbl_DesignationType.DesignationID, imgid = @item.Image })
+                                @Html.ActionLink("Delete", "DeleteData", new { id = item.StaffID })
+                            </td>
+
+                        </tr>
+                    </tbody>
+                }
+            </table>
+        </div>
+            <div id="listpage" style="padding-left: 22px; width: 85%; float: left;">
+                @Html.PagedListPager(Model.staffListListsResults, page => Url.Action("staffList", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+            </div>
+          
+        </div>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+</body>
+</html>

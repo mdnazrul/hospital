@@ -1,0 +1,109 @@
+﻿@model WebApplication2.Models.tbl_AmbulanceSchedule
+@{
+    ViewBag.Title = "addambulanceSechedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Add AmbulanceSchedule</h2>
+        <hr />
+        @using (Html.BeginForm("addambulanceSechedule", "AmbulanceSechedule", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.AmbID, "AmbPlateNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("AmbID", (SelectList)ViewData["tbl_AmbulanceInfo"], "...Select AmbPlateNo...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.TargetLocation, " TargetLocation", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.TargetLocation, new { id = "TargetLocation", @class = "form-control", placeholder = "Input TargetLocation" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.GoingTime, " GoingTime", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.GoingTime, new { id = "GoingTime", @class = "form-control", placeholder = "Input GoingTime", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.BackTime, " BackTime", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.BackTime, new { id = "BackTime", @class = "form-control", placeholder = "Input BackTime", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Date, " Date", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Date, new { @class = "form-control", placeholder = "Input Date", id = "Date", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PatientDescription, " PatientDescription", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.PatientDescription, new { id = "PatientDescription", @class = "form-control", placeholder = "Input PatientDescription", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.FreeOrBusy, " FreeOrBusy", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.RadioButtonFor(u => u.FreeOrBusy, "Free")
+                                    @Html.Label("Free") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    @Html.RadioButtonFor(u => u.FreeOrBusy, "Busy")
+                                    @Html.Label("Busy")
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Remarks, " Remarks", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Remarks, new { id = "Remarks", @class = "form-control", placeholder = "Input Remarks", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Save" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-sm" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "ambulanceScheduleLists")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div id="SaleItems result_area">
+                                    <div class="CSSTableGenerator">
+                                        <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <link href="../Content/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery.datetimepicker.full.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#Date').datetimepicker({
+            timepicker: false,
+            format: 'Y-m-d',
+            formatDate: 'Y-m-d'
+        });
+    </script>
+</body>
+</html>

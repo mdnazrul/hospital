@@ -1,0 +1,101 @@
+﻿@model WebApplication2.Models.tbl_InvoiceVocher
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Invoicelist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+    @*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+
+        <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+
+        <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            function DeleteAdvance(pid, that) {
+                if (confirm("Do you want to delete the Row: " + pid)) {
+                    $.ajax({
+                        type: "POST",
+                        url: '/Advanced/advancedDelete',
+                        data: { id: pid },
+                        dataType: "json",
+                        success: function () {
+                            alert('Deleted Successfully');
+                            location = location.href;
+                            location.reload();
+                        }
+                    });
+                }
+            }
+        </script>*@
+</head>
+<body>
+    <h2 style="text-align:center;color:#ff6a00;">Invoice List</h2>
+    <hr />
+    <div class="form-group">
+        <div class="btn btn-group btn-sm" style="color: #ff6a00;">
+            @Html.ActionLink("Add To Create", "addInvoice")
+        </div>
+    </div>
+    @using (Html.BeginForm("Invoicelist", "Invoice", FormMethod.Post))
+    {
+        <input type="text" name="keyword" />
+        <input type="submit" value="Search" name="Search">
+    }
+    <br />
+    <table id="myDataTable" class="gridtable" style=" width:100%; font-family:Tahoma;font-size:11px ;">
+        <thead>
+            <tr>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">VoucherNo</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Patient Name</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">ReleaseDate</th>
+                @*<th style="border-right-color:ActiveBorder;background-color:#dedede">TotalAmount</th>*@
+                <th style="border-right-color: ActiveBorder; background-color: #dedede">vat</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">Discount</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">GrandTotalAmount</th>
+                <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.InvoicelistResults)
+        {
+            <tbody>
+                <tr>
+                    <td><span class="PurchaseDate">@item.InvoiceVoucherNo</span></td>
+                    <td>@item.tbl_PatientInfo.PatientName</td>
+                    <td>@item.ReleaseDate</td>
+                    @*<td>@item.TotalAmount</td>*@
+                    <td>@item.vat</td>
+                    <td>@item.Discount</td>
+                    <td>@item.GrandTotalAmount</td>
+                    <td>
+                        <a href="InvoiceEdit?InvoiceVoucherNo=@item.InvoiceVoucherNo">Edit</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="Delete?InvoiceVoucherNo=@item.InvoiceVoucherNo">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div id="listpage" style="padding-left: 22px; padding-top:10px; width: 85%; float: left;">
+        @Html.PagedListPager(Model.InvoicelistResults, page => Url.Action("Invoicelist", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+

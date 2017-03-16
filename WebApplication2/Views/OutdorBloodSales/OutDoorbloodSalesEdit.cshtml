@@ -1,0 +1,436 @@
+﻿@model WebApplication2.Models.ReferenceOutdoorBloodSalesModel
+@{
+    ViewBag.Title = "OutDoorbloodSalesEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-ui.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<style>
+    .CSSTableGenerator {
+        border: 1px solid #000000;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+        .CSSTableGenerator table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .CSSTableGenerator tr:last-child td:last-child {
+            -moz-border-radius-bottomright: 0px;
+            -webkit-border-bottom-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .CSSTableGenerator table tr:first-child td:first-child {
+            -moz-border-radius-topleft: 0px;
+            -webkit-border-top-left-radius: 0px;
+            border-top-left-radius: 0px;
+        }
+
+        .CSSTableGenerator table tr:first-child td:last-child {
+            -moz-border-radius-topright: 0px;
+            -webkit-border-top-right-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+
+        .CSSTableGenerator tr:last-child td:first-child {
+            -moz-border-radius-bottomleft: 0px;
+            -webkit-border-bottom-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .CSSTableGenerator tr:hover td {
+        }
+
+        .CSSTableGenerator tr:nth-child(odd) {
+            background-color: #aad4ff;
+        }
+
+        .CSSTableGenerator tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .CSSTableGenerator td {
+            vertical-align: middle;
+            border: 1px solid #000000;
+            border-width: 0px 1px 1px 0px;
+            text-align: center;
+            padding: 2px;
+            font-size: 10px;
+            font-family: Arial;
+            font-weight: normal;
+            color: #000000;
+        }
+
+        .CSSTableGenerator tr:last-child td {
+            border-width: 0px 1px 0px 0px;
+        }
+
+        .CSSTableGenerator tr td:last-child {
+            border-width: 0px 0px 1px 0px;
+        }
+
+        .CSSTableGenerator tr:last-child td:last-child {
+            border-width: 0px 0px 0px 0px;
+        }
+
+        .CSSTableGenerator tr:first-child td {
+            background: -o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+            background: -moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
+            background: -o-linear-gradient(top,#005fbf,003f7f);
+            background-color: #005fbf;
+            border: 0px solid #000000;
+            text-align: center;
+            border-width: 0px 0px 1px 1px;
+            font-size: 11px;
+            font-family: Arial;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .CSSTableGenerator tr:first-child:hover td {
+            background: -o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+            background: -moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");
+            background: -o-linear-gradient(top,#005fbf,003f7f);
+            background-color: #005fbf;
+        }
+
+        .CSSTableGenerator tr:first-child td:first-child {
+            border-width: 0px 0px 1px 0px;
+        }
+
+        .CSSTableGenerator tr:first-child td:last-child {
+            border-width: 0px 0px 1px 1px;
+        }
+
+    .form-group {
+        margin-bottom: 5px !important;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 24px;
+        padding: 6px 10px;
+        font-size: 11px;
+        line-height: 1.428571429;
+        color: #000;
+        vertical-align: middle;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+</style>
+<script>
+
+    //$(document).ready(function () {
+
+    //    $("#Rate").keyup(function () {
+    //        var x = $("#Rate").val();
+    //        var y = $("#Quantity").val();
+    //        var z = parseInt(x) * parseInt(y);
+    //        $("#TotalAmount").val(parseInt(z));
+
+    //        var sum = parseInt($("#hidden_grandt").val()) - parseInt($("#hidden_amount").val()) + parseInt($("#TotalAmount").val());
+    //        $("#GrandTotalAmount").val(sum);
+
+    //        $("#DeuAmount").val($("#GrandTotalAmount").val() - $("#PayAmount").val());
+    //    });
+
+    //    $("#Rate").keyup(function () {
+    //        var x = $("#Rate").val();
+    //        var y = $("#Quantity").val();
+    //        var z = parseInt(x) * parseInt(y);
+    //        $("#TotalAmount").val(parseInt(z));
+
+    //        var sum = parseInt($("#hidden_grandt").val()) - parseInt($("#hidden_amount").val()) + parseInt($("#TotalAmount").val());
+    //        $("#GrandTotalAmount").val(sum);
+
+    //        $("#DeuAmount").val($("#GrandTotalAmount").val() - $("#PayAmount").val());
+    //    });
+
+
+    //    $("#PayAmount").keyup(function () {
+    //        var x = $("#GrandTotalAmount").val() - $("#PayAmount").val();
+    //        $("#DeuAmount").val(x);
+    //    });
+    //});
+    $(document).ready(function () {
+
+        $("#Rate").keyup(function () {
+            var x = $("#Rate").val();
+            var y = $("#Quantity").val();
+            var z = parseInt(x) * parseInt(y);
+            $("#TotalAmount").val(parseInt(z));
+
+            var sum = parseInt($("#hidden_grandt").val()) - parseInt($("#hidden_amount").val()) + parseInt($("#TotalAmount").val());
+            $("#GrandTotalAmount").val(sum);
+
+            $("#DeuAmount").val($("#GrandTotalAmount").val() - $("#PayAmount").val());
+        });
+
+        $("#Rate").keyup(function () {
+            var x = $("#Rate").val();
+            var y = $("#Quantity").val();
+            var z = parseInt(x) * parseInt(y);
+            $("#TotalAmount").val(parseInt(z));
+
+            var sum = parseInt($("#hidden_grandt").val()) - parseInt($("#hidden_amount").val()) + parseInt($("#TotalAmount").val());
+            $("#GrandTotalAmount").val(sum);
+
+            $("#DeuAmount").val($("#GrandTotalAmount").val() - $("#PayAmount").val());
+        });
+
+
+        $("#PayAmount").keyup(function () {
+            var x = $("#GrandTotalAmount").val() - $("#PayAmount").val();
+            $("#DeuAmount").val(x);
+        });
+    });
+
+
+    $(document).ready(function () {
+
+        //Save button click function
+        $('#btnUpdate').click(function () {
+
+            var OutdorBloodSalesID = $("#VocherDe_hiddenId").val();
+            var OutdorBloodSalesVoucherNo = $("#OutdorBloodSalesVoucherNo").val();
+            var OutdorBuyerName = $("#OutdorBuyerName").val();
+            var OutdorBuyerPnoneNo = $("#OutdorBuyerPnoneNo").val();
+            var BloodID = $("#BloodID").val();
+            var Quantity = $("#Quantity").val();
+            var Rate = $("#Rate").val();
+            var MediUnitID = $("#MediUnitID").val();
+            var TotalAmount = $("#TotalAmount").val();
+            var GrandTotalAmount = $("#GrandTotalAmount").val();
+            var PayAmount = $("#PayAmount").val();
+            var DeuAmount = $("#DeuAmount").val();
+
+            if ($('#VocherDe_hiddenId').val() == '' || $('#OutdorBuyerName').val() == '' || $('#OutdorBuyerPnoneNo').val() == '' || $('#BloodID').val() == '' || $('#Quantity').val() == '' || $('#Rate').val() == '' || $('#TotalAmount').val() == '' || $('#GrandTotalAmount').val() == '') {
+                alert('Vocuher Id, OutDoorBuyerName,OutdorBuyerPnoneNo, Blood Group, Quantity, Rate, TotalAmount and GrandTotal are required');
+            }
+            else {
+                var data = {
+                    OutdorBloodSalesVoucherNo: OutdorBloodSalesVoucherNo,
+                    OutdorBuyerName: OutdorBuyerName,
+                    OutdorBuyerPnoneNo: OutdorBuyerPnoneNo,
+                    GrandTotalAmount: GrandTotalAmount,
+                    PayAmount: PayAmount,
+                    DeuAmount: DeuAmount,
+                    OutdorBloodSalesID: OutdorBloodSalesID,
+                    BloodID: BloodID,
+                    Quantity: Quantity,
+                    Rate: Rate,
+                    MediUnitID: MediUnitID,
+                    TotalAmount: TotalAmount
+                }
+
+                $.ajax({
+                    url: '../OutdorBloodSales/OutDoorBloodSalesUpdate',
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    dataType: "JSON",
+                    contentType: "application/json",
+                    success: function (d) {
+                        alert(d.message);
+                        $('#VocherDe_hiddenId').val('');
+                        $('#OutdorBuyerName').val('');
+                        $('#OutdorBuyerPnoneNo').val('');
+                        $("#BloodID").val('Select');
+                        $("#Quantity").val('');
+                        $("#Rate").val('');
+                        $("#MediUnitID").val('');
+                        $("#TotalAmount").val('');
+                        $("#hidden_amount").val('');
+                        $("#hidden_grandt").val('');
+                        $('#GrandTotalAmount').val('');
+                        $('#PayAmount').val('');
+                        $('#DeuAmount').val('');
+                        $("#btnUpdate").hide();
+                        window.location.reload();
+                    },
+                    error: function () {
+                        alert('Error. Please try again.');
+                    }
+                });
+            }
+        });
+    });
+
+
+    function Edit(id, value1, value2, value3, value4, value5, value6, value7, value8,value9,value10)
+    {
+        $("#VocherDe_hiddenId").val(id);
+        $("#OutdorBuyerName").val(value1);
+        $("#OutdorBuyerPnoneNo").val(value2);
+        $("#BloodID option").each(function () {
+            if ($(this).val() == value3) {
+                $(this).attr('selected', 'selected');
+            }
+        });
+        $("#Quantity").val(value4);
+        $("#Rate").val(value5);
+        $("#MediUnitID").val(value6);
+        $("#TotalAmount").val(value7);
+        $("#GrandTotalAmount").val(value8);
+        $("#PayAmount").val(value9);
+        $("#DeuAmount").val(value10);
+
+        // calculate for grand total
+        $("#hidden_amount").val(value7);
+        $("#hidden_grandt").val(value8);
+
+        $("#btnUpdate").show();
+    }
+
+    function OutdoorBloodSalesDelete(OutdorBloodSalesVoucherNo, id, amount)
+    {
+        var OutdorBloodSalesID = id;
+        var data = {
+            OutdorBloodSalesVoucherNo: OutdorBloodSalesVoucherNo,
+            OutdorBloodSalesID: OutdorBloodSalesID,
+            GrandTotalAmount: amount
+        }
+        $.ajax({
+            url: '../OutdorBloodSales/OutdoorBloodSalesDelete',
+            type: "POST",
+            data: JSON.stringify(data),
+            dataType: "JSON",
+            contentType: "application/json",
+            success: function (d) {
+                alert(d.message);
+                window.location.reload();
+            },
+            error: function () {
+                alert('Error. Please try again.');
+            }
+        });
+    }
+</script>
+<div>
+    <h4 style="text-align:center;color:#ff6a00"> Edit OutDoor Blood Sales</h4>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="OutdorBloodSalesVoucherNo">OutdorBloodSalesVoucherNo</label>
+                        <input type="text" class="form-control" id="OutdorBloodSalesVoucherNo" readonly value="@ViewBag.OutdorBloodSalesVoucherNo" />
+                        <input type="hidden" class="form-control" id="VocherDe_hiddenId" />
+                    </div>
+                    <div class="form-group">
+                        <label for="OutdorBuyerName">OutdorBuyerName</label>
+                        <input type="text" class="form-control" id="OutdorBuyerName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="OutdorBuyerPnoneNo">OutdorBuyerPnoneNo</label>
+                        <input type="text" class="form-control" id="OutdorBuyerPnoneNo" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Blood Group">Blood Group</label>
+                        @Html.DropDownList("BloodID", (SelectList)ViewData["tbl_BloodGroup"], "...Select Blood...", new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Quantity">Quantity</label>
+                        <input type="text" class="form-control" id="Quantity" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Rate">Rate</label>
+                        <input type="text" class="form-control" id="Rate" />
+                    </div>
+                    <div class="form-group">
+                        <label for="BloodUnite">BloodUnit</label>
+                        @Html.DropDownList("MediUnitID", (SelectList)ViewData["tbl_MedicinUnit"], "...Select MedicineUnit...", new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input type="text" class="form-control" id="TotalAmount" readonly />
+                        <input type="hidden" class="form-control" id="hidden_amount" />
+                        <input type="hidden" class="form-control" id="hidden_grandt">
+                    </div>
+                    <div class="form-group">
+                        <label for="GrandTotalAmount">Grand Total Amount</label>
+                        <input type="text" class="form-control" id="GrandTotalAmount" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="PayAmount">Pay Amount</label>
+                        <input type="text" class="form-control" id="PayAmount" />
+                    </div>
+                    <div class="form-group">
+                        <label for="DueAmount">Due Amount</label>
+                        <input type="text" class="form-control" id="DeuAmount" readonly />
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-10">
+                            <input type="button" class="btn btn-primary" id="btnUpdate" value="Update" style="display:none;" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                            @Html.ActionLink("Back To List", "OutdoorBloodSalesList")
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div id="SaleItems result_area">
+                        <div class="CSSTableGenerator">
+                            <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;">
+                                <tbody>
+                                    <tr>
+                                        <th>Blood</th>
+                                        <th>Quantity</th>
+                                        <th>Rate</th>
+                                        <th>Amount</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    @foreach (var item in Model.OutdoorbloodSalesDeltailsTbl)
+                                    {
+                                        <tr>
+                                            <td>@item.BloodID</td>
+                                            <td>@item.Quantity</td>
+                                            <td>@item.Rate</td>
+                                            <td>@item.TotalAmount</td>
+                                            <td>
+                                                <input type="button" name="edit" value="Edit" onclick="Edit(@item.OutdorBloodSalesID,'@item.tbl_OutdorBloodSalesVoucher.OutdorBuyerName','@item.tbl_OutdorBloodSalesVoucher.OutdorBuyerPnoneNo', @item.BloodID, @item.Quantity,@item.Rate,@item.MediUnitID, @item.TotalAmount, @item.tbl_OutdorBloodSalesVoucher.GrandTotalAmount, @item.tbl_OutdorBloodSalesVoucher.PayAmount, @item.tbl_OutdorBloodSalesVoucher.DeuAmount);">
+                                                &nbsp;
+                                                <input type="button" name="delete" value="Delete" onclick="OutdoorBloodSalesDelete('@ViewBag.OutdorBloodSalesVoucherNo', @item.OutdorBloodSalesID, @item.TotalAmount);">
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <table id="dataTable1" class="gridtable" style="font-family:Tahoma;font-size:11px;"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

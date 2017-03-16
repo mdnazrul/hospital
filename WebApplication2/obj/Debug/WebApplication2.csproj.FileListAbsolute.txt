@@ -1,0 +1,708 @@
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\WebApplication2.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Antlr3.Runtime.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\EntityFramework.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\EntityFramework.SqlServer.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Newtonsoft.Json.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Owin.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Optimization.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.WebPages.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\WebGrease.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Optimization.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.WebPages.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\EntityFramework.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\EntityFramework.SqlServer.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+c:\users\hossain\documents\visual studio 2013\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\Hossain\Documents\Visual Studio 2013\Projects\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Hossain\Documents\Visual Studio 2013\Projects\WebApplication2\WebApplication2\bin\PagedList.dll
+C:\Users\Hossain\Documents\Visual Studio 2013\Projects\WebApplication2\WebApplication2\bin\PagedList.Mvc.dll
+C:\Users\Hossain\Documents\Visual Studio 2013\Projects\WebApplication2\WebApplication2\bin\PagedList.xml
+C:\Users\Hossain\Documents\Visual Studio 2013\Projects\WebApplication2\WebApplication2\bin\PagedList.Mvc.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\WebApplication2.dll.config
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\WebApplication2.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\WebApplication2.pdb
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Antlr3.Runtime.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\EntityFramework.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\EntityFramework.SqlServer.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Newtonsoft.Json.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Owin.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Helpers.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Mvc.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Optimization.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Razor.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.WebPages.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.WebPages.Razor.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\WebGrease.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\PagedList.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\PagedList.Mvc.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Helpers.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Mvc.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Optimization.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.Razor.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.WebPages.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\System.Web.WebPages.Razor.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Newtonsoft.Json.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Antlr3.Runtime.pdb
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\EntityFramework.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\EntityFramework.SqlServer.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Users\Hossain\Downloads\pms\pms\WebApplication2\obj\Debug\WebApplication2.pdb
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\WebApplication2.dll.config
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\WebApplication2.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\WebApplication2.pdb
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Antlr3.Runtime.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\EntityFramework.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\EntityFramework.SqlServer.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Newtonsoft.Json.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Owin.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\PagedList.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\PagedList.Mvc.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Helpers.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Mvc.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Optimization.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Razor.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.WebPages.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.WebPages.Razor.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\WebGrease.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\PagedList.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\PagedList.Mvc.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Helpers.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Mvc.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Optimization.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.Razor.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.WebPages.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\System.Web.WebPages.Razor.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Newtonsoft.Json.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Antlr3.Runtime.pdb
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\EntityFramework.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\EntityFramework.SqlServer.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\PMSProject\Mohi\update\pms\WebApplication2\obj\Debug\WebApplication2.dll
+G:\PMSProject\Mohi\update\pms\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\WebApplication2.dll.config
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\WebApplication2.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\WebApplication2.pdb
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Owin.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\PagedList.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\PagedList.Mvc.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\PagedList.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\PagedList.Mvc.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Users\Administrator\Desktop\NewHospitalManagementSystem\pmsProject\pmsProject\pms\WebApplication2\obj\Debug\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.pdb
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+G:\FinalHospitalManagementSystem\Final\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Helpers.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+G:\FinalHospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+F:\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+F:\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+F:\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+F:\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+F:\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+F:\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+F:\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+F:\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+F:\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+F:\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+F:\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+F:\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+F:\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+F:\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+F:\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+F:\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+F:\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+F:\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+D:\hospitamproject from Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+D:\hospitamproject Sent Mohiuddin\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll.config
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebApplication2.pdb
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Owin.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\WebGrease.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\PagedList.Mvc.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Helpers.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Mvc.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Optimization.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.Razor.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\System.Web.WebPages.Razor.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Newtonsoft.Json.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Antlr3.Runtime.pdb
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\EntityFramework.SqlServer.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Facebook.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Cookies.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.OAuth.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Google.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.Twitter.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.dll
+E:\HMSProject\HospitalManagementSystem\HospitalManagementSystem\HospitalManagementSystem\WebApplication2\obj\Debug\WebApplication2.pdb

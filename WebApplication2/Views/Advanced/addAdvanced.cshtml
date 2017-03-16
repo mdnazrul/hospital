@@ -1,0 +1,220 @@
+﻿@model WebApplication2.Models.tbl_Advance
+@{
+    ViewBag.Title = "addAdvanced";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title></title>
+    @*<script src="~/Scripts/jquery-ui.js"></script>
+        <link href="~/Content/jquery-ui.css" rel="stylesheet" />*@
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"> </script>
+    <script>
+        $(document).ready(function () {
+            $("#NewAdvance").keyup(function (e) {
+                e.preventDefault();
+                var AdvanceBack = $("#AdvanceBack").val();
+                if (AdvanceBack == "" || AdvanceBack == null) {
+                    var AdvanceBack = 0;
+                }
+                else {
+                    var AdvanceBack = $("#AdvanceBack").val();
+                }
+
+                var NewAdvance = $("#NewAdvance").val();
+                if (NewAdvance == "" || NewAdvance == null) {
+                    var NewAdvance = 0;
+                }
+                else {
+                    var NewAdvance = $("#NewAdvance").val();
+                }
+
+                var summation = parseFloat($("#hidden_amount").val()) - parseFloat(AdvanceBack) + parseFloat(NewAdvance);
+                $("#AdvanceAmount").val(parseFloat(summation));
+                $("#GrandTotalAmount").val(parseFloat(summation));
+            });
+
+            $("#AdvanceBack").keyup(function (e) {
+                e.preventDefault();
+
+                var AdvanceBack = $("#AdvanceBack").val();
+                if (AdvanceBack == "" || AdvanceBack == null) {
+                    var AdvanceBack = 0;
+                }
+                else {
+                    var AdvanceBack = $("#AdvanceBack").val();
+                }
+
+                var NewAdvance = $("#NewAdvance").val();
+                if (NewAdvance == "" || NewAdvance == null) {
+                    var NewAdvance = 0;
+                }
+                else {
+                    var NewAdvance = $("#NewAdvance").val();
+                }
+
+                var sub = parseFloat($("#hidden_amount").val()) + parseFloat(NewAdvance) - parseFloat(AdvanceBack);
+                $("#GrandTotalAmount").val(parseFloat(sub));
+                $("#AdvanceAmount").val(parseFloat(sub));
+            });
+        });
+
+        @* ....................Copy.........................*@
+        function get_value(_this) {
+            var staffid = $(_this).val();
+            var data = {
+                "StaffId": staffid
+            }
+            $.ajax({
+                url: '/Advanced/GetEmpInfo',
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: "JSON",
+                contentType: 'application/json; charset=utf-8',
+                cache: false,
+                success: function (d) {
+                    $("#Salary").val(d.basicSalary);
+                    $("#AdvanceAmount").val(d.advanceamount);
+                    $("#hidden_amount").val(d.advanceamount);
+                },
+                error: function (d) {
+                    //alert(d.message);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00">Advanced</h2>
+        <hr />
+        @using (Html.BeginForm("addAdvanced", "Advanced", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.StaffID, " Employee", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("StaffID", (SelectList)ViewData["tbl_staffInfo"], "[Select Employee]", new { Value = 0, id = "Name", @class = "DropDownList", @onchange = "get_value(this)", })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Salary, " Salary", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.Salary, new { @class = "textbox", @placeholder = "Input salary", id = "Salary", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.AdvanceDate, " AdvanceDate", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.AdvanceDate, new { @class = "textbox", @placeholder = "Input AdvanceDate", id = "AdvanceDate" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.AdvancePurpose, " AdvancePurpose", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(model => model.AdvancePurpose, new { @class = "textbox", @placeholder = "Input AdvancePurpose", id = "AdvancePurpose" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.AdvanceAmount, " AdvanceAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.AdvanceAmount, new { @class = "textbox", @placeholder = "Input AdvanceAmount", id = "AdvanceAmount", @readonly = "readonly" })
+                                    <input type="hidden" id="hidden_amount">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.NewAdvance, " NewAdvance", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.NewAdvance, new { @class = "textbox", @placeholder = "Input NewAdvance", id = "NewAdvance" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.AdvanceBack, " AdvanceBack", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.AdvanceBack, new { @class = "textbox", @placeholder = "Input AdvanceBack", id = "AdvanceBack" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PaymentWay, " PaymentWay", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.PaymentWay, new { @class = "textbox", @placeholder = "Input Paymentway", id = "PaymentWay" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.GrandTotalAmount, " GrandTotalAmount", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(model => model.GrandTotalAmount, new { @class = "textbox", @placeholder = "Input GrandTotalAmount", id = "GrandTotalAmount", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Paid, "Paid", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    <select id="Paid" name="Paid">
+                                        <option>Select Option</option>
+                                        <option value="1">Paid</option>
+                                        <option value="0">NonPaid</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Remarks, " Remarks", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(model => model.Remarks, new { @class = "textbox", @placeholder = "Input Remarks", id = "Remarks" })
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                @Html.LabelFor(s => s.UserInfoID, " UserEmployee", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("UserInfoID", (SelectList)ViewData["tbl_UserInfo"], "[Select UserEmployee]", new { Value = 0, id = "UserName", @class = "DropDownList" })
+                                </div>
+                            </div>*@
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Add Create" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "AdvancedList")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="SaleItems result_area">
+                            <div class="CSSTableGenerator">
+                                <table id="dataTable" class="gridtable" style="font-family:Tahoma;font-size:11px ;"></table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <link href="../Content/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery.datetimepicker.full.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#AdvanceDate').datetimepicker({
+            timepicker: false,
+            format: 'Y-m-d',
+            formatDate: 'Y-m-d'
+        });
+    </script>
+</body>
+</html>

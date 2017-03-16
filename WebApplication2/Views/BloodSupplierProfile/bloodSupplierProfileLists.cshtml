@@ -1,0 +1,107 @@
+﻿@model WebApplication2.Models.tbl_BloodSupplierProfile
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "bloodSupplierProfileLists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        function DeleteBloodSupplierProfile(pid, that) {
+            if (confirm("Do you want to delete the Row: " + pid)) {
+                $.ajax({
+                    type: "POST",
+                    url: '/BloodSupplierProfile/BloodSupplierProfileDelete',
+                    data: { id: pid },
+                    dataType: "json",
+                    success: function () {
+                        alert('Deleted Successfully');
+                        location = location.href;
+                        location.reload();
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 style="text-align:center;color:#ff6a00;">Blood Supplier Profile List</h2>
+    <hr />
+    <div class="form-group">
+        <div class="btn btn-group btn-lg" style="color: #ff6a00;">
+            @Html.ActionLink("Add To Create", "addBloodSupplierProfile")
+        </div>
+    </div>
+    @using (Html.BeginForm("bloodSupplierProfileLists", "BloodSupplierProfile", FormMethod.Post))
+    {
+        <input type="text" name="keyword" />
+        <input type="submit" value="Search" name="Submit">
+    }
+    <br />
+    <table id="myDataTable" class="gridtable" style=" width:100%; font-family:Tahoma;font-size:12px ;">
+        <thead>
+            <tr>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">CompanyName</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">BloodVoucherNo</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">TotalAmount</th>
+                <th style="border-right-color: ActiveBorder; background-color: #dedede">PayAmount</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">DueAmount</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">DueAmountBack</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">DueAmountBackDate</th>
+                <th style="border-right-color:ActiveBorder;background-color:#dedede">GrandTotalAmount</th>
+                <th style="border-right-color: ActiveBorder; background-color:#ffd800;">Action</th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model.bloodSupplierProfileListResults)
+        {
+            <tbody>
+                <tr>
+                    <td><span class="EmployeeName">@item.tbl_BloodSupplierInfo.CompanyName</span></td>
+                    <td>@item.VoucherNo</td>
+                    <td>@item.TotalAmount</td>
+                    <td>@item.PayAmount</td>
+                    <td>@item.DueAmount</td>
+                    <td>@item.DueAmountBack</td>
+                    <td>@item.DueAmountBackDate</td>
+                    <td>@item.GrandTotalAmount</td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "UpdateData", new { id = item.LeaveId, userid = @item.tbl_Staff.StaffId })*@
+                        @Html.ActionLink("Edit", "bloodSupplierProfielUpdate", new { id = item.BloodSupplierProfileID,bloodsupcompanyid=@item.tbl_BloodSupplierInfo.BloodSupplyerID })
+                        &nbsp;&nbsp;&nbsp;
+                        <img src="~/Images/delete.png" alt="Delete" onclick="DeleteBloodSupplierProfile(@item.BloodSupplierProfileID)" />
+                      
+                    </td>
+
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div id="listpage" style="padding-left: 22px; padding-top:10px; width: 85%; float: left;">
+        @Html.PagedListPager(Model.bloodSupplierProfileListResults, page => Url.Action("bloodSupplierProfileLists", new RouteValueDictionary()
+    {
+        { "Page", page }
+    }),
+   PagedListRenderOptions.PageNumbersOnly)
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+﻿@model WebApplication2.Models.tbl_PatientInfo
+
+@{
+    ViewBag.Title = "addPatientInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2 style="text-align:center;color:#ff6a00;">Patient Information</h2>
+        <hr />
+        @using (Html.BeginForm("addPatientInfo", "PatientInfo", FormMethod.Post))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PatientName, " PatientName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.PatientName, new { id = "PatientName", @class = "form-control", placeholder = "Input PatientName", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Age, " Age", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Age, new { id = "Age", @class = "form-control", placeholder = "Input Age", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Weight, " Weight", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Weight, new { id = "Weight", @class = "form-control", placeholder = "Input Weight", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Gender, " Gender", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.RadioButtonFor(u => u.Gender, "Male")
+                                    @Html.Label("Male") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    @Html.RadioButtonFor(u => u.Gender, "Female")
+                                    @Html.Label("Female")
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Address, " Address", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Address, new { id = "Address", @class = "form-control", placeholder = "Input Address", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PatientMobNo, " PatientMobNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.PatientMobNo, new { id = "PatientMobNo", @class = "form-control", placeholder = "Input PatientMobNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Disease, " Disease", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Disease, new { id = "Disease", @class = "form-control", placeholder = "Input Disease", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.ReferenceID, "ReferenceName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("ReferenceID", (SelectList)ViewData["tbl_Referenceinfo"], "...Select ReferenceName...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Gardian, " GardianName", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.Gardian, new { id = "Gardian", @class = "form-control", placeholder = "Input Gardian", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.EmergencyMobNo, " EmergencyMobNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextBoxFor(u => u.EmergencyMobNo, new { id = "EmergencyMobNo", @class = "form-control", placeholder = "Input EmergencyMobNo", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.PRoomID, "PatientRoomNo", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.DropDownList("PRoomID", (SelectList)ViewData["tbl_PationRoomInformation"], "...Select patientRoomNo...", new { @class = "form-control", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(s => s.Remarks, " Remarks", new { @class = "control-label col-sm-2" })
+                                <div class="col-sm-10">
+                                    @Html.TextAreaFor(u => u.Remarks, new { id = "Remarks", @class = "form-control", placeholder = "Input Remarks", Required = "required" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-sm-10">
+                                    <input type="submit" class="btn btn-primary" value="Save" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="btn btn-group btn-sm" style="color: #ff6a00;">
+                                    @Html.ActionLink("Back To List", "patientInfoList")
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>
